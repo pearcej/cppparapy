@@ -1,10 +1,15 @@
-For Loops
+Bucles For 
 =========
 
 Even though the ``while`` type of construct is very useful in a wide variety of
 situations, another iterative structure, the ``for`` statement, can be
 used to iterate across a range of values easily.
 A ``for`` statement allows us to write a loop that is executed a specific number of times.
+
+Aunque ``while`` es muy útil en muchas situaciones, 
+se puede usar otra estructura iterativa, la declaración ``for``, para iterar fácilmente a 
+través de un rango de valores. Una declaración ``for`` nos permite escribir un bucle que se 
+ejecuta un número específico de veces.
 
 .. activecode:: ForLoopIterations
    :language: cpp
@@ -15,16 +20,15 @@ A ``for`` statement allows us to write a loop that is executed a specific number
 
    int main() {
       for (int i = 0; i < 10; i++){
-            cout << i << "hello world" << endl;
+            cout << i << "hola mundo" << endl;
        }
     }
 
 
 
-In the example above, the **hello world** statement is executed 10 times.
+En el ejemplo de arriba, la sentencia **hello world** es ejecutada 10 veces. 
 
-A common use of the ``for`` construct is to implement **certain** repetition  
-over a range of values.
+Un uso común de ``for`` es implementar **ciertas** repeticiones en un rango de valores.
 
 .. activecode:: rangeForLoop1
    :language: cpp
@@ -32,8 +36,8 @@ over a range of values.
    #include <iostream>
    using namespace std;
 
-    // squares the numebers in range 5
-    // ex. 0*0, 1*1, 2*2 ...
+    // eleva al cuadrado los números en el rango 5
+    // por ejemplo: 0*0, 1*1, 2*2 ...
     int main() {
         for (int i=0; i<5; i++) {
             cout << i*i << " ";
@@ -43,12 +47,11 @@ over a range of values.
     }
 
 
-The code will use ``cout`` five times.  The value of the variable ``i`` will
-start at 0 and go through the full sequence of values 0,1,2,3,4.  This
-value is then squared and printed.
 
+El código usará ``cout`` cinco veces. El valor de la variable ``i`` comienza en 0 y sigue en la secuencia
+completa de los valores 0,1,2,3,4. Luego este valir es elevado al cuadrado e impreso. 
 
-Check yourself
+Compruébalo tu mismo 
 ==============
 
 ::
@@ -58,8 +61,8 @@ Check yourself
 
     int main() {
 
-        for (int counter=0; counter<4; counter++) {
-            cout << counter * 2 << " ";
+        for (int contador=0; contador<4; contador++) {
+            cout << contador * 2 << " ";
         }
 
         return 0;
@@ -68,13 +71,13 @@ Check yourself
 .. mchoice:: mc_forloop
   :answer_a: 0 2 4 6
   :answer_b: 0 0 0 0
-  :answer_c: Runtime error
+  :answer_c: Error de tiempo de ejecución
   :answer_d: 0 1 2 3
-  :answer_e: all of the above
+  :answer_e: todos los anteriores
   :correct: a
-  :feedback_a: Good Job!
-  :feedback_b: Not quite, take another look at the operation happening in the cout line
-  :feedback_c: Not quite, take another look at the for loop
-  :feedback_d: Not quite, take another look at the operation happening in the cout line
+  :feedback_a: Buen trabajo!
+  :feedback_b: No del todo, revise la operación que ocurre en la línea que imprime.
+  :feedback_c: No del todo, revise el bucle for.
+  :feedback_d: No del todo, revise la operación que ocurre en la línea que imprime.
 
-  Using the code above please select the answer that should appear?
+  Usando el código anterior, seleccione la respuesta que debería aparecer.

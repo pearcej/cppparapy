@@ -1,4 +1,4 @@
-Exception Handling
+Manejo de Excepciones
 ::::::::::::::::::
 
 .. toctree::

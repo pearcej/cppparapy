@@ -1,56 +1,58 @@
-Introduction
+Introducción
 ============
 
-C++ is designed with the principal that speed is more important than safety and error-checking.
-This differs from languages like Python, which is considerably more restrictive in regards to
-aspects such as memory allocations and resource management. C++ is translated to "machine language"
-when it is compiled, which is a step skipped by Python. Python skips this step in favor of immediate
-interpretation of the code itself.
+C++ está diseñado con el principio de que la velocidad es más importante que la seguridad 
+y la verificación de errores. Esto difiere de lenguajes como Python, que es considerablemente 
+más restrictivo en aspectos como la asignación de memoria y la gestión de recursos. C ++ se 
+traduce a "lenguaje de máquina" cuando se compila, que es un paso que Python omite. 
+Python se salta este paso a favor de la interpretación inmediata del propio código.
 
-This difference is what allows C++ to be as fast as it is, which also makes it particularly good
-for graphically-intensive applications. Graphical applications heavily leverage memory management
-to display every pixel you see on your screen. Python does not allow for the creation of arrays like in
-C++, which are just "chunks" of memory of a fixed size. Furthermore, running directly on the hardware
-allows C++ to communicate better with other components of your computer, such as your graphics processing unit, or "GPU".
-This is one of many reasons C++ is considered an industry standard for high-performance graphics applications, such as
-video games or software used for visual effects in movies.
+Esta diferencia es lo que permite que C++ sea tan rápido como lo es, lo que también lo hace 
+particularmente bueno para aplicaciones con uso intensivo de gráficos. Las aplicaciones gráficas 
+aprovechan en gran medida la gestión de la memoria para mostrar cada píxel que ve en su pantalla. 
+Python no permite la creación de arreglos como en C++, que son solo "trozos" de memoria de un tamaño fijo. 
+Además, ejecutarse directamente en el hardware permite que C++ se comunique mejor con otros componentes de 
+su computadora, como su unidad de procesamiento de gráficos o "GPU". Esta es una de las muchas razones por 
+las que C ++ se considera un estándar de la industria para aplicaciones gráficas de alto rendimiento, 
+como videojuegos o software utilizado para efectos visuales en películas.
 
-What are Turtles?
+¿Qué son las tortugas?
 =======================
-Turtle graphics are a popular and simple way for introducing programming to beginners. 
-It was part of the original Logo programming language developed by 
-Wally Feurzeig, Seymour Papert, and Cynthia Solomon in 1967.
+Los gráficos de tortugas son una forma popular y sencilla de introducir la programación a los principiantes. 
+Era parte del lenguaje de programación Logo original desarrollado por Wally Feurzeig, Seymour Papert y Cynthia Solomon en 1967.
 
-Imagine turtles as being a digital marker used for drawing various shapes, images, and designs.
-Drawing with Turtles can be as basic as a simple triangle and as complex as a highly detailed fractal image.
-Nearly all commands used when drawing with Turtles are as simple as telling your Turtle to move forward, backward,
-left, and right in as few or many steps as desired.
+Imagine tortugas como un marcador digital utilizado para dibujar varias formas,
+imágenes y diseños. Dibujar con tortugas puede ser tan básico como un simple triángulo
+y tan complejo como una imagen fractal altamente detallada. 
+Casi todos los comandos utilizados al dibujar con Turtles son tan simples como decirle a tu Turtle que
+se mueva hacia adelante, hacia atrás, hacia la izquierda y hacia la derecha en los pocos o muchos pasos que desees.
 
-The :code:`turtle` library is commonly used in Python. This chapter will cover a close analog for turtle graphics between 
-Python and C++, the :code:`C-Turtle` library.
+La biblioteca :code:`turtle` es comonmente usada en Python. Este capítulo cubrirá un análogo cercano para
+gráficos de tortugas entre Python y C++, la biblioteca :code:`C-Turtle`.
 
-Turtles in C++
+Tortugas en C++
 =======================================
 
-Python is particularly well-suited for educational purposes due to its
-wide array of built in tools and good documentation. These things are particularly
-lacking in regards to C++, as many of the built-in tools require complicated syntax
-and deep understanding of the language itself. One of these tools is the :code:`turtle` library,
-which is very well suited for educational purposes because it offers live, interactive,
-and visual representations of your code.
+Python es particularmente adecuado para fines educativos debido a su amplia gama de herramientas
+integrados y buenas documentaciones. Estas cosas faltan particularmente en lo que respecta a C ++,
+ya que muchas de las herramientas integradas requieren una sintaxis complicada y una comprension
+profundo del lenguaje en sí. Una de estas herramientas es la biblioteca :code:`turtle`,
+que es muy adecuado para fines educativos porque ofrece representaciones en vivo, interactivas
+y visuales de su código.
 
-Visual representations afford students an opportunity to observe a facet of computer science
-from an alternative point of view: rather than waiting anxiously for the print statement
-to come around after your program churns, you get a visual representation of the concept itself.
-This is particularly useful for abstract concepts such as recursion and iteration.
+Las representaciones visuales brindan a los estudiantes la oportunidad de observar una faceta de
+las ciencias de la computación desde un punto de vista alternativo: en lugar de esperar ansiosamente
+a que aparezca la declaración impresa después de que su programa se agite, obtiene una representación
+visual del concepto en sí. Esto es particularmente útil para conceptos abstractos como la recursividad
+y la iteración.
 
-For C++, a library called :code:`C-Turtle` is used to provide an equivalent of Python's :code:`turtle`.
-It acts as a close replacement to provide easy to use graphics to C++, while maintaining
-the objects and commands you might be used to in Python. It was developed by Jesse Walker-Schadler
-at Berea College during the summer of 2019, and can be found on GitHub here: https://github.com/walkerje/C-Turtle
+En C++, la biblioteca llamada :code:`C-Turtle` es usado como equivalente de la biblioteca :code:`turtle` en Python.
+Actúa como un reemplazo cercano para proporcionar gráficos fáciles de usar para C++, mientras mantiene
+los objetos y comandos a los que podría estar acostumbrado en Python. Fue desarrollado por Jesse Walker-Schadler
+en Berea College durante el verano de 2019 y se puede encontrar en GitHub aquí: https://github.com/walkerje/C-Turtle
 
-Below is a comparison of the two versions, C++ and Python, which do
-the same thing. Try running both and comparing how the code looks between the two versions.
+A continuación se muestra una comparación de las dos versiones, C++ y Python, que hacen lo mismo.
+Intente ejecutar ambos y compare cómo se ve el código entre las dos versiones.
 
 .. activecode:: cturtle_1
     :language: cpp
@@ -89,14 +91,14 @@ the same thing. Try running both and comparing how the code looks between the tw
     turt.end_fill()
 
 .. mchoice:: cturtle_question_1
-    :answer_a: Students receive instant feedback and gratification for their work.
-    :answer_b: Students will pay less attention to how their code works, and more attention to its end result.
-    :answer_c: Students get more acquainted with RGB values common in web development.
-    :answer_d: Students will be more comfortable working with concepts they are used to, such as Turtles.
+    :answer_a: Los estudiantes reciben comentarios instantáneos y gratificación por su trabajo.
+    :answer_b: Los estudiantes prestarán menos atención a cómo funciona su código y más atención a su resultado final.
+    :answer_c: Los estudiantes se familiarizan más con los valores RGB comunes en el desarrollo web.
+    :answer_d: Los estudiantes se sentirán más cómodos trabajando con conceptos a los que están acostumbrados, como Tortugas.
     :correct: a, d
-    :feedback_a: Correct!
-    :feedback_b: Incorrect, because equal thought must be put into the usage of Turtles as well as the outcome.
-    :feedback_c: Incorrect, because RGB values are not the focus or reason behind using Turtles.
-    :feedback_d: Correct!
+    :feedback_a: Correcto!
+    :feedback_b: Incorrecto, porque se debe pensar igual en el uso de las Tortugas como en el resultado.
+    :feedback_c: Incorrecto, porque los valores RGB no son el enfoque o la razón detrás del uso de Turtles.
+    :feedback_d: Correcto!
 
-    How might students benefit from having a visual representation such as C-Turtle? Check all that apply.
+   ¿Cómo se beneficiarían los estudiantes de tener una representación visual como C-Turtle? Marque todo lo que corresponda.

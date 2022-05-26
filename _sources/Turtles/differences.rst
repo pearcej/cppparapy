@@ -1,10 +1,9 @@
-Python's turtle vs C-Turtle
+Las Tortugas de Python vs C-Turtle
 ==========================================
 
-:code:`C-Turtle` varies from the Python :code:`turtle` library primarily in syntax. Most of the methods
-are exactly the same between implementations, however there are a few notable differences between the two.
-Colors, for example, must be surrounded by curly brackets (e.g, '{' and '}') when referring to them by a
-name such as "red", "green", or "blue". You can also ask for a random color by using the string "random".
+:code:`C-Turtle` varia de la biblioteca de Python :code:`turtle` primordialmete en la sintaxis. La mayoría de los métodos 
+son exactamente los mismos, pero hay algunas diferencias notables. Los colores, por ejemplo, deben ser rodeados por llaves ( '{' and '}')¨
+cuando se usan los nombres de los colores como "red", "green", o "blue". También puede usar un color aleatorio usando la cadena "random". 
 
 .. code-block:: cpp
 
@@ -20,7 +19,7 @@ name such as "red", "green", or "blue". You can also ask for a random color by u
     turtle.pencolor({"green"});
     turtle.pencolor({"random"});
 
-Unlike in Python, the :code:`write` method does not allow you to specify a font nor size. This is due to the complex handling
+A diferencia de Python, el método :code:`write` no permite que especifique ni la fuente ni el tamaño de las letras. Esto es debido al complejo manejo
 and of Fonts by operating systems that is far more cumbersome to manage in C++. Furthermore, there is no "world" screen mode like
 there is in Python. Normally, this would allow you to specify the "bounds" of your canvas (e.g, specify minimum
 and maximum coordinates for your canvas).
@@ -29,10 +28,10 @@ Default shapes are also different and somewhat limited in comparison. Python off
 "turtle", "square", "triangle", and "classic". :code:`C-Turtle`, on the other hand, offers four shapes by default: "arrow", "triangle",
 "indented triangle", and "square".
 
-There are a few utility methods available in :code:`C-Turtle` that are not available in Python, such as :code:`shift` and :code:`middle`.
-The former of the two, :code:`shift`, simply adds to the X and Y coordinate position of the turtle. If your turtle is at coordinate
-600x, 400y and :code:`shift` is called with coordinate 50x and -50y, the turtle's final position would be 650x, 350y. The latter
-of the two, :code:`middle`, returns the point exactly between two other points. See the examples below.
+Hay algunos métodos de utilidad disponibles en :code:`C-Turtle` que no están disponibles en Python como :code:`shift` and :code:`middle`.
+Este método :code:`shift` simplemente añade a las coordenadas X y Y de la tortuga. Si su tortuga está en la coordenada
+600x, 400y y  :code:`shift` is called with coordinate 50x and -50y, the turtle's final position would be 650x, 350y. The latter
+of the two, :code:`middle`, returns the point exactly between two other points. Vea el ejemplo de abajo.
 
 .. code-block:: cpp
 

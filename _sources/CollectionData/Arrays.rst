@@ -3,66 +3,55 @@
     To view a copy of this license, visit http://creativecommons.org/licenses/by-nc-sa/4.0/.
 
 
-Collections
+Colecciones
 ~~~~~~~~~~~
 
-In addition to the numeric, Boolean, and character types,
-C++ also offers built-in collection types.
-A **collection** data type is a grouping of some number of other data items
-(possibly only zero or one) that have some shared significance
-or need to be operated upon together.
+Además de los tipos de datos numéricos, booleanos y de caracteres, C++ también ofrece tipos de colección integrados. 
+Un tipo de datos de **colección** es una agrupación de una cierta cantidad de otros elementos de datos (posiblemente solo cero o uno) 
+que tienen algún significado compartido o necesitan ser operar juntos.
 
-Arrays, vectors, strings, sets, and hash tables are among these useful
-C++ collection types.
+Las matrices, los vectores, las cadenas, los conjuntos y las tablas hash están dentro de los tipos de colección de C++ que son útiles.
 
-Arrays
+Arrays 
 ~~~~~~
 
-**What is an Array?**
-An array is a data structure consisting of an ordered collection of data elements,
-of identical type in which each element can be identified by an array index.
-More technically, an array data structure is an ordered arrangement of values
-located at equally spaced addresses in contiguous computer memory.
+**¿Qué es un array? **
+Un array (arreglo) es una estructura de datos que consta de una colección ordenada de elementos de datos, de tipo idéntico, 
+en la que cada elemento puede identificarse mediante un índice del array. En términos más técnicos, una estructura de datos de array 
+es un arreglo ordenado de valores ubicados en direcciones igualmente espaciadas en la memoria de la computadora contigua.
 
-NOTE: A C++ **array** is always stored in contiguous memory. C++ arrays can be allocated in two different ways:
+NOTA: un **array** en C++ siempre se almacena en la memoria contigua. Los arrays de C++ se pueden asignar de dos maneras diferentes:
 
-    1) *statically allocated* in which the array size is fixed at compile-time and cannot change
-    2) *dynamically allocated* in which pointers are used in the allocation process so the size can change at run-time
+    1) *asignado estáticamente* en el que el tamaño del array se define en tiempo de compilación y no puede cambiar
+    2) *asignado dinámicamente* en el que se utilizan punteros en el proceso de asignación para que el tamaño pueda cambiar en tiempo de ejecución
 
     
+En C++ moderno, el array asignado estáticamente se usa típicamente en situaciones en las que la velocidad es esencial o donde existen restricciones 
+de hardware, y una estructura de datos llamada vector se usa típicamente cuando se requiere más flexibilidad.
 
-In modern C++, the statically allocated array is typically used
-in situations when speed is essential or where hardware constraints exist, and a data structure
-called a vector is typically used when more flexibility is required.
+Como programador de Python, es posible que vea un array como el ancestro de la lista de Python, 
+y puede recordar que las listas de Python en realidad se implementan a través de un array subyacente que consta de referencias.
 
-As a Python programmer, you might see the array as the ancestor
-of the Python list, and you might remember that Python lists are actually implemented via
-an underlying array consisting of references.
+Los arrays de C++ son similares a las listas de Python, excepto que debido a que C++ almacena variables directamente, cada elemento de un array 
+de C++ debe tener un tipo de datos idéntico. Al igual que las listas de Python, los índices de las matrices comienzan desde 0.
 
-C++ arrays are similar to Python lists except that because C++ stores variables
-directly, each element of a C++ array must be of identical data type.
-Like Python lists, the indices for arrays start counting with 0.
+El uso de arrays nos permite utilizar un conjunto ordenado de ubicaciones de memoria que luego podemos manipular como una sola entidad 
+y que, al mismo tiempo, nos brinda acceso directo a cada componente individual.
 
-The use of arrays permits us to utilize an ordered set
-of memory locations that we can then manipulate as a single
-entity, and that at the same time gives us direct access to each
-individual component.
+**Por qué usar un Array?**
 
-**Why use an Array?**
+C++ es un lenguaje que se usa a menudo para el procesamiento en tiempo real 
+o de bajo nivel donde la velocidad es esencial y/o solo hay una cantidad 
+fija de espacio disponible.
 
-C++ is a language often used for real-time or low-level processing
-where speed is essential and/or there is only a fixed amount of space
-available.
+El hecho de que los elementos de un array se almacenen en la memoria en ubicaciones de memoria contigua 
+hace que la búsqueda a través del índice sea muy, muy rápida. 
+En computación, una **palabra** es la unidad de datos utilizada por un diseño de procesador particular, 
+como de 32 o 64 bits. Por ejemplo, un array de 100 variables enteras, con índices del 0 al 99, 
+podría almacenarse como 100 palabras en las direcciones de memoria 20000, 20004, 20008, … 20396. 
+El elemento con índice i estaría ubicado en la dirección 20000 + 4 × i .
 
-The fact that array elements are stored in memory in contiguous
-memory locations making look-up via index very, very fast.
-In computing, a **word** is the unit of data used by a particular processor design,
-such as 32 or 64 bits. For example, an array of 100 integer variables, with indices 0 through 99,
-might be stored as 100 words at memory addresses 20000, 20004, 20008, ... 20396.
-The element with index i would be located at the address 20000 + 4 × i.
-
-Statically allocated C++ arrays must be declared with both a type and a size at compile-time.
-
+Arrays de C++ asignadas estáticamente deben declararse con un tipo y un tamaño en tiempo de compilación.
 ::
 
     double darray[4];
@@ -70,45 +59,43 @@ Statically allocated C++ arrays must be declared with both a type and a size at 
     char arr2[3000];
 
 
-It is also possible to initialize statically allocated arrays at compile time,
-in which case the number of items determines the array's size.
+
+
+También es posible inicializar arrays asignados estáticamente en tiempo de compilación, 
+en ese caso el número de elementos determina el tamaño del arreglo.
+::
+
+    int arr[] = {1, 2, 3, 4};  // Este tiene 4 elementos
+    char arr2[] = {'a', 'b', 'c'}; // Este tiene 3 elementos 
+    string arr3[] = {"this", "is", "an", "array"}; // Este tiene 4 elementos
+
+
+
+Tenga en cuenta que un array con un solo elemento no es del mismo tipo que el tipo **atómico**, por lo que los siguientes no son lo mismo.
 
 ::
 
-    int arr[] = {1, 2, 3, 4};  // This is size 4.
-    char arr2[] = {'a', 'b', 'c'}; // This is size 3.
-    string arr3[] = {"this", "is", "an", "array"}; // This is size 4.
+    double darray[] = {1.2};  // debe usar el índice para acceder al valor
+    double ddouble = 1.2;     // no se puede usar el índice para acceder al valor
 
 
-Note that an array with a single element is not the same type as the **atomic** type,
-so the following are not the same.
+**Sea Cuidadoso con los Arrays**
 
-::
+La velocidad y el control de bajo nivel que los arrays nos ofrecen como programadores es poderoso... y peligroso. 
+Como programador de Python, el uso de un array de C++ lo ayudará a comprender mejor las ventajas y desventajas de las protecciones que ofrece Python.
 
-    double darray[] = {1.2};  // must use index to access value
-    double ddouble = 1.2;     // cannot use index to access value
-
-
-**Be Cautious with Arrays**
-
-The speed and low-level control that arrays offer us
-as programmers is powerful... and dangerous.
-As a Python programmer, using a C++ array will
-help you better understand the trade-offs of the
-protections Python offers.
-
-Here are examples of iteration.
+Estos son ejemplos de iteraciones.
 
 .. tabbed:: list-array
 
   .. tab:: C++
 
     .. activecode:: listarray_cpp
-        :caption: Iterating an array in C++
+        :caption: Iterando un array en C++
         :language: cpp
 
-        // outputs all elements in the array 
-        //to the console
+        // genera todos los elementos en un array
+        // a la consola
         #include <iostream>
         using namespace std;
 
@@ -136,31 +123,30 @@ Here are examples of iteration.
         main()
 
 
-The protections Python offers, however, takes time and C++ is designed for speed.
-Python would never let you iterate beyond the end of
-a list. C++ will not only let you iterate beyond either
-end of an array, but it will let you change the values
-beyond either end of the array with sometimes catastrophic
-results.
 
-The phrase, "be careful what you wish for" is a great one
-to remember when programming in C++. Because C++ will
-generally try to do everything you ask for.
+Las protecciones que ofrece Python, sin embargo, toman tiempo y C++ está diseñado 
+para ser rápido. Python nunca te permitiría iterar más allá del final de una lista. 
+C ++ no solo le permitirá iterar más allá de cualquier extremo de un array, sino 
+que también le permitirá cambiar los valores más allá de cualquier extremo de un array 
+con resultados a veces catastróficos.
+
+La frase, "ten cuidado con lo que deseas" es excelente para recordar cuando se programa 
+en C++. Porque C++ generalmente intentará hacer todo lo que le pidas.
 
 .. tabbed:: array_error
 
   .. tab:: C++
 
     .. activecode:: array_error_cpp
-        :caption: Iterating an array in C++
+        :caption: Iterando un array en C++
         :language: cpp
 
         #include <iostream>
         using namespace std;
 
-        // demonstrates what happens when iterating 
-        // outside of an array in C++, 
-        //also outputs the location of the value in memory
+        // Demuestra que pasa cuando se itera  
+        // afuera de un array en C++
+        // también genera la ubicación del valor en la memoria
         int main(){
             int myarray[] = {2,4,6,8};
             for (int i=0; i<=8; i++){
@@ -173,11 +159,12 @@ generally try to do everything you ask for.
   .. tab:: Python
 
     .. activecode:: array_error_py
-        :caption: Iterating a list in Python
+        :caption: Iterando una lista en Python
 
-        """Demonstrates how python protects from 
-        iterating past the end of a list,
-         and shows the use of Id as the location in memory"""
+        """ Demuestra cómo python protege de 
+        iterar más allá del final de una lista,
+         y muestra el uso de Id como la locación de memoria y"""
+
         def main():
             mylist = [2,4,6,8]
             print(mylist)
@@ -187,14 +174,11 @@ generally try to do everything you ask for.
 
         main()
 
-The speed of C++ comes at the cost of minimal to no error checking.
-Sometimes this can have perplexing results such as in the next example.
+La velocidad de C ++ tiene el costo de una verificación de errores mínima o nula. 
+A veces, esto puede tener resultados desconcertantes, como en el siguiente ejemplo.
 
-You should use an array when you have a need for speed
-or you need to work with hardware constraints.
-Otherwise, you may want to consider using another collection data type,
-the *vector*.
-
+Debe usar una matriz cuando necesite velocidad o necesite trabajar con restricciones 
+de hardware. De lo contrario, es posible que desee considerar el uso de otro tipo de datos de colección, el *vector*.
 
 .. tabbed:: array_werror
 
@@ -207,8 +191,8 @@ the *vector*.
         #include <iostream>
         using namespace std;
 
-        // Demonstrates how in iterating outside 
-        // of an arry in C++, can change data in other places 
+        // Demuestra cómo al iterar fuera 
+        // de un array en C++, puede cambiar los datos en otros lugares
         int main(){
             int myarray[] = {2, 4};
             int otherdata[]={777, 777};
@@ -231,11 +215,9 @@ the *vector*.
   .. tab:: Python
 
     .. activecode:: array_werror_py
-        :caption: Write error in Python
+        :caption: Escribir un error en Python
 
-        """Demonstrates how python protects from 
-        iterating past the end of a list 
-        and changing any other data""" 
+        """ Demuestra cómo python protege de iterar más allá del final de una lista y cambiar cualquier otro dato""" 
         def main():
             mylist = [2, 4]
             otherdata = [777, 777]
@@ -252,29 +234,30 @@ the *vector*.
 
 
 .. mchoice:: mc_werror
-   :answer_a: Nothing. Everything is fine.
-   :answer_b: All data was automatically reinitialized.
-   :answer_c: I have no idea. Please give me a hint.
-   :answer_d: The first loop went out of bounds and wrote over the values in otherdata.
-   :answer_e: none of the above
+   :answer_a: Nada. Todo esta bien.
+   :answer_b: Todos los datos se reinicializaron automáticamente.
+   :answer_c: No tengo ni idea. Por favor dame una pista.
+   :answer_d: El primer bucle salió de los límites y escribió sobre los valores en otros datos.
+   :answer_e: ninguno de las anteriores
    :correct: d
-   :feedback_a: Actually, there is a problem. Look carefully.
-   :feedback_b: No. C++ just does what you tell it to do.
-   :feedback_c: Try again. One of these is indeed correct. Look at the memory addresses.
-   :feedback_d: Right!
-   :feedback_e: One of the above is indeed correct.
+   :feedback_a: En realidad hay un problema. Mire cuidadosamente.
+   :feedback_b: No. C++ solamente hace lo que le dice que haga.
+   :feedback_c: Intente otra vez. Uno de estos es correcto. Mira las direcciones de memoria.
+   :feedback_d: Bien!
+   :feedback_e: Uno de los anteriores es correcto.
 
-   In the above example, what happened to otherdata[ ] in C++?
+   En el ejemplo anterior, ¿qué pasó con otherdata[ ] en C++?
 
 .. mchoice:: mc_array
     :answer_a: int myarray(5);
     :answer_b: myarray[5];
     :answer_c: int myarray[5];
-    :answer_d: None of the above.
+    :answer_d: Ninguno de los anteriores
     :correct: c
-    :feedback_a: Check the characters at the end of the array! Right now that is a function!
-    :feedback_b: You are forgetting something important!
-    :feedback_c: Good work!
-    :feedback_d: Check the characters at the end of the array!
+    :feedback_a: ¡Revise los caracteres al final del array! ¡Ahora es una función!
+    :feedback_b: Se está olvidando algo importante!
+    :feedback_c: Bien hecho!
+    :feedback_d: Revisa los caracteres al final del array!
 
-    What is the correct way to declare an array in C++?
+    ¿Cuál es la forma correcta de declarar una matriz en C++?
+

@@ -1,86 +1,85 @@
-Conditionals
+Condicionales 
 ============
 
-Conditional statements in Python and C++ are very similar.
+Las declaraciones condicionales son muy similares en Python y C++.
 
-Simple if
+El Sencillo if
 ---------
-In Python, we write a simple if statement in the following way:
+En Python, declaramos una condicional if de la siguiente manera:
 
 ::
 
-    if condition:
-        statement1
-        statement2
+    if condición:
+        sentencia1
+        sentencia2
         ...
 
-In C++ this same pattern is simply written as:
+En C++ este mismo patrón se escribe como:
 
 ::
 
-    if (condition) {
-        statement1
-        statement2
+    if (condición) {
+        sentencia1
+        sentencia2
         ...
     }
 
-Once again you can see that in C++ the curly braces define a block
-rather than indentation. In C++ the parenthesis around the condition
-are required because ``if`` is technically a function that
-evaluates to ``true`` or ``false``.
+Una vez más, puede ver que en C++ las llaves definen un bloque 
+en lugar de una sangría. En C++, los paréntesis alrededor de la 
+condición son necesarios porque ``if`` es técnicamente una función 
+que se evalúa como ``verdadero`` o ``falso``.
 
 if else
 -------
-The if-else statement in Python looks like this:
+La declaración de if-else en Python se ve así:
 
 ::
 
-    if condition:
-        statement1
-        statement2
+    if condición:
+        sentencia1
+        sentencia2
         ...
     else:
-        statement1
-        statement2
+        sentencia1
+        sentencia2
         ...
 
-In C++ this is written as:
+En C++ esto es escrito así:
 
 ::
 
-    if (condition) {
-        statement1
-        statement2
+    if (condición) {
+        declaración1
+        declaración2
         ...
     } 
     else {
-        statement1
-        statement2
+        declaración1
+        declaración2
         ...
     }
 
 elif
 ------------------
 
-C++ does not have an elif pattern like Python. In C++ you can get the
-functionality of an elif statement by nesting if and else. Here is a
-simple example in both Python and C++.
+C++ no tiene un patrón elif como en Python. En C++ puede obtener la funcionalidad de 
+una declaración elif anidando if y else. Aquí hay un ejemplo simple tanto en Python como en C++.
 
 
 .. activecode:: pyelif
     :language: python
 
-    # demonstrates if,elif, and else statements in python
+    #muestra las declaraciones if,elif, y else en Python
     def main():
-        grade = 85
+        nota = 85
 
-        if (grade < 60):
+        if (nota < 60):
             print('F')
-        elif (grade < 70):
+        elif (nota < 70):
             print('D')
-        elif grade < 80:
+        elif nota < 80:
             print('C')
-        elif grade < 90:
+        elif nota < 90:
             print('B')
         else:
             print('A')
@@ -88,34 +87,34 @@ simple example in both Python and C++.
     main()
 
 
-In C++ we have a couple of ways to write this
+En C++ tenemos un par de formas de escribir esto.
 
 .. activecode:: cppelif
    :language: cpp
    :sourcefile: elseif.cpp
 
-    // Shows how to use conditional statements
+    // Muestra cómo usar declaraciones condicionales.
     #include <iostream>
     using namespace std;
 
     int main() {
 
-        int grade = 85;
+        int nota = 85;
 
-        if (grade < 60) {
+        if (nota < 60) {
           cout<<'F'<< endl;
         } 
-        else {      /* if, elif, and else statement can be used
-                        inside of themselves to allow for sub options */
-            if (grade < 70) {
+        else {      /* sentencias if, elif, y else pueden ser usadas dentro de ellas 
+                        para permitir sub opciones */
+            if (nota < 70) {
                 cout<<'D'<< endl;
             } 
             else {
-                if (grade < 80) {
+                if (nota < 80) {
                     cout<<'C'<< endl;
                 } 
                 else {
-                    if (grade < 90) {
+                    if (nota < 90) {
                         cout<<'B'<< endl;
                     } 
                     else {
@@ -128,36 +127,33 @@ In C++ we have a couple of ways to write this
     }
 
 
-We can get closer to the look of the elif statement in C++ by
-taking advantage of the
-C++ rule that a single statement does not need to be enclosed in curly
-braces. Since the if is the only statement used in each else we can get
-away with the following.
-
+Podemos enfocarnos más en cómo luce la sentencia elif en C++ aprovechando la regla de C++ de que no es necesario
+encerrar una única sentencia entre llaves. Dado que if es la única sentencia utilizada en cada una, podemos
+resolver esto de la siguiente manera.
 
 .. activecode:: cppelif2
    :language: cpp
    :sourcefile: elseif2.cpp
 
-    //Shows how to put conditional statements together,
-    //specfically putting "else if" after an "if" statement.
+    // Muestra como poner juntas las sentencias condicionales,
+    // especificamente como poner "else if" después de una sentencia "if".
     #include <iostream>
     using namespace std;
 
     int main() {
 
-        int grade = 85;
+        int nota = 85;
 
-        if (grade < 60) {
+        if (nota < 60) {
             cout<<'F'<<endl;
         } 
-        else if (grade < 70) {
+        else if (nota < 70) {
             cout<<'D'<<endl;
         } 
-        else if (grade < 80) {
+        else if (nota < 80) {
             cout<<'C'<<endl;
         } 
-        else if (grade < 90) {
+        else if (nota < 90) {
             cout<<'B'<<endl;
         } 
         else  cout<<'A'<<endl;
@@ -165,111 +161,108 @@ away with the following.
         return 0;
     }
 
-Check Yourself
+Compruébalo tú mismo
 ~~~~~~~~~~~~~~
 
 .. mchoice:: mc_cpp_elsecond
-   :answer_a: True
-   :answer_b: False 
+   :answer_a: Verdadero
+   :answer_b: Falso
    :correct: b
-   :feedback_a: Not quite, try modifying the code above to test it out.
-   :feedback_b: Good job!
+   :feedback_a: No realmente, intente modificar el código anterior para probarlo.
+   :feedback_b: Buen trabajo!
 
-   T/F: It is necessary to have an else statement after an if statement. (Hint: Test it out in the code above.)
+   T/F: Es necesario tener una sentencia else después de una sentencia if. (Ayuda: Puede probarlo con el código de arriba.)
 
 switch
 ------
 
+C++ también admite una declaración de ``switch`` es como una 
+declaración elif de Python bajo ciertas condiciones porque la declaración 
+toma casos y verifica la validez del caso dependiendo del código. Utiliza casos en lugar 
+de condiciones y el caso debe basarse en números enteros o en un tipo de datos 
+definido por el usuario denominado constante enumerada.
 
-C++ also supports a ``switch`` statement that acts something like the
-elif statement of Python under certain conditions because the statement
-takes cases and checks the validity of the case against the code.
-It uses cases instead of conditions and the case must be based on
-integers or a user-defined data type called an enumerated constant.
-
-To write the grade
-program using a switch statement we would use the following:
+Para escribir el programa para calcular notas usando la declaración switch
+usaríamos lo siguiente:
 
 .. activecode:: cppswitch
    :language: cpp
    :sourcefile: switchup.cpp
 
-    // Shows how to use a Switch statement.
+    // Muestra como usar la sentencia Switch.
 
     #include <iostream>
     using namespace std;
 
     int main() {
 
-        int grade = 85;
+        int nota = 85;
 
-        int tempgrade = grade/10;
-        switch(tempgrade) {  /*switch cases allow for different options based on
-                            the value of temp grade similar to if statements*/
+        int tempnota = nota/10;
+        switch(tempnota) {  /* los casos switch permiten for different options based on
+                            the value of temp nota similar to if statements*/
+
+        los casos permiten diferentes opciones basadas en el valor del grado temporal similar a las declaraciones if
         case 10:
         case 9:
-            cout << "The grade is A" << endl;
+            cout << "The nota is A" << endl;
             break;
         case 8:
-            cout << "The grade is B" << endl;
+            cout << "The nota is B" << endl;
             break;
         case 7:
-            cout << "The grade is C" << endl;
+            cout << "The nota is C" << endl;
             break;
         case 6:
-            cout << "The grade is D" << endl;
+            cout << "The nota is D" << endl;
             break;
         default:
-            cout << "The grade is F" << endl;
+            cout << "The nota is F" << endl;
         }
 
         return 0;
     }
 
-Frankly, the ``switch`` statement is not used very often.
-It is not as powerful as the ``else if`` model
-because the switch variable can only be compared for equality with an
-integer or something called an enumerated constant.
-Second it is very easy to forget to put
-in the ``break`` statement. Note above how cases 10 and 9 are coded together.
-If the break statement is left out then then
-the next alternative will be automatically executed.
-For example if the
-grade was 95 and the ``break`` was omitted from the ``case 9:``
-alternative then the program would print out both (A and B.)
-So, you might want to just avoid it and use if...
 
-Check Yourself
+Honestamente, la declaración ``switch`` no se usa muy frecuentemente. No es tan poderoso 
+como el modelo ``else if`` porque la variable switch solo se puede comparar para la 
+igualdad con un número entero o algo llamado constante enumerada. También, 
+es muy fácil olvidarse de poner la sentencia ``break``. Note arriba cómo los casos 10 y 
+9 están codificados juntos. Si se omite la instrucción break, la siguiente alternativa 
+se ejecutará automáticamente. Por ejemplo, si la calificación fue 95 y se omitió el ``break`` 
+de la alternativa ``case 9:`` entonces el programa imprimiría ambos (A y B). Por lo tanto, es 
+posible que desee evitarlo y usar if...
+
+Compruébalo tú mismo
 ~~~~~~~~~~~~~~
 
 .. mchoice:: mc_cpp_ifcond
    :answer_a: { }
    :answer_b: [ ]
    :answer_c: ( )
-   :answer_d: Any set of matching braces may be used.
-   :answer_e: none of the above
+   :answer_d: Se puede utilizar cualquier juego de llaves.
+   :answer_e: ninguna de las anteriores.
    :correct: c
-   :feedback_a: No. Try again.
-   :feedback_b: No. Try again.
-   :feedback_c: Right!
-   :feedback_d: No. Try again.
-   :feedback_e: One of the above is indeed correct.
+   :feedback_a: No. Intente nuevamente.
+   :feedback_b: No. Intente nuevamente.
+   :feedback_c: Correcto!
+   :feedback_d: No. Intente nuevamente.
+   :feedback_e: Uno de los anteriores es correcto.
 
-   When indicating the condition for a C++ if statement, what symbols are used?
-
+   Al indicar la condición para una sentencia if de C++, ¿qué símbolos se utilizan?
 
 .. mchoice:: mc_cpp_switch
-  :answer_a: Ending statements with ;
-  :answer_b: Using a break statement
-  :answer_c: Enclosing each cases with { }
-  :answer_d: Setting a default case
+  :answer_a: Terminando las sentencias con ;
+  :answer_b: Usando una sentencia break 
+  :answer_c: Encerrando cada caso con { }
+  :answer_d: Establecer un caso predeterminado
   :correct: b
-  :feedback_a: No. This is always needed.
-  :feedback_b: Good job!
-  :feedback_c: No. Try again.
-  :feedback_d: No. This is a good idea, but it will not help.
+  :feedback_a: No. Esto es siempre necesario.
+  :feedback_b: Buen trabajo!
+  :feedback_c: No. Intente nuevamente.
+  :feedback_d: No. Es una buena idea, pero no ayudará.
 
-  When using a switch, what prevents all the cases from passing as correct?
+  Cuando usa una sentencia switch, ¿qué impide que todos los casos pasen como correctos?
 
 
 .. mchoice:: mc_cpp_and
@@ -278,9 +271,9 @@ Check Yourself
   :answer_c: !
   :answer_d: &&
   :correct: d
-  :feedback_a: No, this means "or".
-  :feedback_b: No, this is Python.
-  :feedback_c: No, this means "not"
-  :feedback_d: Very good!
+  :feedback_a: No, esto significa "or".
+  :feedback_b: No, esto es en Python.
+  :feedback_c: No, esto significa "not"
+  :feedback_d: Muy bien!
 
-  What symbol is used to indicate the “and” in C++ such as in a compound condition?
+  ¿Qué símbolo se usa para indicar "and" en C++ como en una condición compuesta?

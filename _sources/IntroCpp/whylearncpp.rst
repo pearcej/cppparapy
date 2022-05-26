@@ -11,22 +11,12 @@ lenguajes como C, C++ y Java son más formales.
 
 Estos otros lenguajes más formales tienen algunas ventajas.
 Primero, es la velocidad: para programas muy grandes, es probable que C y C ++ le brinden la mejor
-actuación. En segundo lugar, es su mantenibilidad. Python
-requiere que recuerdes ciertas cosas. por ejemplo si tu
-estableces la variable ``t`` para hacer referencia a una tortuga en Python, y luego olvida que ``t`` es
+rendimiento. En segundo lugar, es su mantenibilidad. Python
+requiere que recuerdes ciertas cosas. Por ejemplo, si
+establece la variable ``t`` para hacer referencia a una tortuga en Python, y luego olvida que ``t`` es
 una tortuga pero intenta invocar un método de string en ella, obtendrá un error.
 C++ lo protege de este tipo de error al obligarlo a ser directo y formal acerca de
 el tipo de objeto al que se referirá cada variable.
-
-La buena noticia es que aprender un segundo lenguaje de programación es mucho más fácil que aprender
-su primer lenguaje de programación porque podrá aprovechar su conocimiento existente.
-Es probable que los lenguajes de programación cambien regularmente a medida que pasa el tiempo.
-A medida que avanza el campo de la informática, es probable que haya una nueva programación.
-lenguages que deseará o necesitará aprender. Hay ciertas características
-que la mayoría de los lenguajes de programación tienen en común, como variables, bucles,
-condicionales y funciones. Y hay otras características del lenguaje que son únicas. Si
-sabes lo que es común en la mayoría de los idiomas, entonces al aprender un nuevo idioma, solo necesita
-para centrarse en lo que es diferente de los idiomas que ya conoce.
 
 En cierto sentido, Python es representativo de toda una clase de lenguajes interpretados,
 a veces denominados "lenguajes de secuencias de comandos". Otros lenguajes de secuencias de comandos
@@ -36,29 +26,33 @@ Los idiomas son buenos para proyectos con varias o muchas personas trabajando en
 proyecto en el que ser formal y cuidadoso con lo que haces puede tener un gran impacto
 de otras personas Los lenguajes en esta categoría incluyen C, C#, C++, Ada y Java.
 
-Why Learn C++? Why not Java or Javascript?
+La buena noticia es que aprender un segundo lenguaje de programación es mucho más fácil que aprender
+un primer lenguaje de programación porque podrá aprovechar su conocimiento existente.
+Es probable que los lenguajes de programación cambien regularmente a medida que pasa el tiempo.
+A medida que avanza el campo de la Ciencia de la Computación, es probable que hayan nuevos
+lenguages que deseará o necesitará aprender. Hay ciertas características
+que la mayoría de los lenguajes de programación tienen en común, como variables, bucles,
+condicionales y funciones. Y hay otras características del lenguaje que son únicas. Si
+sabe lo que es común en la mayoría de los lenguages, entonces al aprender un nuevo lenguaje, solo necesitará
+enfocarse en lo que es diferente de los idiomas que ya conoce.
+
+¿Por Qué Aprender C++? Y Por Qué No Java o Javascript?
 ------------------------------------------
 
-    - C++ is an enormous language which is very powerful because it is a high-level language that offers low-level features, 
-      but one only needs to learn a small part of the language to write effective code.
+    - C++ es un lenguage enorme C++ es un lenguaje enorme que es muy poderoso porque es un lenguaje de alto nivel que ofrece funciones de bajo nivel pero uno solo necesita aprender una pequeña parte del lenguaje para escribir código efectivo.
+     
+    - C++ influyó en muchos lenguajes de programación como C#, Java y otras versiones más nuevas de C, por lo que al aprender C++, le facilitará aprender otros lenguajes.
     
-    - C++ influenced many programming languages such as C#, Java, and other newer versions of C, so by learning C++,
-      learning these other languages becomes much easier.
+    - C++ es un lenguaje muy demandado en la industria y es usado muy frecuentemente hoy en día por grandes grupos de personas que trabajan en grandes sistemas. 
+
+    - C++ es particularmente bueno para interactuar directamente con el hardware de la computadora, lo que hace que la ejecución sea muy rápida. 
+
+    - C++ fue el primer lenguaje de programación orientado a objetos (POO) ampliamente utilizado que apoya las cuatro características principales de POO:abstracción, herencia, polimorfismo y encapsulación.
+
+    - C++ permite al programador crear explícitamente y usar un tipo de datos llamados punteros los cuales pueden aumentar el control sobre la memoria y el rendimiento en determinadas circunstancias.
+
+    - Debido a que C++ es rápido, actualmente es el lenguaje elegido para la realidad virtual.
     
-    - C++ is an industrial strength programming language and is very often used today for large systems by large groups of people.
+    - Además, debido a que C++ es rápido, es el lenguaje elegido por muchos motores de juegos 2D y 3D. #edit game engines 
 
-    - C++ is particularly good at interacting directly with computer hardware, making execution very fast.
-
-    - C++ was the first widely used object-oriented programming (OOP) language,
-      supporting the four primary features of OOP:
-      abstraction, inheritance, polymorphism, and encapsulation.
-    
-    - C++ allows the programmer to create and use a data type called a pointer explicitly, 
-      which can increase control over both memory and performance under certain circumstances.
-
-    - Because C++ is fast, it is currently the language of choice for virtual reality. 
-    
-    - Also, because C++ is fast, it is the language of choice of many 2D and 3D game engines.
-
-    - For all of the above reasons, even though C++ is an older language, 
-      it is still one of the top listed in job advertisements.
+    - Por todas las razones anteriores, aunque C++ es un lenguaje más antiguo, sigue siendo uno de los primeros listados en los anuncios de trabajo.

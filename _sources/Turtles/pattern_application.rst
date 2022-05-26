@@ -1,23 +1,22 @@
-Practical Application - Tessellation
+Aplicación Practica - Tessellation
 ====================================
 
-Art takes a variety of forms, ranging from abstract to realistic,
-and consisting of an impossibly wide variety of materials.
-Ancient Sumerians would dye and dry small pieces of clay to create mosaics.
-These mosaics were often composed of shapes and patterns that would overlap
-without any gaps in between them. This art form is known today as tessellation,
-which can be observed in any modern building that is composed of bricks,
-or any floor covered in ceramic tiles. Mosaics are defined by their interlocking shapes,
-however, what these shapes are made of‒ or, the medium‒ varies depending on the artist.
+El arte toma una variedad de formas, que van desde lo abstracto a lo realista, y consiste
+en una variedad de materiales increíblemente amplia. Los antiguos sumerios teñían y secaban
+pequeños trozos de arcilla para crear mosaicos. Estos mosaicos a menudo se componían de
+formas y patrones que se superponían sin espacios entre ellos. Esta forma de arte se conoce
+hoy como teselado, que se puede observar en cualquier edificio moderno que esté compuesto
+de ladrillos, o cualquier piso cubierto con baldosas de cerámica. Los mosaicos se definen 
+por sus formas entrelazadas, sin embargo, de qué están hechas estas formas, o el medio, varía según el artista.
 
-The common mediums for this art form have changed over time,
-ranging from pieces of clay to pieces of wood. More recently,
-digital mediums have been used as an effective alternative to physical materials.
-Turtles are one of many such digital mediums, and are often used to
-create images rich in repetitive features. Your task will be to create
-a mosaic-like tessellating image using turtles.
+Los medios comunes para esta forma de arte han cambiado con el tiempo, desde piezas
+de arcilla hasta piezas de madera. Más recientemente, los medios digitales se
+han utilizado como una alternativa eficaz a los materiales físicos. Las tortugas
+son uno de los muchos medios digitales de este tipo y, a menudo, se utilizan para
+crear imágenes ricas en características repetitivas. Su tarea será crear una imagen
+de teselado similar a un mosaico utilizando tortugas.
 
-Consider the following examples.
+Considere los siguientes ejemplos.
 
 .. activecode:: cturtle_practical_example_cpp
     :language: cpp
@@ -111,10 +110,10 @@ Consider the following examples.
     wn.tracer(1)
 
 
-You must create a similar image with the following criteria:
+Debe crear una imagen similar con los siguientes criterios:
 
-- There must not be four edges in your chosen shape, but 3 or 5+ is fine.
-- There must be no more than two colors for the shapes in the image.
+- No debe haber cuatro bordes en la forma elegida, pero 3 o 5+ está bien.
+- No debe haber más de dos colores para las formas en la imagen.
 
 .. activecode:: cturtle_practical_prompt
     :language: cpp
@@ -127,7 +126,7 @@ You must create a similar image with the following criteria:
         scr.tracer(0);//disable animation
         ct::Turtle turtle(scr);
         
-        //Your code here
+        //Escriba su código aquí
         
         scr.bye();
         return 0;

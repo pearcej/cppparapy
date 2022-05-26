@@ -1,28 +1,25 @@
-Let's look at a C++ program
+Veamos un programa en C++
 ===========================
 
-A time honored tradition in computer science is to write a program
-called “hello world.” The “hello world” program is simple and easy.
-No logic errors are possible to make, so getting it to run relies only on
-understanding the syntax. Let's look at an easy version of "hello world"
-in Python:
+Una larga tradición en informática es escribir un programa llamado "hola mundo". El programa “hola mundo” es simple y fácil. No es posible cometer errores lógicos, por lo que lograr que se ejecute depende solo de comprender la sintaxis. Veamos una versión fácil de "hola mundo"
+en Python:
 
 .. activecode:: hellopysimp
   :language: python
 
-  print("Hello World!")
+  print("hola mundo!")
 
-Now, lets look at a more “complicated” version of the "hello world" program with a
-``main`` function in Python:
+Ahora, miremos a una versión más “complicada” del programa "hola mundo" con una función 
+``main`` en Python:
 
 .. activecode:: hellopymain
   :language: python
 
   def main():
-      print("Hello World!")
+      print("hola Mundo!")
   main()
 
-Next, lets look at the same program written in C++:
+Ahora, miremos al mismo programa escrito en C++:
 
 .. activecode:: hellocppstd
     :language: cpp
@@ -31,12 +28,12 @@ Next, lets look at the same program written in C++:
 
     int main(){
 
-        std::cout << "Hello World!\n";
+        std::cout << "hola mundo!\n";
         return 0;
     }
 
-The above program can alternatively be written as follows to allow
-better facilitate standard input and output:
+El programa anterior se puede escribir alternativamente de la siguiente manera para permitir facilitar 
+mejor la entrada y salida estándar:
 
 .. activecode:: hellocppnamespace
     :language: cpp
@@ -45,146 +42,132 @@ better facilitate standard input and output:
     using namespace std;
 
     int main(){
-        cout << "Hello World!\n";
+        cout << "hola mundo!\n";
         return 0;
     }
 
-What we see is that at the core there are a few similarities with the
-complicated Python version, such as the ``main`` function and the
-string “Hello world”. However, in C++ there is a lot more
-stuff around the edges that make it harder to see the core of the program.
-Do not worry! An important skill for a computer scientist is to learn what
-to ignore and what to look at carefully. You will soon find that there
-are some elements of C++ that will fade into the background as you
-become used to seeing them. One thing that will help you is to learn a
-little bit more about C++.
+Lo que vemos fundamentamente es que hay algunas similitudes con la versión complicada de Python, 
+como la función main y la cadena "Hola mundo". Sin embargo, en la versión en C++ hay muchas más 
+cosas que dificultan ver lo esencial del programa. ¡No te preocupes! Una habilidad importante para 
+un informático es aprender qué ignorar y qué mirar cuidadosamente. Pronto se acostumbrará con los 
+elementos en C++ a medida que los vea. Una cosa que le ayudará, es aprender un poco más sobre C++.
 
-Compilation
+Compilación
 -----------
 
-A question you may have about this little program is “How would I run it on
-my own machine?” Running a C++ program is not as simple as running a
-Python program. The first big difference between C++ and Python is that
-Python is an *interpreted language* while C++ is a *compiled language*.
-We could run our Python programs in
-the Python **interpreter**, and we were often quite happy to do that.
-In C++, running programs is a two step process.
+Una pregunta que puede tener sobre este pequeño programa es "¿Cómo lo ejecutaría en mi propia máquina?" 
+Ejecutar un programa en C++ no es tan simple como ejecutar un programa en Python. 
+La primera gran diferencia entre C++ y Python es que Python es un *lenguaje interpretado* mientras que C++ 
+es un lenguaje compilado. Podíamos ejecutar nuestros programas de Python usando el **intérprete** de Python y, 
+normalmente, estábamos muy contentos de hacerlo. En C++, ejecutar programas es un proceso de dos pasos.
 
-First, we must type the hello world program into a file and save that file
-using a name like ``hello.cpp`` Once we have saved the file we **compile**
-it either from the command line or from an integrated development environment (IDE).
-Only after the program is compiled, can we run it.
+Primero, debemos escribir el programa hola mundo en un archivo y guardar ese archivo con un nombre como ``hello.cpp`` 
+Una vez que hemos guardado el archivo, lo compilamos desde la línea de comandos o desde un entorno de desarrollo integrado (IDE). 
+Solo después de compilar el programa podemos ejecutarlo.
 
-Now you may be wondering what good is this extra step? What does
-compiling do for us? There are a couple of important benefits we get
-from compiling:
+Ahora puede que se pregunte ¿de qué sirve este paso adicional? ¿Qué hace compilar por nosotros? Hay un par 
+de beneficios importantes que obtenemos al compilar:
 
--  Early detection of errors
+-  Detección temprana de errores 
 
--  Faster program execution
+-  Ejecuciones más rápidas de los programas 
 
-The job of the compiler is to turn your C++ code into language that your
-machine can understand. We call the code that the computer
-understands **machine code**. The computer interprets the machine code
-much like the Python interpreter interprets your Python.
-However, since machine code is much closer to the native language of the
-computer, it can run faster.
+El trabajo del compilador es convertir su código en C++ a un lenguaje que su máquina puede entender. 
+Llamamos al código que la computadora entiende **Lenguaje de Máquina**. La computadora interpreta el 
+lenguaje de máquina al igual que el intérprete de Python interpreta el código en Python. Sin embargo, 
+dado que el lenguaje de máquina está mucho más cerca del lenguaje nativo del computadora, funciona más rápido.
 
-When the compiler does the translation it can find many different kinds
-of errors. For example if you make a typo or forget to declare a variable
-the compiler will find these and point them out to you before you ever
-run the program. We will look at some examples of  errors that the compiler
-catches shortly. Chances are you may create some on your own very soon too,
-but first let's talk about each of the statements in a C++ program.
+Cuando el compilador hace la traducción, puede encontrar muchos tipos diferentes errores. 
+Por ejemplo, si se olvida declarar una variable el compilador los encontrará y se los mostrará antes de que 
+ejecute el programa. Veremos en breve algunos ejemplos de errores que el compilador captura. Lo más probable 
+es que también cometas estos errores muy pronto, pero primero hablemos de cada una de las declaraciones en un programa C++.
 
 .. dragndrop:: interpreterdrag
-    :feedback: This is feedback.
-    :match_1: Compiler|||generally transforms code written in a high-level language into a low-level language in order to create an executable program
-    :match_2: Interpreter|||directly executes statements in a scripting language without requiring them to have been assembled into machine language
+    :feedback: Esto es retroalimentación
+    :match_1: Compilador||| Generalmente transforma el código escrito en un lenguaje de alto nivel en un lenguaje de bajo nivel para crear un programa ejecutable.
+    :match_2: Interpretador||| Ejecuta directamente declaraciones en un lenguaje de secuencias de comandos sin necesidad de que se hayan ensamblado en lenguaje de máquina.
 
-    Match Compiler and Interpreter to the correct definition.
+    Relacione el compilador y el intérprete con la definición correcta.
 
 
-Using headers and libraries
+Uso de encabezados y bibliotecas
 ---------------------------
 
-Preprocessor directives in C++ appear as statements preceded by the hash sign ``#``.
-These tell the preprocessor which file, header, or library to make available to
-the compiler. For example, ``#include <iostream>`` will make sure that
-the ``iostream`` library is available at compile time.
-Here, the term *header* is used for a type of C++ file that contains definitions
-of functions and variables, but not the function implementations.
+Las instrucciones del preprocesador en C++ aparecen como declaraciones precedidas por el símbolo numeral ``#``.
+Estos le dicen al preprocesador qué archivo, encabezado o biblioteca debe poner a disposición
+el compilador Por ejemplo, ``#include <iostream>`` se asegurará de que
+la biblioteca ``iostream`` está disponible en tiempo de compilación.
+Aquí, el término *encabezado* se usa para un tipo de archivo C++ que contiene definiciones
+de funciones y variables, pero no las implementaciones de funciones.
 
-You can think of the ``#include ...`` statement in C++ as working a bit like
-the ``import ...`` statement in Python.
-Python's ``import`` statement directly accesses the code written in another file
-while the ``#include`` statement in C++ copies classes and functions from
-another file.
+Puede pensar en la instrucción ``#include ...`` en C++ como si funcionara un poco como
+la declaración ``import ...`` en Python.
+La declaración ``import`` de Python accede directamente al código escrito en otro archivo
+mientras que la instrucción ``#include`` en C++ copia clases y funciones de
+otro archivo.
 
-In Python, an import statement looks like:
-
+En Python, una declaración para importar se ve así: 
 ::
 
   import classname
 
-There are two ways to use ``#include`` in C++:
+Hay dos maneras de usar ``#include`` en C++:
 
 ::
 
-  #include <libraryname>
-  #include "filename"
+  #include <nombredelabiblioteca>
+  #include "nombredelabiblioteca"
 
-Here the angle-brackets ``<>`` are used to include libraries or headers provided by
-the implementation, such as the
-headers in the standard library (``iostream``, ``string``, etc.). The double
-quotes ``"`` are used for headers and files not provided by the implementation.
+Aquí los símbolos de mayor y menor ``<>`` son usados para incluir bibliotecas o 
+encabezados dados en la implementación como los encabezados en la biblioteca estandard (``iostream``, ``string``, etc.). 
+Las comillas ``"`` son usadas para los encabezados y los archivos que no son dados por la implementación.
 
-The main function
+La función main
 -----------------
 
-Unlike Python, every C++ program **must** have a ``main`` function which begins
-with ``int main()``. This ``main`` function is called implicitly instead of
-explicitly like we must do in Python when we have a main function. This is
-why you do not see an explicit function call invoking main.
+A diferencia de Python, cada programa C++ **debe** tener una función ``main`` que comienza
+con ``int main()``. Esta función ``main`` se declara implícitamente en lugar de
+explícitamente como debemos hacer en Python cuando tenemos una función main. Es por eso que
+no ve una llamada de función explícita que invoque main.
 
-The ``int``  in ``int main()`` indicates that the *return type* of the ``main`` function will be
-an integer. The final line of the ``main`` C++ function is typically ``return 0``,
-so you can see that the program does actually return the integer 0.
-Here zero is returned to indicate successful completion of the ``main``
-function. In case you are wondering why an integer is returned, if you do error
-handling in C++, instead of 0, you can alternatively return an integer error code representing
-a specific error when and where it occurs.
+El ``int`` en ``int main()`` indica que el *tipo de retorno* de la función ``main`` será
+un número entero. La última línea de la función ``main`` de C++ suele ser ``return 0``,
+para que pueda ver que el programa realmente retorna el número entero 0.
+Se retorna cero para indicar la finalización exitosa de la función ``main``. 
+En caso de que se pregunte por qué se devuelve un número entero, si comete un error de
+manejo en C++, en lugar de 0, puede alternativamente devolver un código de error con un número entero que represente
+un error específico cuándo y dónde ocurre.
 
-C++ functions and other C++ code blocks are grouped together using the curly ``{}``
-brackets. These curly brackets are used much like tabbing is used in Python.
-Many people also use tabbing in C++ to indicate blocks, but tabs and other
-whitespace (mostly) have no inherent meaning in C++.
-Instead, the semi-colon (``;``) must be used to conclude most statements in C++.
+Las funciones en C++ y otros bloques de código en C++ se agrupan usando los símbolos de llaves ``{}``.
+Las llaves son usadas como se usan las tabulaciones en Python. 
+Muchos también usan el tabulado en C++ para indicar bloques de código, pero las tabulaciones y otros
+los espacios en blanco (en su mayoría) no tienen un significado intrínseco en C++.
 
-In fact, the following program will run perfectly
-even though the lack of meaningful spacing is more difficult for humans to read.
+En su lugar, se debe usar el punto y coma (``;``) para concluir la mayoría de las declaraciones en C++.
+
+De hecho, el siguiente programa funcionará perfectamente a pesar de que la falta de espacios  
+hace que sea más difícil de leer para los humanos.
 
 
 .. activecode:: hellocppugly
     :language: cpp
 
     #include <iostream>
-    using namespace std; int main(){cout << "Hello World!\n"; return 0;}
+    using namespace std; int main(){cout << "Hola Mundo!\n"; return 0;}
 
 
-As you program in C++, we strongly recommend you continue to use
-the kind of human-readable formatting you have become used to in Python.
-You will likely learn to appreciate this when you are debugging.
+Mientras programa en C++, le recomendamos que continúe usando
+el tipo de formato legible al que se ha acostumbrado en Python.
+Seguramente apreciará esto cuando esté depurando su código.
 
-Without peeking, see if you can put the following code in the correct order.
-
+Sin mirar, intente poner el siguiente código en el orden correcto.
 
 .. parsonsprob:: pp_introcpp_order
    :language: c++
    :adaptive:
    :noindent:
 
-   Correctly rearrange the code below to implement hello world in C++:
+   Reorganice correctamente el código a continuación para implementar hola mundo en C++
    -----
    &#x22D5include &#x003Ciostream&#x003E
    =====
@@ -193,7 +176,7 @@ Without peeking, see if you can put the following code in the correct order.
    int main()
    {
    =====
-       cout << "Hello World!\n";
+       cout << "Hola Mundo!\n";
    =====
        return 0;
    =====
@@ -201,63 +184,63 @@ Without peeking, see if you can put the following code in the correct order.
 
 
 
-Comments in C++
+Comentarios en C++
 ---------------
 
-Python and C++ both support comments that are not processed by the interpreter or compiler.
+Ambos Python y C++ admiten comentarios que no son procesados por el intérprete o el compilador.
 
-Python's single line comment begins with a hash (``#``).
-In C++, the equivalent is two forward slashes (``//``)
-In each case the rest of the line is treated as a comment and ignored by the
-interpreter or compiler.
+En Python, una sola línea de comentario comienza con el símbolo de  (``#``).
+En C++, el equivalente son dos barras diagonales (``//``).
+En ambos casos el resto de la línea es tratado como un comentario e ignorado por el intérprete o compilador. 
 
-Python supports comments using triple quotes.
-Like Python, C++ also supports multi-line comments
-beginning with
+Python admite comentarios usando triple comillas. 
+
+Al igual que Python, C++ también admite comentarios de varias líneas
+empezando con
 ``/*``
-and ending with
+y terminando con 
 ``*/``.
 
-The triple quoted docstring in Python is often used for automatically
-processing documentation.
-There is no equivalent in the C++ standard to the triple-quoted docstring in Python.
-However, the symbol groups
+La cadena de documentación entre comillas triples en Python se usa a menudo para
+Tramitación de la documentación.
+No hay equivalente en el estándar C++ a la cadena de documentación entre comillas triples en Python.
+Sin embargo, los grupos de símbolos
+
+Las comillas 
 ``/**``
-and
+y
 ``*/``
-are often used to indicate documentation blocks
-at the beginning of a class, program, or function,
-which is legal because the second asterisk ``*``  is simply treated as part of the
-multi-line comment.
-Certain libraries will also automatically process the text between these symbol groups,
-as a docstring for the documentation.
+se utilizan a menudo para indicar bloques de documentación
+al comienzo de una clase, programa o función,
+lo cual es legal porque el segundo asterisco ``*`` simplemente se trata como parte del
+comentario de varias líneas.
+Ciertas bibliotecas también procesarán automáticamente el texto entre estos grupos de símbolos,
+como una cadena de documentación.
 
 ::
 
-  // The remainder of this line is a C++ comment which is ignored by the compiler
-
-  /* This is a multi-line C++ comment that can
-  span many lines, beginning and ending with the given symbols */
+  // el resto de esta línea es un comentario de C++ que el compilador ignora
+  /* Este es un comentario de C++ de varias líneas que puede abarcar muchas líneas, comenzando y terminando con los símbolos dados */
 
 
 Standard Output
 ---------------
 
-We often have a need to interact with users, either to get data or to provide some sort of result.
-The C++ ``<iostream>`` library provides us with the functionality to get information
-from the standard input as well as to output information to the standard output. This input and output is handled by what
-is known as a ``stream``.
+A menudo tenemos la necesidad de interactuar con los usuarios, ya sea para obtener datos o para proporcionar algún tipo de resultado.
+La biblioteca C++ ``<iostream>`` nos proporciona la funcionalidad para obtener información
+desde la entrada estándar, así como para enviar información a la salida estándar. Esta entrada y salida es manejada por lo que
+se conoce como ``flujo``.
 
-A ``stream`` is essentially a channel in which data flows from the source to a destination (often called the "sink".)
-Output streams send data out, and the standard output stream ``cout`` sends character data to the screen.
-So, ``cout`` stands for "character output".
-Much like the Python ``print`` statement, ``cout`` is used to
-print to the standard output device, which is typically your screen.
-When ``cout`` is used, you will also see ``<<`` used.
-When this odd set of symbols are used together, they are called the "output operator".
-The output operator is used to direct output to the designated output device or file.
-The output operator can also be used to concatenate output, much like the "+"
-can be used to concatenate in Python.
+Un ``flujo`` es esencialmente un canal en el que los datos fluyen desde el origen hasta el destino (a menudo denominado "sumidero").
+Los flujos de salida envían datos, y el flujo de salida estándar ``cout`` envía datos de caracteres a la pantalla.
+Entonces, ``cout`` significa "salida de caracteres".
+Al igual que la instrucción ``print`` de Python, ``cout`` se usa para
+imprima en el dispositivo de salida estándar, que suele ser su pantalla.
+Cuando se usa ``cout``, también verá que se usa ``<<``.
+Cuando este extraño conjunto de símbolos se usan juntos, se denominan "operador de salida".
+El operador de salida se utiliza para dirigir la salida al archivo o dispositivo de salida designado.
+El operador de salida también se puede usar para concatenar la salida, como el "+"
+se puede usar para concatenar en Python.
 
 .. activecode:: hellocppducky
     :language: cpp
@@ -268,7 +251,7 @@ can be used to concatenate in Python.
     using namespace std;
 
     int main(){
-      cout << "Ever heard of rubber duck debugging?" << endl;
+      cout << "Alguna vez has escuchado de rubber duck debugging?" << endl;
       cout << "                __     " << endl;
       cout << "              <(o )___-" << endl;
       cout << "               ( .__> /" << endl;
@@ -278,14 +261,13 @@ can be used to concatenate in Python.
 
 Standard Input
 --------------
+Además de poder generar la salida estándar, queremos poder recibir información del usuario.
+El comando ``cin`` es algo similar a ``cout`` excepto, por supuesto, que se usa para obtener entrada de caracteres.
+La entrada transmite datos directos desde una fuente, como el teclado o un archivo.
+Como habrás adivinado, ``cin`` significa "entrada de caracteres" y hace que obtener entrada desde el dispositivo de entrada estándar (generalmente el teclado) sea relativamente fácil.
+El operador de entrada en C++ es ``>>``.
 
-In addition to being able to output to the standard output, we want to be able to take input from the user.
-The command ``cin`` is somewhat similar to ``cout`` except, of course, it is used for getting character input.
-Input streams direct data from a source, such as the keyboard or a file.
-As you might have guessed, ``cin`` stands for "character input" and it makes getting input from the standard input device (usually the keyboard) relatively easy.
-The input operator in C++ is ``>>``.
-
-Here is an example that uses ``cin``:
+Este un ejemplo que usa ``cin``:
 
 .. raw :: html
 
@@ -293,59 +275,56 @@ Here is an example that uses ``cin``:
     <iframe height="600px" width="100%" src="https://repl.it/@pearcej/cin-example?lite=true" scrolling="no" frameborder="no" allowtransparency="true" allowfullscreen="true" sandbox="allow-forms allow-pointer-lock allow-popups allow-same-origin allow-scripts allow-modals"></iframe>
     </div>
 
-Type Declarations
+Tipo de Declaraciones
 -----------------
 
-In this example, you may note the line ``float num`` which declares a new variable called ``num`` of type ``float``.
-Just like functions, all variables in C++ must be declared before use, and
-they cannot change type. This is known as **static typing**.
-The line ``float num`` essentially tells the compiler to set aside sufficient space for a floating point number,
-and to name this memory location ``num.``
-Then whatever the user types in will be stored in the ``num`` variable.
-Using the ``cout`` function, we can write instructions that will prompt the user to enter data and then
-incorporate that data into further processing.
-For example, in the code above, the integer input is doubled and then displayed!
+En este ejemplo, puedes notar la línea ``float num`` que declara una nueva variable llamada ``num`` de tipo ``float``.
+Al igual que las funciones, todas las variables en C++ deben declararse antes de su uso y
+no pueden cambiar de tipo. Esto se conoce como **escritura estática**.
+La línea ``float num`` esencialmente le dice al compilador que reserve suficiente espacio para un número de coma flotante,
+y para nombrar esta ubicación de memoria ``num.`` 
 
-We will talk more about type declarations in the section on data types, and
-we will go into more depth on input and output later when we discuss
-C++ streams and file handling.
+Luego, lo que el usuario escriba se almacenará en la variable ``num``.
+Usando la función ``cout``, podemos escribir instrucciones que pedirán al usuario que ingrese datos y luego
+incorporar esos datos en un procesamiento posterior.
+Por ejemplo, en el código anterior, la entrada de entero se duplica y luego se muestra.
+
+Hablaremos más sobre las declaraciones de tipo en la sección sobre tipos de datos, y
+profundizaremos en la entrada y la salida más adelante cuando discutamos
+Flujos C++ y manejo de archivos.
 
 
-Summary
+Resumen
 =======
-
-Now that we have run our "hello world" program, lets go back and look at
-it carefully to see what we can learn about the C++ language.
+Ahora que hemos ejecutado nuestro programa "hola mundo", regresemos y veamos
+atentamente para ver qué podemos aprender sobre el lenguaje C++.
 
 .. activecode:: hellocommented
     :language: cpp
 
-    /* This hello world program demonstrates the C++ concepts
-        of commenting, using libraries, and using output.
+    /* Este programa "Hola Mundo!" demuestra los conceptos de comentarios, el uso de bibliotecas y usar output en C++ 
     */
 
     #include <iostream>
     using namespace std;
 
-    int main(){         // main() must exist & return an int
-        cout << "Hello World!\n";
-        return 0;       // 0 indicates program ended correctly.
+    int main(){         // main() debe existir y retornar un número entero
+        cout << "Hola Mundo!\n";
+        return 0;       // 0 indica que el programa ha terminado exitosamente
     }
 
-This simple example illustrates a few very important rules:
+Este simple ejemplo ilustra algunas reglas muy importantes:
 
+1. Todo en C++ debe declararse como un tipo específico de objeto o variable, incluida la declaración del tipo de retorno para cada función.
 
-1. Everything in C++ must be declared as a specific type of object or variable, including declaring the return type for each function.
+2. Todo programa C++ debe tener una función que comience como ``int main()``, y termine con la declaración ``return 0;`` cuando se haya completado exitosamente.
 
-2. Every C++ program must have a function which begins as ``int main()``, and ends with the statement ``return 0;`` when successfully
-   completed.
+3. Las declaraciones de C++ terminan con un punto y coma.
 
-3. C++ statements are ended by a semi-colon.
+4. Los espacios en blanco casi no tienen sentido en C++, pero todos los bloques de código de C++ deben estar rodeados por llaves {}, en lugar de usar
+   sangría para definir bloques como se hace en Python.
 
-4. White space is mostly meaningless in C++, but all C++ code blocks must be surrounded by curly brackets {}, rather than using
-   indentation to delineate blocks as is done in Python.
-
-Check yourself
+Compruébalo tú mismo
 ==============
 
 .. mchoice:: mc_comment
@@ -353,48 +332,44 @@ Check yourself
    :answer_b: &#x22D5
    :answer_c: //
    :answer_d: @
-   :answer_e: none of the above
+   :answer_e: Ninguna de las anteriores
    :correct: c
-   :feedback_a: No, &#x003C!- is used in html to begin comments, but it is not used in C++.
-   :feedback_b: No, &#x22D5 is used in Python for comments, but in C++ it is used for compiler directives such as loading a code library.
-   :feedback_c: Correct!
-   :feedback_d: No, @ is not used in C++.
-   :feedback_e: One of the above is correct.
+   :feedback_a: No, &#x003C!- es usado en html para comenzar commentarios, pero no es usado en C++.
+   :feedback_b: No, &#x22D5 es usado en Python para comentarios, pero en C++ es usado para las instrucciones del compilador como cargar una biblioteca de código. 
+   :feedback_c: Correcto!
+   :feedback_d: No, @ no es usado en C++.
+   :feedback_e: Uno de los anteriores es correcto.
 
-   What symbol or set of symbols will begin a comment in C++ when the comment extends only to the end of the line?
-
+   ¿Qué símbolo o conjunto de símbolos comienza un comentario en C++ cuando el comentario se extiende solo hasta el final de una línea?
 
 .. mchoice:: mc_mlcomment
-  :answer_a: True
-  :answer_b: False
+  :answer_a: Verdadero
+  :answer_b: Falso
   :correct: a
-  :feedback_a: Right!
-  :feedback_b: Sorry, both languages do support multi-line comments.Python uses triple quotes while in C++ they begin with /* and end with */.
+  :feedback_a: Correcto!
+  :feedback_b: Perdon, ambos idiomas admiten comentarios de varias líneas. Python usa comillas triples mientras que en C++ comienzan con /* y terminan con */.
 
-  True or False: Both Python and C++ support multi-line comments. In C++, they begin with ``/*`` and end with ``*/``.
-
+  Verdadero o Falso: Ambos Python y C++ admiten comentarios multilínea. En c++, los comentarios comienzan con ``/*`` y terminan con ``*/``.
 
 
 .. mchoice:: mc_comment
    :answer_a: cout x;
    :answer_b: output x;
    :answer_c: print x;
-   :answer_d: none of the above
+   :answer_d: Ninguna de las anteriores
    :correct: d
-   :feedback_a: Partically right. The object cout stands for character output and you need it, but you will also need to use the insertion operator <<.
-   :feedback_b: No, output is not a C++ command or object.
-   :feedback_c: No, print is a Python command, but is not used in C++.
-   :feedback_d: The correct statement would be "cout << x;" or "std:cout x;" but the insertion operator is certainly needed.
+   :feedback_a: Parcialmente correcto. El objeto cout significa salida de caracteres y lo necesita, pero también necesitará usar el operador de inserción <<.
+   :feedback_b: No, output no es un comando u objecto en C++.
+   :feedback_c: No, print es un comando en Python, pero no es usado en C++.
+   :feedback_d: La declaración correcta es "cout << x;" o "std:cout x;" Pero el operador de inserción es ciertamente necesario.
 
-   Given a variable called x. What statement will print the contents of x?
-
+  Dada una variable llamada x. ¿Qué declaración imprimirá lo que contiene x?
 
 .. fillintheblank:: input
 
-   What keyword from the Standard Library (std) is used in conjunction with the extraction operator to accept C++ input from the keyboard as the standard input?
-
-  - :cin: Right! It stands for character input.
-    :raw_input: That's Python, not C++!
-    :input: That's Python, not C++!
-    :scanf: That's C, not C++!
-    :default: Incorrect. Please try again.
+   ¿Qué palabra clave de la biblioteca estándar (std) se usa junto con el operador de extracción para aceptar la entrada de C++ desde el teclado como entrada estándar?
+  - :cin: Correcto! Significa entrada de caracteres, del inglés *character input*
+    :raw_input: Eso es en Python, no en C++!
+    :input: Eso es en Python, no en C++!
+    :scanf: Eso es en C, no en C++!
+    :default: Incorrecto. Por favor, intente nuevamente.

@@ -4,21 +4,16 @@
 
 Vectors
 -------
+Los **vectores** son mucho más similares a las listas de Python que los arrays. Los vectores usan un array asignada 
+dinámicamente para almacenar sus elementos, por lo que pueden cambiar de tamaño y también tienen otras características amigables. 
+Debido a que usan un array asignado dinámicamente, usan ubicaciones de almacenamiento contiguas, lo que significa que se puede 
+acceder a sus elementos y recorrerlos, y también se puede acceder a ellos aleatoriamente mediante índices. Sin embargo, los vectores 
+tienen un tamaño dinámico, por lo que su tamaño puede cambiar automáticamente. Se puede insertar o eliminar un nuevo elemento de 
+cualquier parte de un vector, y se aplicará la reasignación automática para otros elementos existentes en el vector. A diferencia 
+de las listas de Python, los vectores son homogéneos, por lo que todos los elementos del vector deben ser del mismo tipo.
 
-**Vectors** are much more similar to Python lists than arrays are.
-Vectors use a dynamically allocated array to store their elements,
-so they can change size, and they have other friendly features as well.
-Because they use a dynamically allocated array, they use contiguous storage locations
-which means that their elements can be accessed and traversed, and they
-can also be accessed randomly using indexes.
-However, vectors are dynamically sized, so their size can change automatically.
-A new element can be inserted into or deleted from any part of a vector,
-and automatic reallocation for other existing items in the vector will be applied.
-Unlike Python lists, vectors are homogeneous, so every element in the vector must be of the same type.
-
-Vectors are a class that is available through a library called the Standard Template Library (STL), and one uses a ``< >``
-notation to indicate the data type of the elements. In order to use vectors, One
-needs to include the vector library.
+Los vectores son una clase que está disponible a través de una biblioteca llamada Biblioteca de plantillas estándar (STL), 
+y se usa una notación < > para indicar el tipo de datos de los elementos. Para usar vectores, es necesario incluir la biblioteca de vectores.
 
 ::
 
@@ -31,7 +26,7 @@ needs to include the vector library.
 
 
     ===================== ============================= ====================================================
-     **Vector Operation**                       **Use**                                      **Explanation**
+     **Operación del vector**                       **Uso**                                      **Explicación**
     ===================== ============================= ====================================================
                   ``[ ]``               ``myvector[i]``                   access value of element at index i
                     ``=``         ``myvector[i]=value``                   assign value to element at index i

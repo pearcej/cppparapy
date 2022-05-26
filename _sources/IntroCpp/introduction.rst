@@ -1,39 +1,41 @@
-Introduction
+Introducción
 ============
 
-This book assumes that you are already familiar with the
-`Python <http://www.python.org>`_ programming language because
-Python will be the starting point for our journey into C++. We will begin by
-looking at a very simple C++ program to see how the C++ language
-looks, and we will discuss how we get a C++ program to run. 
+Este libro asume que usted ya está familiarizado con el
+Lenguaje de programación `Python <http://www.python.org>`_ porque
+Python será el punto de partida para aprender C++. Comenzaremos 
+mirando un programa en C++ muy simple para ver cómo el lenguaje C++
+se ve, y discutiremos cómo hacemos que se ejecute un programa en C++.
 
-Next, we will look at the primary constructs that are common 
-to nearly all programming languages:
+A continuación, veremos las construcciones primarias que son comunes
+en casi todos los lenguajes de programación:
 
-    -  Using code libraries
+    -  Uso de bibliotecas de código
     
-    -  Documenting with comments 
+    -  Documentar el código con comentarios 
     
-    -  The main function
+    -  La función main
     
-    -  Writing output to the screen
+    -  Escribir output (salida) hacia la pantalla 
     
-    -  Reading input from the keyboard
+    -  Leer input (entrada) del teclado
    
-    -  Data types and operators
+    -  Tipo de datos y operadores
     
-    -  Conditionals
+    -  Condicionales
 
-    -  Loops
+    -  Bucles 
 
-Once we have the basics of C++ behind us we will move on to look at the
-additonal useful features of C++ including:
 
-    -  Functions and their parameters
 
-    -  File operations
+Una vez que enseñemos los conceptos básicos de C ++, pasaremos a ver las características útiles adicionales de C ++, que incluyen:
 
-    -  Exception handling
+    -  Funciones y parámetros 
 
-Please note that this book is a work in progress. 
-Updates and new versions are likely to be forthcoming.
+    -  Operaciones con archivos
+
+    -  Manejo de excepciones
+
+
+Tenga en cuenta que este libro es un trabajo en progreso.
+Es probable que haya actualizaciones y nuevas versiones próximas.

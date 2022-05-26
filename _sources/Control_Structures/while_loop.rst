@@ -1,76 +1,73 @@
-While Loops
+Bucles While 
 ============
 
-As we noted earlier, algorithms require two important control
-structures: iteration and selection. Both of these are supported by
-Python in various forms. The programmer can choose the statement that is
-most useful for the given circumstance.
+Como señalamos anteriormente, los algoritmos requieren dos estructuras de control importantes: 
+iteración y selección. Ambos son compatibles con Python en varias formas. El programador puede 
+elegir la declaración que sea más útil según la circunstancia.
 
-For repeating a block of code, C++ provides a standard ``while`` and ``for`` constructs.
-The ``while`` construct repeats a body of code as long as a condition is true. For example,
+Para repetir un bloque de código, C++ proporciona construcciones estándar ``while`` y ``for``. 
+La construcción ``while`` repite un cuerpo de código siempre y cuando una condición sea verdadera. Por ejemplo,
 
 ::
 
-    int counter = 1;
-    while (counter <= 5) {          /*Use of an interactive method until the
-                                     the loop ends   */
-        cout << "Hello, world" << endl;
-        counter = counter + 1;
+    int contador = 1;
+    while (contador <= 5) {          /*Uso de un método interactivo hasta que
+                                     el bucle termina  */
+        cout << "Hola, mundo" << endl;
+        contador = contador + 1;
     }
 
     Console output:
-    Hello, world
-    Hello, world
-    Hello, world
-    Hello, world
-    Hello, world
+    Hola, mundo
+    Hola, mundo
+    Hola, mundo
+    Hola, mundo
+    Hola, mundo
 
 
-prints out the phrase “Hello, world” five times. The condition on the
-``while`` statement is evaluated at the start of each repetition. If the
-condition is ``true``, the body of the statement will execute.
+Imprime la frase “Hola, mundo” cinco veces. La condición en la sentencia
+``while`` es evaluada al comienzo de cada repetición. Si la condición 
+es verdad ``true``, se ejecutará el cuerpo.
 
-The ``while`` statement is a very general purpose iterative structure
-that we will use in a number of different algorithms. In many cases, a
-compound condition will control the iteration. A fragment such as
-
+La declaración while es una estructura iterativa de propósito muy general 
+que usaremos en varios algoritmos diferentes. En muchos casos, una condición 
+compuesta controlará la iteración. Un fragmento como:
 ::
 
-    while ((counter <= 10) && (!done)) {
+    while ((contador <= 10) && (!done)) {
     ...
 
 
-would cause the body of the statement to be executed only in the case
-where both parts of the condition are satisfied due to the and operator (``&&``). The value of the
-variable ``counter`` would need to be less than or equal to 10 and the
-value of the variable ``done`` would need to be ``false`` (``not false``
-is ``true``) so that ``true and true`` results in ``true``.
 
-Here are some of the logical operators that are useful for true-false boolean statements in C++.
+haría que el cuerpo de la declaración se ejecutara solo en el caso de que ambas partes de la condición
+se cumplan debido al operador and  (``&&``). El valor de la variable ``contador`` tendría que ser menor o igual
+a 10 y el valor de la variable ``done``  tendría que ser ``falso`` (``no falso`` es ``verdadero``)  para que ``true and true``  resulten en ``verdadero``.
+
+Estos son algunos de los operadores lógicos que son útiles para declaraciones booleanas de verdadero o 
+falso en C++.
 
 ::
 
-    and          - &&
+    y           - &&
 
-    or           - ||
+    o          - ||
 
-    not equal to - !=
+    no igual a  - !=
 
-    not          - !
+    no         - !
 
-    greater than - >
+    más que  - >
 
-    less than    - <
+    menos que   - <
 
-    greater than
-    or equal to  - >=
+    mayor que 
+    o igual a  - >=
 
-    less than
-    or equal to  - <=
+    menos que
+    o igual a - <=
 
 
-These are the same as we saw in earlier chapters.
-
+Estos son los mismos que vimos en capítulos anteriores.
 
 
 ::
@@ -79,22 +76,22 @@ These are the same as we saw in earlier chapters.
     using namespace std;
 
     int main(){
-        int counter = 0;
-        while (counter <= 1) {
-            cout << "Hello, world!" << endl;
+        int contador = 0;
+        while (contador <= 1) {
+            cout << "Hola, mundo!" << endl;
         }
     };
 
 
 .. mchoice:: mc_whileloop
-  :answer_a: "0" is written 1 time.
-  :answer_b: "Hello world!" is written 1 time.
-  :answer_c: "Hello world!" is written infinitely many times.
-  :answer_d: None of the  above.
+  :answer_a: "0" es escrito 1 vez.
+  :answer_b: "Hola mundo!" es escrito 1 vez.
+  :answer_c: "Hola mundo!" is written infinitely many times.
+  :answer_d: Ninguno de los anteriores.
   :correct: c
-  :feedback_a: Take a look at the cout line.
-  :feedback_b: Take a closer look at the while loop
-  :feedback_c: Right! because counter is never greater than one, thus making the while loop infinite.
-  :feedback_d: Not quite, take another look.
+  :feedback_a: Revise la línea que imprime.
+  :feedback_b: Revisa el bucle while 
+  :feedback_c: Correcto! porque contador es nunca mayor que uno hace que el buble while se infinito.
+  :feedback_d: No del todo, revisa nuevamente.
 
-  Using the code above please select the answer that should appear.
+  Usando el código anterior, seleccione la respuesta que debería aparecer.

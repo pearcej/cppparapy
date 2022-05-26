@@ -2,35 +2,35 @@
     This work is licensed under the Creative Commons Attribution-NonCommercial-ShareAlike 4.0 International License. To view a copy of this license, visit http://creativecommons.org/licenses/by-nc-sa/4.0/.
 
 
-Glossary
+Glosario 
 --------
 
-.. glossary::
+.. glosario::
 
     ``break``
-        Terminates the current block of code and resumes the program outside of it.
+        Termina el bloque de código actual y reanuda el programa fuera de él.
 
     ``case``
-        A condition in a switch statement for a variable to be tested against.
+        Una condición en una declaración de cambio "switch" para que se pruebe una variable.
 
-    conditional
-        A statement that tests whether a condition is true or false
+    condicional 
+        Una declaración que prueba si una condición es verdadera o falsa.
 
-    loop
-        A series of instructions repeated infinitely or until a condition is met.
+    bucle
+       Una serie de instrucciones que se repiten infinitamente o hasta que se cumple una condición.
     
     ``switch``
-        A statement that tests a variable against possible conditions for it.
+        Una declaración que prueba una variable contra las posibles condiciones para ella.
 
 
-Matching
+Emparejar definiciones 
 --------
 .. dragndrop:: matching_ControlStructures
-   :feedback: Feedback shows incorrect matches.
-   :match_1: break|||Terminates the current block of code and resumes the program outside of it.
-   :match_2: case|||Condition in a switch statement for a variable to be tested against.
-   :match_3: conditional|||Statement that tests whether a condition is true or false .
-   :match_4: loop|||Series of instructions repeated infinitely or until a condition is met.
-   :match_5: switch|||Statement that tests a variable against possible conditions for it.
+   :feedback: Los comentarios muestran emparejamientos incorrectos.
+   :match_1: break|||Termina el bloque de código actual y reanuda el programa fuera de él.
+   :match_2: case|||Condición en una declaración de cambio para que se pruebe una variable.
+   :match_3: condicional|||Declaración que comprueba si una condición es verdadera o falsa.
+   :match_4: bucle |||Serie de instrucciones repetidas infinitamente o hasta que se cumpla una condición.
+   :match_5: switch|||Declaración que prueba una variable frente a posibles condiciones para ella.
 
-   Drag each glossary term to its' corresponding definition.
+  Arrastre cada término del glosario a su definición correspondiente.

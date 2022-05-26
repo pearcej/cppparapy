@@ -2,56 +2,55 @@
     This work is licensed under the Creative Commons Attribution-NonCommercial-ShareAlike 4.0 International License. To view a copy of this license, visit http://creativecommons.org/licenses/by-nc-sa/4.0/.
 
 
-Glossary
+Glosario 
 --------
 
 .. glossary::
 
     `cin`
-        `cin` stands for "console input". It is the standard input statement in C++.
+        `cin` significa "entrada de consola". Es la instrucción de entrada estándar en C++.
 
-    comment
+    comentario 
         A comment is a programmer-readable explanation  in the source code of a computer program (``//`` single line comment, ``/**/`` Multiline comment).
 
-    compiler
-        A compiler generally transforms code written in a high-level programming language like C++ into a low-level programming language like machine code in order to create an executable program.
+    compilador 
+        Un compilador generalmente transforma el código escrito en un lenguaje de programación de alto nivel como C++ en un lenguaje de programación de bajo nivel como código de máquina para crear un programa ejecutable.
 
     `cout`
-        `cout` stands for "console output". It is the standard output statement in C++.
+        `cout` significa "salida de consola". Es la declaración de salida estándar en C++.
 
-    dynamically typed
-        A dynamically typed programming languages is one in which variables need not necessarily be defined before they are used, and can change during execution.
+    escrito dinámicamente
+       Un lenguaje de programación de tipo dinámico es aquel en el que las variables no necesariamente deben definirse antes de que se usen y pueden cambiar durante la ejecución.
 
-    header
-        Header files are library files that contain a variety of useful definitions. They are imported into any C++ program by using the pre-processor #include statement.
+    encabezado
+        Los archivos de encabezado son archivos de biblioteca que contienen una variedad de definiciones útiles. Se importan a cualquier programa de C++ mediante la instrucción #include del preprocesador.
 
     #include
 
-        Tells the preprocessor to treat the contents of a specified file as if they appear in the source program at the point where the directive appears.
+       Le dice al preprocesador que trate el contenido de un archivo específico como si apareciera en el programa fuente en el punto donde aparece la directiva.
 
-    interpreter
-        An interpreter directly executes statements in a scripting language without requiring them to have been compiled into machine language.
+    intérprete 
+        Un intérprete ejecuta directamente declaraciones en un lenguaje de secuencias de comandos sin necesidad de que se hayan compilado en lenguaje de máquina.
 
-    machine code
-        machine code is a computer program written in instructions that can be directly executed by a computer's CPU.
+    código máquina 
+        El código de máquina es un programa de computadora escrito en instrucciones que pueden ser ejecutados directamente por la CPU de una computadora.
 
-    statically typed
-        A statically typed programming languages is one in which variables must be defined before they are used and cannot change during execution.
+    escrito estáticamente
+        Un lenguaje de programación de tipo estático es aquel en el que las variables deben definirse antes de usarse y no pueden cambiar durante la ejecución.
 
-
-Matching
+Emparejar definiciones 
 --------
 .. dragndrop:: matching_intro
-   :feedback: Feedback shows incorrect matches.
-   :match_1: cin|||Standard input statement in C++. 
-   :match_2: comment|||a readable explanation  in the source code of a computer program.
-   :match_3: compiler|||Creates an executeable program by transforming code written in a high-level programming language into a low-level programming language.
-   :match_4: cout|||Standard output statement in C++.
-   :match_5: dynamically typed|||Programing language, in which variables need not necessarily be defined before they are used, and can change during execution.
-   :match_6: header|||library files that contain a variety of useful definitions. They are imported into any C++ program by using the #include statement.
-   :match_7: #include|||Tells the preprocessor to treat the contents of a specified file as if they appear in the source program at the point where the directive appears.
-   :match_8: interpreter|||directly executes statements in a scripting language without requiring them to have been compiled into machine language
-   :match_9: machine code||| a computer program written in instructions that can be directly executed by a computer's CPU.
-   :match_10: statically typed|||Programming language,  in which variables must be defined before they are used and cannot change during execution.
+   :feedback: Los comentarios muestran emparejamientos incorrectos.
+   :match_1: cin||| Declaración de entrada estándar en C++. 
+   :match_2: comentario ||| una explicación legible en el código fuente de un programa informático.
+   :match_3: compilador||| Crea un programa ejecutable transformando el código escrito en un lenguaje de programación de alto nivel en un lenguaje de programación de bajo nivel.
+   :match_4: cout|||Declaración de salida estándar en C++.
+   :match_5: escrito dinámicamente||| Lenguaje de programación en el que no es necesario definir las variables antes de usarlas, y pueden cambiar durante la ejecución.
+   :match_6: encabezado||| archivos de biblioteca que contienen una variedad de definiciones útiles. Se importan a cualquier programa C++ usando la instrucción #include.
+   :match_7: #include||| Le dice al preprocesador que trate el contenido de un archivo específico como si apareciera en el programa fuente en el punto donde aparece la directiva.
+   :match_8: intérprete||| ejecuta directamente declaraciones en un lenguaje de secuencias de comandos sin necesidad de que se hayan compilado en lenguaje de máquina.
+   :match_9: código máquina||| un programa de computadora escrito en instrucciones que puede ser ejecutado directamente por la CPU de una computadora.
+   :match_10: escrito estáticamente|||Lenguaje de programación en el que las variables deben definirse antes de usarse y no pueden cambiar durante la ejecución.
 
-   Drag each glossary term to its' corresponding definition.
+   Arrastre cada término del glosario a su definición correspondiente.

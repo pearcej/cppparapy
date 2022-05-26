@@ -1,17 +1,15 @@
-..  Copyright (C)  Jan Pearce and Brad Miller
-    This work is licensed under the Creative Commons Attribution-NonCommercial-ShareAlike 4.0 International License. To view a copy of this license, visit http://creativecommons.org/licenses/by-nc-sa/4.0/.
+..  Copyright (C)  Jan Pearce y Brad Miller
+    Este trabajo está bajo la licencia Creative Commons Attribution-NonCommercial-ShareAlike 4.0 International License. Para ver una copia de esta licencia, visite http://creativecommons.org/licenses/by-nc-sa/4.0/.
 
-Exception Handling
+Manejo de Excepciones
 ~~~~~~~~~~~~~~~~~~
 
-There are two types of errors that typically occur when writing
-programs. The first, known as a **syntax error**, simply means that the
-programmer has made a mistake in the structure of a statement or
-expression. For example, it is incorrect to write a statement in one line and
-forget the semicolon.
+Hay dos tipos de errores que suelen ocurrir al escribir programas. El primero,
+conocido como **error de sintaxis**, simplemente significa que el programador 
+ha cometido un error en la estructura de una declaración o expresión. 
+Por ejemplo, es incorrecto escribir una declaración en una línea y olvidar el punto y coma.
 
 ::
-
     int main() {
         int i = 10
         return 0;
@@ -23,34 +21,34 @@ forget the semicolon.
              return 0;
          ^~~~~~
 
-In this case, the C++ compiler has found that it cannot complete
-the processing of this instruction since it does not conform to the
-rules of the language. Syntax errors are usually more frequent when you
-are first learning a language.
+En este caso, el compilador de C++ no puede completar el 
+procesamiento de esta instrucción porque no concuerda con las reglas del lenguaje. 
+Los errores sintácticos suelen ser más frecuentes cuando está aprendiendo un nuevo lenguage de programación.
 
-The other type of error, known as a **logic error**, denotes a situation
-where the program executes but gives the wrong result. This can be due
-to an error in the underlying algorithm or an error in your translation
-of that algorithm. In some cases, logic errors lead to very bad
-situations such as trying to divide by zero or trying to access an item
-in a list where the index of the item is outside the bounds of the list.
-In this case, the logic error leads to a **runtime error** that causes the
-program to terminate. These types of runtime errors are typically called
-**exceptions**.
+El otro tipo de error, conocido como **error lógico**, denota una situación
+en la que el programa se ejecuta pero da un resultado incorrecto.
+Esto puede deberse a un error en el algoritmo o a un error en la traducción
+de ese algoritmo. En algunos casos, los errores lógicos llevan a situaciones
+muy malas, como intentar dividir por cero o intentar acceder a un elemento
+de una lista donde el índice del elemento está fuera de los límites de la lista. 
+En este caso, el error lógico conduce a un error de tiempo de ejecución que
+hace que el programa finalice. Estos tipos de errores de tiempo de ejecución
+suelen denominarse **excepciones**.
 
-Most of the time, beginning programmers simply think of exceptions as
-fatal runtime errors that cause the end of execution. However, most
-programming languages provide a way to deal with these errors that will
-allow the programmer to have some type of intervention if they so
-choose. In addition, programmers can create their own exceptions if they
-detect a situation in the program execution that warrants it.
+La mayoría de las veces, los programadores principiantes simplemente piensan 
+en las excepciones como errores fatales de tiempo de ejecución que causan
+el final de la ejecución. Sin embargo, la mayoría de los lenguajes de programación 
+proporcionan una forma de lidiar con estos errores que permitirán al programador
+tener algún tipo de intervención si así lo desea. Además, los programadores pueden 
+crear sus propias excepciones si detectan una situación en la ejecución del programa 
+que lo amerite.
 
-When an exception occurs, we say that it has been “thrown.” You can
-“catch” the exception that has been raised by using a ``try``
-statement. For example, consider the following session that asks the
-user for an integer and then uses the division operator.
-If the user enters a second number that is not 0, then the print will show the result of division.
-However, if the user enters 0, then C++ will throw an error and return a value other than 0.
+Cuando ocurre una excepción, decimos que la excepción ha sido "lanzada". Usted puede "atrapar" la 
+excepción que se ha generado utilizando una declaración de prueba ``try``. Por ejemplo, 
+considere la siguiente sesión que le pide al usuario un número entero y luego usa el
+operador de división. Si el usuario ingresa un segundo número que no es 0, la impresión 
+mostrará el resultado de la división. Sin embargo, si el usuario ingresa 0, C++ generará 
+un error y devolverá un valor distinto a 0.
 
 ::
 
@@ -60,66 +58,65 @@ However, if the user enters 0, then C++ will throw an error and return a value o
                ~~^~
     exit status -1
 
-We can handle this exception by creating a divide function that can
-``throw`` an error. A corresponding ``try`` and ``catch`` block can “catch” the exception
-and prints a message back to the user in the event that an exception
-occurs. For example, try changing the values assigned to firstNum and secondNum
-in the code below:
+
+Podemos manejar esta excepción creando una función de división que puede lanzar un error. 
+Un bloque de prueba y captura correspondiente puede "atrapar" la excepción e imprime un 
+mensaje al usuario en caso de que ocurra una excepción. Por ejemplo, intente cambiar los 
+valores asignados a firstNum y secondNum en el siguiente código:
 
 .. _lst_divisioncode:
 
   .. activecode:: divisionErr_cpp
-    :caption: Error Handling for Division
+    :caption: Manejo de errores para la división
     :language: cpp
 
-    // Shows exception handling using try,throw,
-    // and catch in order to output 
-    // an error message to the console 
+    // Muestra el manejo de la excepción usando "try", "throw",
+    // y "catch" para poder generar 
+    // un mensaje de error en la consola
     #include <iostream>
     using namespace std;
 
     double div(double num1, double num2) {
     	if (num2 == 0) {
-    		// If the second number is 0, throw this error
-    		throw "Cannot divide by 0!\n";
+    		// Si el segundo número es 0, lanza "throw" este error
+    		throw " No se puede divir por 0!\n";
     	}
 
     	return num1 / num2;
     }
 
     int main() {
-        // Get input from the user
+        // Obtener datos del usuario
     	float firstNum=10;
         float secondNum=0;
 
     	try {
-    		// Attempt to divide the two numbers
+    		// Intento de dividir los dos números
     		double result = div(firstNum, secondNum);
     		cout << "result of division: " << result << endl;
 
     	} 
         catch (const char *err) {
-    		// If an error is thrown, print it
+    		// Si un error es identificado, vamos a imprimirlo
     		cout << err;
     	}
 
     	return 0;
     }
 
-This will catch the fact that an exception is raised by ``div`` and will
-instead print the error back to the user.
-This means that the program will not terminate but instead will continue
-on to the next statements.
 
-It is also possible for a programmer to use nested try and except statements,
-along with different thrown errors to manage what happens in their code. The program
-will continue running after the error is caught, but we can stop this by returning
-a value other than 0 in our main function. This is known as an ``error code``.
+Esto detectará el hecho de que ``div`` genera una excepción y, en su lugar, devolverá el error al usuario. 
+Esto significa que el programa no terminará sino que continuará con las declaraciones que siguen.
 
-The code below should be run inside of a folder, and can be used to open files.
-Ideally one of the files should be called "file.txt". The program will prompt
-the user for a filename and can catch if that file does not exist or the default
-"file.txt" does not exist. This is another useful application for Error handling.
+También es posible que un programador use declaraciones anidadas de prueba "try" y excepción "except", 
+junto con diferentes errores lanzados para administrar lo que sucede en su código. 
+El programa seguirá ejecutándose después de detectar el error, pero podemos detenerlo devolviendo un 
+valor distinto a 0 en nuestra función principal. Esto se conoce como un ``código de error``.
+
+El siguiente código debe ejecutarse dentro de una carpeta y puede usarse para abrir archivos. 
+Idealmente, uno de los archivos debería llamarse "archivo.txt". 
+El programa le pedirá al usuario un nombre de archivo y puede detectar si ese archivo no 
+existe o si el "archivo.txt" predeterminado no existe. Esta es otra aplicación útil para el manejo de errores.
 
 ::
 
@@ -135,7 +132,7 @@ the user for a filename and can catch if that file does not exist or the default
             // Throws an error
                 in_stream.close();
 
-            throw "\nA file by that name does not exist!";
+            throw "\nA un archivo con ese nombre no existe!";
         }
 
         char ch;
@@ -156,20 +153,20 @@ the user for a filename and can catch if that file does not exist or the default
         cin >> filename;
 
         try {
-            // Tries to print the file
+            // Intenta imprimir el archivo
             printFile(filename);
         } 
         catch (const char *msg) {
             // Runs if error is thrown
             cerr << msg << endl; //cerr is used to output errors similar to cout.
 
-            // Uses default file to print instead
+            // En su lugar usa el archivo predeterminado para imprimir 
             try {
                 char defaultFile[32] = "file.txt";
                 printFile(defaultFile);
             } 
             catch (const char *msg) {
-                cerr << "Default file not found!" << endl; //cerr is used to output errors similar to cout.
+                cerr << " Archivo predeterminado no fue encontrado!" << endl; //cerr es usado para imprimir errores similares a cout. 
             }
         }
 
@@ -177,29 +174,33 @@ the user for a filename and can catch if that file does not exist or the default
     }
 
 
-There are many kinds of default exceptions that can be used in the C++ standard library.
-See the C++ official documentation for a list
-of all the available exception types and for how to create your own exception type.
 
-Summary
+Hay muchos tipos de excepciones predeterminadas que se pueden usar en la biblioteca estándar
+de C++. Puede consultar la documentación oficial de C++ para obtener una lista de todos los tipos de 
+excepción disponibles y cómo crear su propio tipo de excepción.
+
+Resumen
 ~~~~~~~~~~~~
 
-1. There are two types of errors that occur while writing programs: syntax errors and logic errors
+1. Hay dos tipos de errores que ocurren al escribir programas: errores sintácticos y errores lógicos.
 
-2. A syntax error is an error that occurs due to typing error or wrong statement that is not allowed in a language. This can be easily caught as the program does not run until this is fixed.
+2. Un error de sintaxis es un error que ocurre debido a un error de escritura o una declaración incorrecta 
+que no está permitida en un idioma. Esto puede detectarse fácilmente ya que el programa no se ejecuta hasta que se solucione.
 
-3. Logic errors are errors happen not due to error in how the code is written, but because the code is producing an unintended or unexpected value such as a division by 0 leading to an undefined value.
+3. Los errores lógicos son errores que ocurren no debido a un error en la forma en que se escribe el código,
+sino porque el código produce un valor no deseado o inesperado, como una división entre 0 que conduce a un valor
+indefinido.
 
-4. logic errors can be caught by using ``try`` and ``catch`` which can help pinpoint what is causing the error and avoid confusion about the problem.
+4. Los errores lógicos se pueden detectar utilizando ``try`` y ``catch``, que pueden ayudar a identificar qué está causando el error y evitar confusiones sobre el problema.
 
 
-Check Yourself
+Compuébalo tú mismo
 ~~~~~~~~~~~~~~
 
 .. clickablearea:: syntax_error
-    :question: Click on the syntax error.
+    :question: Dele click en el error sintáctico.
     :iscode:
-    :feedback: Remember, syntax errors occur more for people learning a new language.
+    :feedback: Recuerde que los errores sintácticos ocurren más cuando se esta aprendiendo un nuevo lenguaje de programación
 
     :click-incorrect:int age;:endclick:
     :click-incorrect:cout << "age:";:endclick:
@@ -211,9 +212,9 @@ Check Yourself
     }
 
 .. clickablearea:: logic_error
-    :question: Click on the logic error.
+    :question: Dele click en el error lógico.
     :iscode:
-    :feedback: If we want the code to say when we can vote, what cases should it say when can and cannot?
+    :feedback: Si queremos que el código diga cuándo podemos votar, ¿en qué casos debería decir cuándo podemos y cuándo no?
 
     :click-incorrect:int age;:endclick:
     :click-incorrect:cout << "age:";:endclick:

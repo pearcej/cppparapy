@@ -2,45 +2,45 @@
     This work is licensed under the Creative Commons Attribution-NonCommercial-ShareAlike 4.0 International License. To view a copy of this license, visit http://creativecommons.org/licenses/by-nc-sa/4.0/.
 
 
-Glossary
+Glosario
 --------
 
-.. glossary::
+.. glosario::
 
 
-    argument
-        the data passed to parameter.
+    argumento
+        los datos pasados al parámetro.
 
     ``const``
-        keyword that makes a variable or value constant and unchanging.
+        palabra clave que hace que una variable o valor sea constante e inmutable.
 
-    function
-        a section of code that performs a procedure and is usually named.
+    función
+        una sección de código que realiza un procedimiento que usualmente tiene un nombre.
 
-    overloading
+    sobrecarga
         specifying more than one definition for the same function name or the same operator within the same scope.
 
-    parameter
-        a variable in a function or method definition that accepts data passed from an argument.
+    parámetro
+        una variable en una función o definición de un método que acepta datos pasados por un argumento.
 
-    pointer
-        a value that indicates a place in a computer’s memory.
+    puntero
+        un valor que indica un lugar en la memoria de la computadora.
 
     ``void``
-        Keyword indicating a function has no return value.
+        Palabra clave que indica que una función no tiene un valor de retorno.
 
 
-Matching
+Emparejar Definiciones 
 --------
 .. dragndrop:: matching_Functions
    :feedback: Feedback shows incorrect matches.
-   :match_1: argument|||Data passed to parameter.
-   :match_2: const|||indicates a variable or value is unchanging.
-   :match_3: friend||| Operator or function that can access the private data members of a class.
-   :match_4: function ||| Section of code that performs a procedure and usually is named meaningfully. 
-   :match_5: overloading|||Specifying more than one definition for the same function name or the same operator within the same scope.
-   :match_6: parameter|||Variable in a function or method definition that accepts data passed from an argument.
-   :match_7: reference|||Value that indicates an address in a computer’s memory.
-   :match_8: void|||indicates a function has no return value.
+   :match_1: argumento|||Datos pasados al parámetro.
+   :match_2: const|||indica una variable y un valor son inmutables.
+   :match_3: friend|||Operador o función que puede acceder the private data members of a class.
+   :match_4: función ||| Section of code that performs a procedure and usually is named meaningfully. 
+   :match_5: sobrecarga|||Specifying more than one definition for the same function name or the same operator within the same scope.
+   :match_6: parámetro|||Variable en una función o la definición de un método que acepta datos pasados por un argumento.
+   :match_7: referencia|||Valor que indica una dirección en la memoria de la compuradora.
+   :match_8: void|||indica que una función no retorna un valor.
 
-   Drag each glossary term to its' corresponding definition.
+   Arrastre cada término del glosario a su definición correspondiente.

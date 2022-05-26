@@ -2,45 +2,48 @@
     This work is licensed under the Creative Commons Attribution-NonCommercial-ShareAlike 4.0 International License. To view a copy of this license, visit http://creativecommons.org/licenses/by-nc-sa/4.0/.
 
 
-Glossary
+Glosario 
 --------
 
-.. glossary::
+.. glosario::
 
     address-of
-        the address-of operator (``&``) is used to access the address of a C++ variable.
+        el operador address-of (``&``) es usado para acceder a la dirección de las variables de C++.
 
     atomic data type
-        basic data type that cannot be broken down into any simpler data elements.
+        tipo de datos básico que no se puede dividir en elementos de datos más simples.
 
     ``bool``
-        keyword for Boolean data type.
+        palabra clave para el tipo de dato Booleano.
 
     ``char``
-        keyword for character data type that stores a single character.
+        palabra clave para character data type that stores a single character.
 
-    dereference
-        follow a pointer to its referenced memory location and read the data there.
+    dereferencia
+        siga un puntero a su ubicación de memoria referenciada y lea los datos allí.
 
     ``float``
-        keyword for floating point data type.
+        palabra clave para floating point data type.
 
     ``double``
-        keyword for double-precision floating point data type.
+        palabra clave para double-precision floating point data type.
 
     ``int``
-        keyword for integer data type.
+        palabra clave para el tipo de datos entero.
 
-    pointer
-        variables that store and manipulate memory addresses.
+    punteros
+        variables que almacenan y manipulan direcciones de memoria.
 
-Matching
+
+Emparejar Definiciones
 --------
 .. dragndrop:: matching_ADT
-   :feedback: Feedback shows incorrect matches.
-   :match_1: address-of|||(&) is used to access the memory address of a C++ variable.
-   :match_2: atomic data type|||Data type that cannot be broken down into any simpler data elements.
-   :match_3: dereference|||Reads data in a pointers memory location. 
-   :match_4: pointer|||Variables that store and manipulate memory addresses.
+   :feedback: Los comentarios muestran coincidencias incorrectas.
+   :match_1: address-of|||(&) se utiliza para acceder a la dirección de memoria de una variable de C++.
+   :match_2: tipo de datos atómicos|||Data type that cannot be broken down into any simpler data elements.
+   :match_3: dereferencia|||Lee datos en una ubicación de memoria de punteros. 
+   :match_4: punteros||| Variables que almacenan y manipulan direcciones de memoria.
 
-   Drag each glossary term to its' corresponding definition. (Note: none of the data types are in this matching, but they are in the glossary)
+   Arrastre cada término del glosario a su definición correspondiente. (Nota: ninguno de los tipos de datos está en esta coincidencia, pero están en el glosario)
+
+   

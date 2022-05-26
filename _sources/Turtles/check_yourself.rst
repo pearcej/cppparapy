@@ -1,4 +1,4 @@
-Check Yourself
+Compruébalo tú mismo
 ==============
 
 .. activecode:: turtle_checkyourself_ac_1
@@ -30,12 +30,12 @@ Check Yourself
    :answer_c: 8
    :answer_d: 4
    :correct: b
-   :feedback_a: No, think about how many times fill is used...
-   :feedback_b: Correct!
-   :feedback_c: Incorrect! Consider that almost everything a turtle does is an action, even filling.
-   :feedback_d: Incorrect! Consider that there are some actions in a for loop.
+   :feedback_a: No, piense en cuantas veces fill es usado... 
+   :feedback_b: Correcto!
+   :feedback_c: Incorrecto! Considere que casi todo lo que hace una tortuga es una acción, incluso el relleno.
+   :feedback_d: Incorrecto! Considere que hay algunas acciones en un bucle for.
 
-   How large would the undo queue be for the above code example?
+   ¿Qué tan grande sería la cola de deshacer para el ejemplo de código anterior?
 
 .. code-block:: cpp
 
@@ -56,23 +56,23 @@ Check Yourself
     }
 
 .. mchoice:: turtle_checkyourself_mchoice_2
-   :answer_a: Circle
-   :answer_b: No shape
-   :answer_c: Pentagon
-   :answer_d: Star
+   :answer_a: Círculo
+   :answer_b: Ninguna forma
+   :answer_c: Pentágono
+   :answer_d: Estrella
    :correct: d
-   :feedback_a: Incorrect! Consider how many times the for-loop iterates...
-   :feedback_b: Incorrect! The turtle's pen is always down.
-   :feedback_c: Incorrect! Consider the angle the turtle turns every iteration.
-   :feedback_d: Correct!
+   :feedback_a: Incorrecto! Considere cuántas veces itera el bucle for...
+   :feedback_b: Incorrecto! The turtle's pen is always down.
+   :feedback_c: Incorrecto! Considere el ángulo la tortuga gira con cada iteración.
+   :feedback_d: Correcto!
 
-   What kind of shape does the above activecode create?
+   ¿Qué tipo de forma crea el activecode anterior?
 
 .. mchoice:: turtle_checkyourself_mchoice_3
-  :answer_a: True
-  :answer_b: False
+  :answer_a: Verdadero
+  :answer_b: Falso
   :correct: a
-  :feedback_a: Correct!
-  :feedback_b: Incorrect!
+  :feedback_a: Correcto!
+  :feedback_b: Incorrecto!
 
-  You can have more than one turtle on one screen.
+   Puede tener más de una tortuga en una pantalla.

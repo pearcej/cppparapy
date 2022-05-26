@@ -1,4 +1,4 @@
-Functions
+Funciones 
 :::::::::
 
 .. toctree::

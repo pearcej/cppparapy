@@ -4,7 +4,7 @@
     visit http://creativecommons.org/licenses/by-nc-sa/4.0/.
 
 
-Defining C++ Functions
+Definiendo Funciones en C++ 
 ----------------------
 
 In general, we can hide the details of any computation by defining
@@ -17,15 +17,15 @@ value you pass into it.
 
   .. activecode:: timesTwo
     :language: cpp
-    :caption: Implementation of the timesTwo function
+    :caption: Implementación de la función timesTwo 
 
     #include <iostream>
     using namespace std;
 
-    // function that multiplies a number by 2
+    // función que multiplica un número por 2
         int timesTwo(int num) {
-        /* return type int which indicates
-           that an integer is being returned */
+        /* el tipo de  dato que retorna es un entero "int" que indica
+           que un número entero es retornado */
         return num*2;
     }
 
@@ -47,14 +47,14 @@ evaluate it, passing an actual parameter value, in this case, ``3``.
 Note that the call to ``timesTwo`` returns an integer that can in turn be
 passed to another invocation.
 
-Let us look at a similar function.
+Miremos a una función similar.
 
 
 .. _lst_timesTwoVoid:
 
   .. activecode:: timesTwoVoid
     :language: cpp
-    :caption: Implementation of the timesTwoVoid function
+    :caption: Implementación de la función timesTwoVoid 
 
     #include <iostream>
     using namespace std;
@@ -501,7 +501,7 @@ same task.
    progress this third function should print out the best string generated so far
    and its score every 1000 tries.
 
-.. admonition:: Self Check Challenge
+.. admonition:: Desafío de autocomprobación
 
     See if you can improve upon the program in the self check by keeping letters
     that are correct and only modifying one character in the best string so far.

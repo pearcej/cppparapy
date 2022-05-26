@@ -1,9 +1,9 @@
-Summary
+Resumen
 =======
 
-- Turtles, originally from the Logo programming language, is used as an educational tool. It relates to a conceptual “turtle” that runs around on a canvas and draws things.
-- Python’s turtle is a great way to start coding, and until recently, C++ did not have the capability of such a library due to the complexity and required understanding of its syntax.
-- Turtles have a variety of commands that are self-describing such as “forward” or “back”. Almost everything that was available to use in Python for Turtles is also available in C++.
-- The two versions of the Turtle library differ mainly in syntax, such as differences in entering color codes, and the limited variety of preset shapes available in C++. However, C++ has a few extra utilities not available in Python.
-- Turtles provide methods to alter their inner workings, including some control over how many frames of animation are shown with :code:`tracer` method.
-- Every shape created and used by Turtles are a set of coordinates. We can change the shape of our turtles by using the :code:`shape` method to one of four default shapes, or by manually entering coordinates and creating your own.
+- Las tortugas originarias del lenguaje de programación Logo, se utiliza como herramienta educativa. Se relaciona con una “tortuga” conceptual que corretea sobre un lienzo y dibuja cosas.
+- La tortuga de Python es una excelente manera de comenzar a codificar y, hasta hace poco, C++ no tenía la capacidad de una biblioteca de este tipo debido a la complejidad y la comprensión requerida de su sintaxis.
+- Las tortugas tienen una variedad de comandos que se describen a sí mismos, como "adelante" o "atrás". Casi todo lo que estaba disponible para usar en Python for Turtles también está disponible en C++.
+- Las dos versiones de la biblioteca Turtle difieren principalmente en la sintaxis, como las diferencias en la introducción de códigos de color y la variedad limitada de formas preestablecidas disponibles en C++. Sin embargo, C++ tiene algunas utilidades adicionales que no están disponibles en Python.
+- Las tortugas proporcionan métodos para alterar su funcionamiento interno, incluido cierto control sobre cuántos cuadros de animación se muestran con el método :code:`tracer`.
+- Cada forma creada y utilizada por Turtles es un conjunto de coordenadas. Podemos cambiar la forma de nuestras tortugas utilizando el método :code:`shape` a una de las cuatro formas predeterminadas, o ingresando manualmente las coordenadas y creando las suyas propias.

@@ -2,47 +2,54 @@
     This work is licensed under the Creative Commons Attribution-NonCommercial-ShareAlike 4.0 International License. To view a copy of this license, visit http://creativecommons.org/licenses/by-nc-sa/4.0/.
 
 
-File Handling
+Manejo de archivos
 ~~~~~~~~~~~~~
 
-File handling in C++ also uses a ``stream`` in a similar way to the cout and cin functions of ``<iostream>``. The library that allows for input and output of files is ``<fstream>``.
+El manejo de archivos en C++ también usa un ``stream`` de manera similar a las funciones cout y cin de ``<iostream>``. 
+La biblioteca que permite la entrada y salida de archivos es ``<fstream>``.
 
-You must declare any file streams before you use them to read and write data. For example, the following statements inform the compiler to create a stream called ``in_stream`` that is an input-file-stream object, ``<ifstream>``, and another called ``out_stream`` that is an output-file-stream object, ``<ofstream>``.
-
+Debe declarar cualquier flujo de archivos antes de usarlos para leer y escribir datos. Por ejemplo, las siguientes 
+sentencias informan al compilador que cree un flujo llamado ``in_stream`` que es un objeto de flujo de archivo de entrada, 
+``<ifstream>``, y otro llamado ``out_stream`` que es un objeto de flujo de salida. objeto de secuencia de archivos, ``<ofstream>``.
 ::
 
     ifstream in_stream;
     ofstream out_stream;
 
-Member Functions and Precision
+Funciones de Miembro y Precisión
 ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
 
-A function that is associated with a certain type of object is called a **member function** of that object. You have already used member functions ``setf(...)`` and ``precision(...)`` for formatting our output streams using ``cout``. These functions are included briefly below:
+Una función que está asociada con cierto tipo de objeto se denomina **función miembro** de ese objeto. 
+Ya ha usado las funciones miembro ``setf(...)`` y ``precision(...)`` para formatear nuestros flujos de salida usando ``cout``. 
+Estas funciones se incluyen brevemente a continuación:
 
 ::
 
-    // Use cout's member function "set flags", called setf
-    // The argument here means to use a fixed point rather than scientific notation
+    // Use la función miembro de cout "set flags", llamada setf
+    // El argumento aquí significa usar un punto fijo en lugar de una notación científica.
     cout.setf(ios::fixed);
 
-    // Use cout's setf function again, but this time
-    // The argument tells cout to show the decimal point
+    // Use la función setf de cout nuevamente, pero esta vez
+    // El argumento le dice a cout que muestre el punto decimal
     cout.setf(ios::showpoint);
 
-    // Use cout's member function, called Precision
-    // The argument indicated to display 2 digits of precision
+    // Use la función miembro de cout, llamada Precisión
+    // El argumento indicado para mostrar 2 dígitos de precisión.
     cout.precision(2);
 
-File Operations
+Operaciones de archivo
 ~~~~~~~~~~~~~~~
-
-Having created a stream with the declaration above, we can connect it to a file (i.e. open the file) using the member function ``open(filename)``. For example, the following statement will allow the C++ program to open the file called "myFile.txt", assuming a file named that exists in the current directory, and connect ``in_stream`` to the beginning of the file:
+Habiendo creado un flujo con la declaración anterior, podemos conectarlo a un archivo (es decir, abrir el archivo) 
+usando la función miembro ``abrir (nombre de archivo)``. Por ejemplo, la siguiente instrucción permitirá que el 
+programa C++ abra el archivo llamado "myFile.txt", suponiendo que existe un archivo en el directorio actual, 
+y conectará ``in_stream`` al principio del archivo:
 
 ::
 
     in_stream.open("myFile.txt");
 
-Once connected, the program can read from that file. Pictorially, this is what happens:
+
+Una vez conectado, el programa puede leer de ese archivo. Gráficamente, esto es lo que sucede:
 
 .. _fig_read_read:
 
@@ -50,13 +57,13 @@ Once connected, the program can read from that file. Pictorially, this is what h
   :align: center
   :alt: image
 
-the ``<ofstream>`` class also has an ``open(filename)`` member function, but it is defined differently. Consider the following statement:
+la clase ``<ofstream>`` también tiene una función miembro ``open(filename)``, pero es definido diferente. Considere la declaración siguiente:
 
 ::
 
     out_stream.open("anotherFile.txt");
 
-Pictorally, we get a stream of data flowing out of the program:
+Gráficamente, obtenemos un flujo de datos que sale del programa:
 
 .. _fig_read_write:
 
@@ -64,59 +71,60 @@ Pictorally, we get a stream of data flowing out of the program:
   :align: center
   :alt: image
 
-Because out_stream is an object of type ``<ofstream>``, connecting it to the file named "anotherFile.txt" will create that file if it does not exist. If the file "anotherFile.txt" already exists, it will be wiped and replaced with whatever is fed into the output stream.
+Debido a que out_stream es un objeto de tipo ``<ofstream>``, conectarlo al archivo llamado "anotherFile.txt" 
+creará ese archivo si no existe. Si el archivo "anotherFile.txt" ya existe, se borrará y se reemplazará con 
+lo que se introduzca en el flujo de salida.
 
-To disconnect the ``ifstream`` in_stream from whatever file it opened, we use it's ``close()`` member function:
+Para desconectar ``ifstream`` in_stream de cualquier archivo que haya abierto, usamos su función miembro ``close()``:
 
 ::
 
     in_stream.close();
 
-To close the file for ``out_stream``, we use its ``close()`` function, which also adds an end-of-file marker to indicate where the end of the file is:
-
+Para cerrar el archivo para ``out_stream``, usamos su función ``close()``, que también agrega un marcador de fin de archivo para indicar dónde está el final del archivo:
 ::
 
     out_stream.close();
 
-Answer the question below concerning the use of the ``fstream`` library:
+Responda la siguiente pregunta sobre el uso de la biblioteca ``fstream``:
 
 .. mchoice:: stream_library_1
-   :answer_a: Yes, ofstream is required to edit the file.
-   :answer_b: Yes, using ifstream will wipe the file clean without using ofstream first.
-   :answer_c: No, using ofstream on a file that already has information on it will clear the entire file.
-   :answer_d: No, ofstream is exclusively used for reading files.
+   :answer_a: Si, ofstream es requerido para editar el archivo. 
+   :answer_b: Si, el uso de ifstream borrará el archivo sin usar ofstream primero.
+   :answer_c: No, el uso de ofstream en un archivo que ya tiene información borrará todo el archivo.
+   :answer_d: No, ofstream es exclusivamente usado para leer archivos.
    :correct: c
-   :feedback_a: Wrong! Even though it is required for editing files, using ofstream first will cause problems when it opens a file that has previous work saved on it.
-   :feedback_b: Wrong! ifstream is only used to read files, therefore it will never edit the contents of one.
-   :feedback_c: Correct!
-   :feedback_d: Wrong! ifstream is used to read files instead.
+   :feedback_a: Incorrecto! Aunque es necesario para editar archivos, usar ofstream primero causará problemas cuando abra un archivo que tenga un trabajo anterior guardado.
+   :feedback_b: Incorrecto! ifstream solo se usa para leer archivos, por lo tanto nunca editará el contenido de uno.
+   :feedback_c: Correcto!
+   :feedback_d: Incorrecto! ifstream se utiliza para leer archivos. 
 
-   Say you wanted to add some text to a file that already has important information on it. 
-   Would it be a good idea to first use ``ofstream`` to open the file?
+   Digamos que desea agregar texto a un archivo que ya contiene información importante. 
+   ¿Sería una buena idea usar primero ``ofstream`` para abrir el archivo?
 
-Dealing with I/O Failures
+Manejo de fallas de E/S 
 ~~~~~~~~~~~~~~~~~~~~~~~~~
 
-File operations, such as opening and closing files, are often a source of runtime
-errors for various reasons. Well-written programs always should include error checking
-and Handling routines for possible problems dealing with files. Error checking
-and handling generally involves the programmer inserting statements in functions
-that perform I/O to check if any of the operations have failed. In C (the predecessor to C++),
-the system call to open a file returns a value after the function is called.
-A negative number means the operation failed for some reason, which the program can
-check to see if reading from a file is alright. In C++, a simple error checking mechanism
-is provided by the member function ``fail()``:
+Las operaciones con archivos, como abrir y cerrar archivos, suelen ser una fuente de errores 
+de tiempo de ejecución por varios motivos. Los programas bien escritos siempre deben incluir 
+rutinas de verificación de errores y manejo de posibles problemas al tratar con archivos. 
+La verificación y el manejo de errores generalmente implican que el programador inserte 
+declaraciones en funciones que realizan E/S para verificar si alguna de las operaciones ha fallado. 
+En C (el predecesor de C++), la llamada al sistema para abrir un archivo devuelve un valor después 
+de llamar a la función. Un número negativo significa que la operación falló por algún motivo, 
+que el programa puede verificar para ver si la lectura de un archivo está bien. En C++, 
+la función miembro ``fail()`` proporciona un mecanismo simple de comprobación de errores:
 
 ::
 
     in_stream.fail();
 
-This function returns ``true`` only if the previous stream operation for in_stream
-was not successful, such as if we tried to open a non-existent file. If a failure has
-occured, in_stream may be in a corrupted state and it is best not to attempt any more
-operations with it.
 
-The following example code fragment safely quits the program entirely in case an I/O operation fails:
+Esta función devuelve ``verdadero`` solo si la operación de transmisión anterior para in_stream no tuvo éxito, 
+como si intentáramos abrir un archivo que no existe. Si ha ocurrido una falla, in_stream puede estar dañado 
+y es mejor no intentar más operaciones con él.
+
+El siguiente fragmento de código de ejemplo cierra el programa por completo en caso de que falle una operación de E/S:
 
 .. raw :: html
 
@@ -124,65 +132,75 @@ The following example code fragment safely quits the program entirely in case an
         <iframe height="400px" width="100%" src="https://repl.it/@CodyWMitchell/File-Handling-1?lite=true" scrolling="no" frameborder="no" allowtransparency="true" allowfullscreen="true" sandbox="allow-forms allow-pointer-lock allow-popups allow-same-origin allow-scripts allow-modals"></iframe>
     </div>
 
-After opening the "myFile.txt" file, the ``if`` conditional checks to see if there was an error. If so, the program will output the apologetic error message and then exit. The ``exit(1)`` function from the library ``cstdlib`` enables the program to terminate at that point and have it return a "1" versus a "0", indicating an Error has occurred.
 
-For more on Error Handling, see section 1.11.
+Después de abrir el archivo "myFile.txt", el condicional ``if`` verifica si hubo un error. Si es así, 
+el programa emitirá el mensaje de error de disculpa y luego saldrá. La función ``exit(1)`` de la biblioteca 
+``cstdlib`` permite que el programa termine en ese punto y que devuelva un "1" frente a un "0", lo que indica 
+que se ha producido un error.
 
-Reading and Writing with File Streams
+Para obtener más información sobre el manejo de errores, vea la sección 1.11.
+
+Leer y Escribir con Secuencias de Archivos
 ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
 
-As file I/O streams work in a similar way to ``cin`` and ``cout``, the operators ">>" and "<<" perform the same direction of data for files, with the exact same syntax.
+Como los flujos de E/S de archivos funcionan de manera similar a ``cin`` y ``cout``, los operadores ">>" y "<<" realizan la misma dirección de datos para archivos, con exactamente la misma sintaxis.
 
-For example, execution of the following statement will write the number 25, a space, the number 15, and another space into the out_stream output stream.
+Por ejemplo, la ejecución de la siguiente instrucción escribirá el número 25, un espacio, el número 15 y otro espacio en el flujo de salida out_stream.
 
 ::
 
     out_stream << 25 << endl;
     out_stream << 15 << endl;
 
-The extra space after the value 25 is important because data in a text file is typically seperated by a space, tab, or newline. Without the space, the value 2515 will be placed in the file, and subsequent read operations on that file would consider 2515 as a single value. For example, suppose that after the previous statement, the program opens the same file with the input stream in_stream. The following statement would put the number 25 into the variable ``inputn``.
+El espacio adicional después del valor 25 es importante porque los datos en un archivo de texto generalmente están separados 
+por un espacio, una tabulación o una nueva línea. Sin el espacio, el valor 2515 se colocará en el archivo y las operaciones 
+de lectura posteriores en ese archivo considerarán 2515 como un valor único. Por ejemplo, suponga que después de la instrucción 
+anterior, el programa abre el mismo archivo con el flujo de entrada in_stream. La siguiente declaración colocaría el número 25 
+en la variable ``inputn``.
 
 ::
 
     int inputn;
     in_stream >> inputn;
 
-The End-Of-File (EOF) for Systems that Implement eof()
+El Fin de Archivo (EOF) para Sistemas que implementan eof()
 ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
 
-So far, the assumption was that the programmer knew exactly how much data to read from
-an open file. However, it is common for a program to keep reading from a file without
-any idea how much data exists. Most versions of C++ incorporate an end-of-file (EOF)
-flag at the end of the file to let programs know when to stop.
-Otherwise, they could read data from a different file that happened to be
-right after it in the hard drive, which can be disastrous.
+Hasta ahora, la suposición era que el programador sabía exactamente cuántos datos leer de un archivo abierto. 
+Sin embargo, es común que un programa siga leyendo un archivo sin tener idea de cuántos datos existen. 
+La mayoría de las versiones de C++ incorporan un indicador de fin de archivo (EOF) al final del archivo 
+para que los programas sepan cuándo detenerse. De lo contrario, podrían leer datos de un archivo diferente 
+que estaba justo después en el disco duro, lo que puede ser desastroso.
 
-Many development environments have I/O libraries that define how the member
-function eof() works for ifstream variables to test if this flag is set to ``true`` or ``false``. Typically, one would like to know when the EOF has not been reached, so a common way is a negative boolean value. An alternative implementation is to keep reading using the >> operator; if that operation was successful (i.e. there was something in the file that was read), this success is interpreted as a 1 (true).
+Muchos entornos de desarrollo tienen bibliotecas de E/S que definen cómo funciona la función miembro eof() 
+para las variables ifstream para probar si este indicador se establece en ``verdadero`` o ``falso``. Por lo general, 
+a uno le gustaría saber cuándo no se ha alcanzado el EOF, por lo que una forma común es un valor booleano negativo. 
+Una implementación alternativa es seguir leyendo usando el operador >>; si esa operación fue exitosa 
+(es decir, había algo en el archivo que se leyó), este éxito se interpreta como un 1 (verdadero).
 
-Incidentally, that is why if you forget the second equals sign in a comparison
-between a variable and a value, you are assigning the value to the variable,
-which is a successful operation, which means the condition ends up evaluating to ``true``.
+Por cierto, es por eso que si olvidas el segundo signo igual en una comparación entre una variable y un valor, 
+le estás asignando el valor a la variable, lo cual es una operación exitosa, lo que significa que la condición 
+termina evaluándose como ``verdadera``.
 
-The following two code fragments highlight the possibilities:
+Los siguientes dos fragmentos de código resaltan las posibilidades:
 
-Using the ``eof()`` member function
+Usando la función miembro ``eof()``
 
 ::
 
     while(!in_stream.eof()) {
-        // statements to execute
-        // while EOF has not been
-        // reached
+        // declaraciones para ejecutar 
+        // mientras EOF no ha sido 
+        // alcanzado
     }
 
-Using the >> operator
+Usando el operador >> 
 
 ::
 
     while(in_stream>>inputn) {
-        // statements to execute
-        // while reads are successful
+        // declaraciones para ejecutar 
+        // mientras que las lecturas son exitosas
     }
 
 Here is an example of a program that essentially uses the second technique
@@ -350,60 +368,59 @@ the array is actually used.
 Typically, `string` from the ``<string>`` library should be used in all other cases when not
 working with file names or when a modern version of C++ can be used.
 
-Putting it all Together
+Poniendolo todo junto
 ~~~~~~~~~~~~~~~~~~~~~~~
 
-The following program combines all of the elements above and asks the user for the input and output filenames. After testing for open failures, it will read three numbers from the input file and write the sum into the output file.
-
+El siguiente programa combina todos los elementos anteriores y le pide al usuario los nombres de los archivos de entrada y salida. Después de probar las fallas abiertas, leerá tres números del archivo de entrada y escribirá la suma en el archivo de salida.
 ::
 
-    #include <cstdlib>  // for the exit function
-    #include <fstream>  // for I/O member functions
-    #include <iostream> // for cout
+    #include <cstdlib>  // para la función de cerrar (exit)
+    #include <fstream>  // para las funciones miembros de entrada y salida (E/S)
+    #include <iostream> // para usar cout
     using namespace std;
 
     int main() {
         char in_file_name[16],
-            out_file_name[16]; // the filenames can have at most 15 chars
+            out_file_name[16]; // los nombres de archivos pueden tener como máximo 15 caracteres
         ifstream in_stream;
         ofstream out_stream;
 
-        cout << "This program will sum three numbers taken from an input\n"
-             << "file and write the sum to an output file." << endl;
-        cout << "Enter the input file name (maximum of 15 characters):\n";
+        cout << "Este programa sumará tres números tomados de un archivo de entrada\n"
+             << "y escribirá la suma en un archivo de salida." << endl;
+        cout << "Introduzca el nombre del archivo de entrada (máximo de 15 caracteres):\n";
         cin >> in_file_name;
-        cout << "\nEnter the output file name (maximum of 15 characters):\n";
+        cout << "\nIntroduzca el nombre del archivo de salida (máximo de 15 caracteres):\n";
         cin >> out_file_name;
         cout << endl;
 
-        // Condensed input and output file opening and checking.
+        // Apertura y verificación de archivos de entrada y salida condensados.
         in_stream.open(in_file_name);
         out_stream.open(out_file_name);
 
         if (in_stream.fail() || out_stream.fail()) {
-            cout << "Input or output file opening failed.\n";
+            cout << "Error al abrir el archivo de entrada o salida.\n";
             exit(1);
         }
 
         double firstn, secondn, thirdn, sum = 0.0;
-        cout << "Reading numbers from the file " << in_file_name << endl;
+        cout << "Lectura de números del archivo " << in_file_name << endl;
         in_stream >> firstn >> secondn >> thirdn;
         sum = firstn + secondn + thirdn;
 
-        // The following set of lines will write to the screen
-        cout << "The sum of the first 3 numbers from " << in_file_name << " is "
+        // El siguiente conjunto de líneas escribirá en la pantalla
+        cout << "La suma de los primeros 3 números de " << in_file_name << " es "
              << sum << endl;
 
-        cout << "Placing the sum into the file " << out_file_name << endl;
+        cout << "Colocando la suma en el archivo" << out_file_name << endl;
 
-        // The following set of lines will write to the output file
-        out_stream << "The sum of the first 3 numbers from " << in_file_name
-                   << " is " << sum << endl;
+        // El siguiente conjunto de líneas escribirá en el archivo de salida
+        out_stream << " La suma de los primeros 3 números de" << in_file_name
+                   << " es " << sum << endl;
 
         in_stream.close();
         out_stream.close();
 
-        cout << "End of Program." << endl;
+        cout << "Final del programa." << endl;
 
         return 0;
     }
@@ -415,19 +432,18 @@ The following program combines all of the elements above and asks the user for t
     </div>
 
 
-Summary
+Resumen 
 ~~~~~~~
+1. El manejo de archivos en C++ usa ``stream`` similar a cout y cin en la biblioteca ``<iosteam>`` pero es ``<fstream>`` para el flujo de archivos.
 
-1. File handling in C++ uses ``stream`` similar to cout and cin in ``<iosteam>`` library but is ``<fstream>`` for file stream.
+2. ``ifstream in_stream`` crea un objeto de flujo de entrada, in_stream, que se puede usar para ingresar texto desde un archivo a C++.
 
-2. ``ifstream in_stream`` creates an input stream object, in_stream, that can be used to input text from a file to C++.
+3. ``ofstream out_stream`` crea un objeto de flujo de salida, out_steam, que se puede usar para escribir texto de C++ en un archivo.
 
-3. ``ofstream out_stream`` creates an output stream object,out_steam, that can be used to write text from C++ to a file.
-
-4. End-of-File or ``.eof()`` is a method for the instance variables of fstream, input and output stream objects, and can be used to carry out a task until a file has ended or do some task after a file has ended.
+4. Fin del documento (End-of-File) o ``.eof()`` es un método para las variables de instancia de fstream, objetos de flujo de entrada y salida, y puede usarse para llevar a cabo una tarea hasta que un archivo haya finalizado o realice alguna tarea. después de que un archivo ha finalizado.
 
 
-Check Yourself
+Compruébalo tú mismo
 ~~~~~~~~~~~~~~
 
 
@@ -438,26 +454,26 @@ Check Yourself
    :answer_c: ofstream
    :answer_d: iostream
    :correct: a,d
-   :feedback_a: Yes, fstream is library for handling file input and output.
-   :feedback_b: No, ifstream is an object type for handling input.
-   :feedback_c: No, ofstream is an object type for handling output.
-   :feedback_d: Yes, iostream is a library for handling console input and output.
+   :feedback_a: Si, fstream es una biblioteca para manejar la entrada y salida de archivos. 
+   :feedback_b: No, ifstream es un tipo de objeto para manejar input. 
+   :feedback_c: No, ofstream es un tipo de objeto para manejar        is an object type for handling output.
+   :feedback_d: Si, iostream es una biblioteca para manejar la entrada de entrada (input) y salida (output).
 
-   Which of the following are libraries for C++ input and output? (Choose all that are true.)
+   ¿Cuáles de las siguientes son bibliotecas para entrada (input) y salida (output) de C++? (Elija todas las que sean verdaderas).
+
 
 
 .. dragndrop:: dnd_streamuse
-   :feedback: Which library is used for which task?
-   :match_1: fstream|||I want to write to a file
-   :match_2: iostream|||I want to write to the console
+   :feedback: ¿Qué biblioteca se utiliza para qué tarea?
+   :match_1: fstream|||Quiero escribir a escribir a un archivo
+   :match_2: iostream|||Quiero escribir a la consola 
 
-   Drag the corresponding library to what you would use it for.
-
-
+   Arrastre la biblioteca correspondiente al uso que le daría.
 
 .. fillintheblank:: file_reading
 
-  Fill in the blank with the value of ``inputn`` when the following code runs.
+  Complete el espacio en blanco con el valor de ``inputn`` cuando se ejecute el siguiente código.
+
   ::
 
       #include <fstream>
@@ -470,19 +486,19 @@ Check Yourself
         ofstream out_stream;
         int inputn;
 
-        out_stream.open("anotherFile.txt");
+        out_stream.open("otroArchivo.txt");
         out_stream << 25;
         out_stream << 15 << endl;
         out_stream << 101 << endl;
 
-        in_stream.open("anotherFile.txt");
+        in_stream.open("otroArchivo.txt");
         in_stream >> inputn;
         cout << inputn;
         in_stream >> inputn;
       }
 
-  - :101: That is the correct answer! Good job!
-    :25: No. Hint: ``inputn`` is changed twice.
-    :2515: No. Hint: ``inputn`` is changed twice.
-    :15: No. Hint: note that there is no space between the first 25 and 15!
-    :.*: No. Hint: Observe what specific numbers are being written to the file!
+  - :101: ¡Esa es la respuesta correcta! ¡Buen trabajo!
+    :25: No. Pista: ``inputn`` se cambia dos veces. 
+    :2515: No. Pista: ``inputn`` se cambia dos veces.
+    :15: No. Pista: tenga en cuenta que no hay espacio entre los primeros 25 y 15!
+    :.*: No. Pista: ¡Observe qué números específicos se están escribiendo en el archivo!
