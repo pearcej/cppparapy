@@ -30,7 +30,7 @@ Compruébalo tú mismo
    :answer_c: 8
    :answer_d: 4
    :correct: b
-   :feedback_a: No, piense en cuantas veces fill es usado... 
+   :feedback_a: No, piense en cuantas veces fill es usado....
    :feedback_b: Correcto!
    :feedback_c: Incorrecto! Considere que casi todo lo que hace una tortuga es una acción, incluso el relleno.
    :feedback_d: Incorrecto! Considere que hay algunas acciones en un bucle for.
