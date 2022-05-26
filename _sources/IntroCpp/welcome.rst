@@ -1,18 +1,17 @@
-Welcome to *C++ for Python Programmers*
+Bienvenidos a *C++ para Programadores de Python*
 =======================================
 
-This short ebook is intended to help Python programmers or students with at least one
-term of Python programming experience learn the basics of the C++ programming language.
+El objetivo de este corto libro electronico es ayudar a programadores de Python o estudiantes que han tenido al menos un semestre de experiencia programando con Python que puedan aprender lo basico del lenguage de programación con C++.
 
-This book is written using the build on what you know
-philosophy. In order to help you learn C++ we will start with a Python
-example and then implement the example in C++. We will also
-examine the strengths, weaknesses, and differences between these two
-languages. As such, this book does not attempt to replace the many good C++ reference books
-that are available. Please feel free to use this book for
-yourself, or as a resource for a course you are teaching.
+Este libro fue escrito usando la filosofia de construir sobre lo que ya sabe. 
+Para ayudarlo a aprender C++ vamos a comenzar con un ejemplo en Python y luego vamos a implementar el mismo ejemplo en C++.
+Tambien vamos a examinar las fortalezas, debilidades y las diferencias entre estos dos lenguages de programacion. 
 
-This ebook is published using a Creative Commons license to
-encourage you to use it, change it, and modify it for your own purposes.
-We would appreciate knowing what you think if you do use this book, and we
-would love to see any modifications or additions you make.  Please, Fork Me!
+Como tal, este libro no intenta reemplazar los muchos buenos libros de referencia de C++
+que están disponibles. Siéntase libre de usar este libro para
+su propio aprendizaje, o como un recurso para un curso que está enseñando.
+
+Este libro electrónico se publica con una licencia Creative Commons para
+animarle a utilizarlo, cambiarlo y modificarlo para sus propios fines.
+Apreciaríamos saber lo que piensas si usas este libro, y te
+nos encantaría ver cualquier modificación o adición que hagas. Por favor crea un Fork!

@@ -1,40 +1,40 @@
-Why Learn Another Programming Language?
+¿Por qué aprender otro lenguaje de programación?
 =======================================
 
-Python is a great language for beginning programming for several reasons.
-First, the syntax is both sparse and clear. Second, the underlying model of
-how objects and variables work is very consistent. Third, you can write
-powerful and interesting programs without a lot of work. However, Python
-is representative of one kind of language, called a dynamic language.
-One might think of Python as being fairly informal. Other
-languages, like C, C++, and Java are more formal.
+Python es un gran lenguaje para comenzar a programar por varias razones.
+En primer lugar, la sintaxis es limitada y clara. En segundo lugar, el modelo fundamental de
+cómo funcionan los objetos y las variables es muy consistente. En tercer lugar, puede escribir 
+programas potentes e interesantes sin mucho trabajo. Sin embargo, Python
+es representativo de un tipo de lenguaje, llamado lenguaje dinámico.
+Uno podría pensar en Python como algo bastante informal. Otros
+lenguajes como C, C++ y Java son más formales.
 
-These other more formal languages have some advantages of their own. 
-First, is speed: For very large programs C and C++ are likely to give you the best
-performance. Second, is their maintainability. Python
-requires you to remember certain things. For example if you
-set variable ``t`` to reference a turtle, and forget later that ``t`` is
-a turtle but try to invoke a string method on it, you will get an error.
-C++ protects you from this kind of error by forcing you to be upfront and formal about
-the type of object each variable is going to refer to.
+Estos otros lenguajes más formales tienen algunas ventajas.
+Primero, es la velocidad: para programas muy grandes, es probable que C y C ++ le brinden la mejor
+actuación. En segundo lugar, es su mantenibilidad. Python
+requiere que recuerdes ciertas cosas. por ejemplo si tu
+estableces la variable ``t`` para hacer referencia a una tortuga en Python, y luego olvida que ``t`` es
+una tortuga pero intenta invocar un método de string en ella, obtendrá un error.
+C++ lo protege de este tipo de error al obligarlo a ser directo y formal acerca de
+el tipo de objeto al que se referirá cada variable.
 
-In one sense Python is representative of a whole class of interpreted languages,
-sometimes referred to as “scripting languages.” Other scripting languages 
-include Ruby and Perl. C++ is representative of
-what one might call industrial strength languages. Industrial strength
-languages are good for projects with several or many people working on the
-project where being formal and careful about what you do may impact lots
-of other people. Languages in this category include C, C#, C++, Ada, and Java.
+La buena noticia es que aprender un segundo lenguaje de programación es mucho más fácil que aprender
+su primer lenguaje de programación porque podrá aprovechar su conocimiento existente.
+Es probable que los lenguajes de programación cambien regularmente a medida que pasa el tiempo.
+A medida que avanza el campo de la informática, es probable que haya una nueva programación.
+lenguages que deseará o necesitará aprender. Hay ciertas características
+que la mayoría de los lenguajes de programación tienen en común, como variables, bucles,
+condicionales y funciones. Y hay otras características del lenguaje que son únicas. Si
+sabes lo que es común en la mayoría de los idiomas, entonces al aprender un nuevo idioma, solo necesita
+para centrarse en lo que es diferente de los idiomas que ya conoce.
 
-The good news is that learning a second programming language is much easier than learning 
-your first programming language because you will be able to draw upon your existing knowledge.
-Programming languages are likely to regularly change as time passes.
-As the field of computer science advances there are likely to be new programming
-languages that you will want or need to learn. There are certain features
-that most programming languages have in common such as variables, loops,
-conditionals, and functions. And there are other language features that are unique. If
-you know what is common in most languages, then in learning a new language, you need only
-to focus on what is different from the languages you already know.
+En cierto sentido, Python es representativo de toda una clase de lenguajes interpretados,
+a veces denominados "lenguajes de secuencias de comandos". Otros lenguajes de secuencias de comandos
+incluyen Ruby y Perl. C++ es representativo de
+lo que uno podría llamar lenguajes de fuerza industrial. Fuerza industrial
+Los idiomas son buenos para proyectos con varias o muchas personas trabajando en el
+proyecto en el que ser formal y cuidadoso con lo que haces puede tener un gran impacto
+de otras personas Los lenguajes en esta categoría incluyen C, C#, C++, Ada y Java.
 
 Why Learn C++? Why not Java or Javascript?
 ------------------------------------------
