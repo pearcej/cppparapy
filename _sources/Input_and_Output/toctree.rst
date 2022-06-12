@@ -1,4 +1,4 @@
-Input and Output
+Input (Entrada) y Output (Salida)
 ::::::::::::::::
 
 .. toctree::
