@@ -271,9 +271,9 @@ Compruébalo tú mismo
   :answer_c: !
   :answer_d: &&
   :correct: d
-  :feedback_a: No, esto significa "or".
+  :feedback_a: No, esto significa "o".
   :feedback_b: No, esto es en Python.
-  :feedback_c: No, esto significa "not"
+  :feedback_c: No, esto significa "no"
   :feedback_d: Muy bien!
 
   ¿Qué símbolo se usa para indicar "and" en C++ como en una condición compuesta?
