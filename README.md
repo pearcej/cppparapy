@@ -10,6 +10,7 @@ Se debe un reconocimiento especial a Jesse Walker-Schadler, quien, cuando solo e
 
 Como usar este libro
 ::::::::::::::::
+
 La versión genérica de este libro se encuentra en https://runestone.academy/ns/books/published/cpp4python/index.html
 Los instructores que deseen usar este libro, vayan a https://runestone.academy/ y creen una cuenta usando cpp4python como libro base.
 Aquellos que deseen informar errores o sugerir mejoras pueden hacerlo en https://github.com/pearcej/cpp4python/issues.
@@ -17,5 +18,6 @@ Aquellos que deseen informar errores o sugerir mejoras pueden hacerlo en https:/
 
 Licencia
 ::::::::::::::::
+
 Licencia Creative Commons
 C++ para programadores de Python de Jan Pearce y Brad Miller tiene una licencia Creative Commons Attribution-NonCommercial-ShareAlike 4.0 International License.
