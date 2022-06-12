@@ -4,21 +4,21 @@
    contain the root `toctree` directive.
 
 .. meta::
-   :description: An interactive book designed to help learners transition from Python to C++.
-   :keywords: C++, cpp, Python, computer science
+   :description: Un libro interactivo diseñado para ayudar a los estudiantes a hacer la transición de Python a C++.
+   :keywords: C++, cpp, Python, Ciencias de la Computación
 
 .. toc_version: 2
 
 ===========================
- C++ for Python Programmers
+C++ para programadores de Python
 ===========================
 
-By Jan Pearce, Berea College and Brad Miller, Runestone
+Por Jan Pearce, Berea College y Brad Miller, Runestone
 
 .. raw:: html
 
    <ul>
-   <li><a href="/runestone/assignments/chooseAssignment.html">Assignments</a></li>
+   <li><a href="/runestone/assignments/chooseAssignment.html">Tareas</a></li>
    </ul>
 
 .. toctree::
@@ -34,25 +34,24 @@ By Jan Pearce, Berea College and Brad Miller, Runestone
    Exception_Handling/toctree.rst
    Turtles/toctree.rst
 
-Acknowledgements
+Agradecimientos
 ::::::::::::::::
 
-Many thanks to Runestone for creating a very strong framework for open source computing books.
-Many thanks also to Berea College's Labor Program for making it possible for students to
-undergraduate students to receive funding to contribute.
+Muchas gracias a Runestone por crear un marco de referencia muy sólido para libros de computación de código abierto. 
+Muchas gracias también al Programa Laboral de Berea College por hacer posible que estudiantes de pregrado 
+reciban fondos para contribuir.
 
-Some sections of this book were originally written by Dr. Brad Miller as
-*Java for Python Programmers*. These were translated to the C++ language
-by Dr. Jan Pearce and a team of excellent students from Berea College.
-Other sections were originally written as course web pages by Dr. Jan Pearce.
+Algunas secciones de este libro fueron escritas originalmente por el Dr. Brad Miller como *Java para 
+programadores de Python*. Estos fueron traducidos al lenguaje C++ por la Dr. Jan Pearce y un equipo 
+de excelentes estudiantes de Berea College. Otras secciones fueron escritas originalmente como páginas 
+web del curso por el Dr. Jan Pearce.
 
-We would like to extend a special note of gratitude to
-`Jesse Walker-Schadler <https://www.linkedin.com/in/jesse-walker-schadler-a4898916b>`_
-who had the vision to create the `CTurtle library <https://github.com/walkerje/C-Turtle>`_
-which makes graphing in C++ particularly easy for Python programmers because it used the
-Python Turtle library syntax, and for his excellent work in porting it to Runestone.
+Nos gustaría extender un agradecimiento especial a Jesse Walker-Schadler, quien tuvo la visión 
+de crear la `biblioteca CTurtle <https://github.com/walkerje/C-Turtle>` que hace que la creación 
+de gráficos en C++ sea fácil especialmente para los programadores de Python porque usa la 
+sintaxis de la biblioteca Python Turtle, y por su excelente trabajo el incorporarlo a Runestone.
 
-Index and Search
+Índice y Búsqueda
 ::::::::::::::::
 
 * :ref:`genindex`
@@ -66,8 +65,8 @@ Index and Search
    <img alt="Creative Commons License" style="border-width:0; display:block; margin-left:
    auto; margin-right:auto;" src="https://i.creativecommons.org/l/by-nc-sa/4.0/88x31.png" /></a>
    <br /><span xmlns:dct="http://purl.org/dc/terms/" href="http://purl.org/dc/dcmitype/InteractiveResource"
-   property="dct:title" rel="dct:type">C++ for Python Programmers</span> by
+   property="dct:title" rel="dct:type">C++ para programadores de Python</span> por
    <span xmlns:cc="http://creativecommons.org/ns#" property="cc:attributionName">
-  Janice L. Pearce and Bradley N. Miller</span> is licensed under a
+  Janice L. Pearce y Bradley N. Miller</span> tiene licencia bajo una  Licencia Internacional
    <a rel="license" href="http://creativecommons.org/licenses/by-nc-sa/4.0/">
-   Creative Commons Attribution-NonCommercial-ShareAlike 4.0 International License</a>.</div>
+   Creative Commons Reconocimiento-NoComercial-CompartirIgual 4.0 </a>.</div>
