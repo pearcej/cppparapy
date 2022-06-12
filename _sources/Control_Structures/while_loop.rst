@@ -29,7 +29,7 @@ Imprime la frase “Hola, mundo” cinco veces. La condición en la sentencia
 ``while`` es evaluada al comienzo de cada repetición. Si la condición 
 es verdad ``true``, se ejecutará el cuerpo.
 
-La declaración while es una estructura iterativa de propósito muy general 
+La declaración while es una estructura iterativa con un propósito muy general 
 que usaremos en varios algoritmos diferentes. En muchos casos, una condición 
 compuesta controlará la iteración. Un fragmento como:
 ::
