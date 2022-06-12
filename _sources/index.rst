@@ -51,6 +51,8 @@ de crear la `biblioteca CTurtle <https://github.com/walkerje/C-Turtle>` que hace
 de gráficos en C++ sea fácil especialmente para los programadores de Python porque usa la 
 sintaxis de la biblioteca Python Turtle, y por su excelente trabajo el incorporarlo a Runestone.
 
+Traducción por: Belen Saavedra 
+
 Índice y Búsqueda
 ::::::::::::::::
 
