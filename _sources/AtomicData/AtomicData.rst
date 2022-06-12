@@ -1,12 +1,12 @@
 ..  Copyright (C)  Jan Pearce and Brad Miller
     This work is licensed under the Creative Commons Attribution-NonCommercial-ShareAlike 4.0 International License. To view a copy of this license, visit http://creativecommons.org/licenses/by-nc-sa/4.0/.
 
-Usando datos en C++
+Usando Datos en C++
 ~~~~~~~~~~~~~~~~~
 
 C++ requiere que los usuarios especifiquen el tipo de datos específico 
 de cada variable antes de usarla. Los principales tipos de datos atómicos 
-integrados de C++ son: entero (``int``), punto flotante (``float``), punto flotante
+integrados de C++ son: número entero (``int``), punto flotante (``float``), punto flotante
 de doble precisión (``double``), booleano (``bool``) y carácter (``char``). También hay
 un tipo especial que contiene una ubicación de memoria llamada ``puntero``. C++
 también tiene tipos de datos de colección o compuestos, que se discutirán en un capítulo futuro.
@@ -20,13 +20,13 @@ Las operaciones aritméticas estándar, +, -, \* y /
 se utilizan con paréntesis opcionales para forzar el orden de
 operaciones fuera de la precedencia normal del operador.
 
-En Python podemos usar ``//`` para dividir enteros.
+En Python podemos usar ``//`` para dividir números enteros.
 En C++, declaramos todos los tipos de datos.
-Cuando dos números enteros se dividen en C++, la parte entera del
-se devuelve el cociente y se elimina la parte fraccionaria.
-es decir, cuando se dividen dos enteros, se utiliza la división de enteros.
-Para obtener el cociente completo, declarar uno de los números como flotante
-convertir todo el resultado en punto flotante.
+Cuando dos números enteros se dividen en C++, la parte entera del 
+cociente se retorna y se elimina la parte fraccionaria. Es decir, 
+cuando se dividen dos enteros, se utiliza la división de enteros.
+Para obtener el cociente completo, al declarar uno de los números como flotante
+convertirá todo el resultado en punto flotante.
 
 La exponenciación en C++ se realiza usando ``pow()`` de la biblioteca ``cmath``
 y el operador resto (módulo) se hace con ``%``.
@@ -175,25 +175,25 @@ en el output también.
 Los objetos de datos booleanos también se utilizan como resultados para los operadores de comparación
 como igualdad (==) y mayor que (:math:`>`). Además,
 Los operadores relacionales y los operadores lógicos se pueden combinar para
-formar preguntas lógicas complejas. :ref:`Table 1 <tab_relational>` muestra los operadores relacionales
+formar preguntas lógicas complejas. :ref:`Tabla 1 <tab_relational>` muestra los operadores relacionales
 y lógicos con ejemplos que se muestran en la siguiente sesión.
 
 .. _tab_relational:
 
-.. table:: **Table 1: C++ Relational and Logical Operators**
+.. table:: **Tabla 1: C++ Operadores Relacionales y Lógicos**
 
     =========================== ============== =================================================================
-             **Nombre del Operador**   **Operador**                                                   **Explanation**
+                **Nombre**       **Operador**                            **Explicación**
     =========================== ============== =================================================================
-                      menos que      :math:`<`                                                Less than operator
-                   más que      :math:`>`                                             Greater than operator
-             menos que o igual     :math:`<=`                                    Less than or equal to operator
-          mayor que or igual     :math:`>=`                                 Greater than or equal to operator
-                          igual     :math:`==`                                                 Equality operator
-                      not equal     :math:`!=`                                                Not equal operator
-                    logical and     :math:`&&`                          Both operands true for result to be true
-                     logical or     :math:`||`        One or the other operand is true for the result to be true
-                    logical not      :math:`!`   Negates the truth value, false becomes true, true becomes false
+                      menos que      :math:`<`                                             menos que el operador
+                   más que           :math:`>`                                               más que el operador
+             menos que o igual      :math:`<=`                                 menos que o igual que el operador 
+          mayor que or igual        :math:`>=`                                 mayor que o igual que el operador 
+                          igual     :math:`==`                                              Operador de igualdad
+                     no igual a     :math:`!=`                                                 Operador no igual
+                       y lógico     :math:`&&`      Si ambos operandos son verdaderos, el resultado es verdadero
+                    o lógico        :math:`||`    Si uno u otro operando es verdadero, el resultado es verdadero
+                    no lógico       :math:`!`         Lo falso se vuelve verdadero, lo verdadero se vuelve falso
     =========================== ============== =================================================================
 
 
@@ -235,7 +235,7 @@ y lógicos con ejemplos que se muestran en la siguiente sesión.
 
 Cuando se declara una variable de C++, se reserva espacio en la memoria para contener
 este tipo de valor.
-Una variable de C++ se puede inicializar opcionalmente en la declaración mediante
+Una variable de C++ se puede inicializar opcionalmente en la declaración 
 usando una combinación de una declaración y una instrucción de asignación.
 
 Considere la siguiente sesión:
@@ -269,14 +269,12 @@ Considere la siguiente sesión:
 La declaración ``int theSum = 0;`` crea una variable llamada ``theSum`` 
 y la inicializa para contener el valor de datos de ``0``. Al igual que 
 en Python, se evalúa el lado derecho de cada declaración de asignación 
-y el valor de los datos resultantes se "asigna" a la variable nombrada en el lado izquierdo.
-
-Aquí el tipo de la variable es entero. Debido a que Python se tipifica dinámicamente, 
+y el valor de los datos resultantes se "asigna" a la variable nombrada en el lado izquierdo. 
+Aquí el tipo de la variable es de un número entero. Debido a que Python se tipifica dinámicamente, 
 si el tipo de los datos cambia en el programa, también lo hace el tipo de la variable.
 Sin embargo, en C++, el tipo de datos no puede cambiar. Esta es una característica del 
-tipo estático de C++. Una variable puede contener siempre un solo tipo de datos.
-
-Trampa: C++ a menudo simplemente intentará hacer la tarea que solicitó sin quejarse. 
+tipo estático de C++. Una variable puede contener siempre un solo tipo de datos. Advertencia: C++ 
+a menudo simplemente intentará hacer la tarea que solicitó sin quejarse. 
 Tenga en cuenta lo que sucedió en el código anterior en el resultado final.
 
 .. mchoice:: mc_bool
@@ -435,57 +433,57 @@ mientras que en C++ usamos el operador *address-of*, ``&``.
   .. tab:: C++
 
     .. activecode:: address_cpp
-        :caption: Memory addresses in C++
+        :caption: Direcciones de memoria en C++.
         :language: cpp
 
         #include <iostream>
         using namespace std;
 
 
-        // outputs the value of a variable
-        // as well as the memory address in C++.
+        // retorna el valor de una variable
+        // así como la dirección de memoria en C++.
         int main(){
             int varN = 101;
             cout << varN << endl;
-            cout << &varN << endl; //outputs the memory address of variable varN
+            cout << &varN << endl; //retorna la dirección de memoria de la variable varN
             return 0;
         }
 
   .. tab:: Python
 
     .. activecode:: address_py
-        :caption: Memory identifier in Python
+        :caption: Identificador de memoria en Python
 
-        # Outputs the value & memory address of
-        # variable titled varN.
+        # Emite el valor y la dirección de memoria de la
+        # variable llamada varN.
         def main():
             varN = 101;
             print(varN)
-            print(id(varN)) # ID function returns the memory address in Python.
+            print(id(varN)) # La función ID devuelve la dirección de memoria en Python.
 
         main()
 
 
-Tanto en Python como en C++, las variables se almacenan en ubicaciones de memoria que dependen
-sobre la carrera misma. Si ejecuta repetidamente el código anterior en C++ o Python, es posible que
-ver el cambio de ubicación.
+Tanto en Python como en C++, las variables se almacenan en ubicaciones de memoria que 
+dependen de la ejecución en sí. Si ejecuta repetidamente el código anterior en C++ 
+o Python, es posible que vea el cambio de ubicación.
 
 Como se sugirió anteriormente, en Python, es imposible almacenar una variable directamente.
 En su lugar, debemos usar un nombre de variable y una referencia al objeto de datos.
-(De ahí la flecha en la imagen).
+(De ahí la flecha en la imagen de arriba).
 En C++, las variables almacenan valores directamente porque son más rápidos de referenciar.
 
 Las referencias son más lentas, pero a veces son útiles.
 Si en C++ queremos crear una referencia análoga a una ubicación de memoria,
 debemos usar un tipo de datos especial llamado **puntero**.
 
-Sintaxis de Puntero
+Sintaxis de los Punteros
 ^^^^^^^^^^^^^^
 
 Al declarar un puntero en C++ que "apuntará" a la dirección de memoria de algunos
-tipo de datos,
-utilizará las mismas reglas para declarar variables y tipos de datos.
-La diferencia clave es que debe haber un asterisco (*) entre el tipo de datos y el
+tipos de datos,
+utilizará las mismas reglas para declarar variables y otros tipos de datos.
+La diferencia clave es que debe haber un asterisco (*) entre el tipo de dato y el
 identificador.
 
 ::
@@ -497,15 +495,15 @@ Los espacios en blanco en C++ generalmente no importan, por lo que las siguiente
 
 ::
 
-    SOMETYPE *variablename; // preferible
-    SOMETYPE * variablename;
-    SOMETYPE* variablename;
+    ALGUNTIPO*variablename; // preferible
+    ALGUNTIPO*variablename;
+    ALGUNTIPO*variablename;
 
 Sin embargo, la primera declaración es preferible porque es más clara para el
 programador que la variable es de hecho un puntero porque el asterisco está más cerca
 al nombre de la variable.
 
-El operador address-of ``&``
+El operador address-of: ``&``
 ------------------------------
 
 Ahora que sabemos cómo declarar punteros, ¿cómo les damos la dirección de
@@ -592,17 +590,16 @@ Ampliemos el ejemplo anterior para generar el valor de una variable y su direcci
 
    Si las líneas (varN = 50;) y (cout << \*ptrN << endl;) fueron insertadas en las líneas 7-8, what would it cout?
 
-Compiling and running the above code will have the program output the
-value in varN,
-what is in ptrN (the memory address of varN),
-and what value is located at that
-memory location.
 
-The second output sentence is the address of varN, which would most likely be
-different if you run the program on your machine.
 
-ADVERTENCIA: ¿Qué sucede si olvida el ampersand?
-al asignar un valor a un puntero
+
+Al compilar y ejecutar el código anterior, el programa generará el valor en varN, 
+lo que hay en ptrN (la dirección de memoria de varN) y qué valor se encuentra en esa ubicación de memoria.
+
+La segunda sentencia de salida es la dirección de varN, que muy probablemente 
+sería diferente si ejecuta el programa en su máquina.
+
+ADVERTENCIA: ¿Qué sucede si olvida el ampersand "&" al asignar un valor a un puntero
 y tener las siguientes instrucciones en su lugar?
 
 .. _cpp_address_error:
@@ -615,15 +612,15 @@ y tener las siguientes instrucciones en su lugar?
 
         int main( ) {
             int varN = 100;
-            int *ptrN = varN; // Note no ampersand,
-                // ptrN now refers to memory position 100,
-                // whatever happens to be there!
-                // You might get an error or you might not!
+            int *ptrN = varN; // Fijese que no hay el signo ampersand "&",
+                // ptrN ahora se referiere a la posición de memoria 100,
+                // sin importar lo que esta ahí!
+                // ¡Puede obtener un error o puede que no!
 
-             cout << "varN value: " << varN << endl;
-             cout << "ptrN location: " << ptrN << endl;
-             cout << "ptrN points to varN: " << endl;
-             cout << "dereference ptrN: " << *ptrN << endl;
+             cout << "valor de varN: " << varN << endl;
+             cout << "locación de ptrN: " << ptrN << endl;
+             cout << "ptrN apunta a varN: " << endl;
+             cout << "dereferencia ptrN: " << *ptrN << endl;
 
              return 0;
         }
@@ -646,8 +643,10 @@ sale la primera instrucción ``cout``
 
     Después de cambiar *ptrN, varN ahora tiene: 50
 
-Lo cual se espera porque cambió el lugar al que apunta ptrN y NO
- el contenido del lugar al que apunta.
+
+
+
+Lo cual se espera porque cambió el lugar al que apunta ptrN y NO el contenido del lugar al que apunta.
 
 La segunda instrucción ``cout`` es un desastre porque
 (1) No sabe lo que está almacenado en la ubicación 100 en la memoria, y
@@ -659,14 +658,14 @@ errores, la razón está bastante localizada.
 
 El Puntero Nulo
 ^^^^^^^^^^^^^^^^
-Al igual que Ninguno en Python, el puntero nulo (nullptr) en C++ no apunta a nada. 
-Las ediciones anteriores de C++ también usaban NULL (todo en mayúsculas) o 0, pero 
-usaremos la palabra clave nullptr porque el compilador puede manejar mejor los errores 
+Al igual que ``None`` en Python, el puntero nulo (``nullptr``) en C++ no apunta a nada. 
+Las ediciones anteriores de C++ también usaban ``NULL`` (todo en mayúsculas) o 0, pero 
+usaremos la palabra clave ``nullptr`` porque el compilador puede manejar mejor los errores 
 con la palabra clave. El puntero nulo se usa a menudo en condiciones y/o en operaciones lógicas.
 
 El siguiente ejemplo demuestra cómo funciona el puntero nulo. La variable ptrx inicialmente 
-tiene la dirección de x cuando se declara. En la primera iteración del bucle, se le asigna
- el valor de nullptr, que se evalúa como un valor falso; terminando así el bucle:
+tiene la dirección de x cuando se declara. En la primera iteración del bucle, se le asigna 
+el valor de ``nullptr``, que se evalúa como un valor falso; terminando así el bucle:
 
 .. _lst_cppcode2:
 
@@ -690,9 +689,9 @@ tiene la dirección de x cuando se declara. En la primera iteración del bucle, 
         }
 
 
-Consejo útil: el puntero nulo se vuelve muy útil cuando debe probar
-el estado de un puntero, como si la asignación a una dirección
-es válido o no.
+Consejo: el puntero nulo se vuelve muy útil cuando debe probar
+el estado de un puntero.Por ejemplo, cuando tiene que probar si la asignación a una dirección 
+es válida o no.
 
 
 Resumen
@@ -700,11 +699,11 @@ Resumen
 
 1. Todas las variables deben declararse antes de su uso en C++.
 
-2. C++ tiene tipos numéricos incorporados típicos: ``int`` es para números enteros y ``float`` y ``double`` se usan para punto flotante dependiendo de la cantidad de dígitos deseados.
+2. C++ tiene tipos numéricos incorporados, los más típicos son: ``int`` es para números enteros y ``float`` y ``double`` se usan para punto flotante dependiendo de la cantidad de dígitos deseados.
 
 3. C++ tiene el tipo de dato Booleano ``bool`` que contiene ``true`` o ``false``.
 
-4. El tipo de datos de carácter ``char``contiene un solo caracter el cual está entre comillas simples.
+4. El tipo de datos de carácter ``char`` contiene un solo caracter el cual está entre comillas simples.
 
 5. Los punteros son un tipo de variable que almacena una dirección de memoria. Para declarar un puntero, se usa un ``*`` antes del nombre de la variable que almacena la ubicación.
 
@@ -733,7 +732,7 @@ Compruébalo tú mismo
 
   Este símbolo: ``___`` es usado para almacenar una dirección de memoria en C++.
 
- - :pointer: Correcto!
+ - :puntero: Correcto!
    :variable: Ser más específico!
    :reference: Eso es en Python, no en C++!
    :default: Incorrecto. Por favor intente nuevamente.
