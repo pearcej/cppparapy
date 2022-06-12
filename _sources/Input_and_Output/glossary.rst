@@ -5,28 +5,27 @@
 Glosario 
 --------
 
-.. glosario::
+.. glossary::
 
     c-string
-        Una matriz de caracteres que terminan con un carácter nulo, es decir  ``\0``.
+        Un array de caracteres que terminan con un carácter nulo, es decir  ``\0``.
 
-    member function
+    función miembro 
         Una función que es asociada con un cierto tipo de objeto; esta funcion es llamada una función miembro de ese objeto.
 
-    stream
+    flujo
         Una abstracción que le permite enviar o recibir un número desconocido de bytes en entrada o salida. Es una metáfora de una corriente de agua.
     
     End-Of-File(EOF)
-         A flag at the end of the file to let programs know when to stop.
-
+         Una indicación al final del archivo para que los programas sepan cuándo detenerse.
 
 Matching
 --------
 .. dragndrop:: matching_ch6
-   :feedback: Feedback shows incorrect matches.
-   :match_1: stream|||An abstraction that allows you to send or receive an unknown number of bytes in input or output. 
-   :match_2: member function|||A function that's associated with a certain type of object.
-   :match_3: c-string||| An array of characters that ends with a terminating null character.
-   :match_4: End-Of-File|||A flag that lets programs know when to stop.
+   :feedback: Los comentarios muestran coincidencias incorrectas.
+   :match_1: flujo||| Una abstracción que le permite enviar o recibir un número desconocido de bytes en entrada o salida.
+   :match_2: función miembro|||Una función que está asociada con un determinado tipo de objeto.
+   :match_3: c-string||| Un array o arreglo de caracteres que termina con un carácter nulo de terminación.
+   :match_4: End-Of-File|||Una indicación que permite que los programas sepan cuándo detenerse.
 
    Match the words to thier corresponding definition.
