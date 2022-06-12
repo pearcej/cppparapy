@@ -129,9 +129,8 @@ El siguiente fragmento de código de ejemplo cierra el programa por completo en 
 .. raw :: html
 
     <div>
-        <iframe height="400px" width="100%" src="https://repl.it/@CodyWMitchell/File-Handling-1?lite=true" scrolling="no" frameborder="no" allowtransparency="true" allowfullscreen="true" sandbox="allow-forms allow-pointer-lock allow-popups allow-same-origin allow-scripts allow-modals"></iframe>
+        <iframe height="400px" width="100%" src="https://repl.it/@sheepof/Manejo-de-archivos?lite=true" scrolling="no" frameborder="no" allowtransparency="true" allowfullscreen="true" sandbox="allow-forms allow-pointer-lock allow-popups allow-same-origin allow-scripts allow-modals"></iframe>
     </div>
-
 
 Después de abrir el archivo "myFile.txt", el condicional ``if`` verifica si hubo un error. Si es así, 
 el programa emitirá el mensaje de error de disculpa y luego saldrá. La función ``exit(1)`` de la biblioteca 
@@ -203,20 +202,19 @@ Usando el operador >>
         // mientras que las lecturas son exitosas
     }
 
-Here is an example of a program that essentially uses the second technique
-mentioned above to read all the numbers in a file and output them in a neater format.
-The ``while`` loop to scan through a file is located in the ``make_neat(...)`` function.
-
+Aquí hay un ejemplo de un programa que esencialmente usa la segunda técnica
+mencionado anteriormente para leer todos los números en un archivo y generarlos en un formato más ordenado.
+El bucle ``while`` para escanear un archivo se encuentra en la función ``make_neat(...)``.
 ::
 
-    // Illustrates output formatting instructions.
-    // Read all the numbers in the file rawdata.dat and write the numbers
-    // to the screen and to the file neat.dat in a neatly formatted way.
+    // Ilustra las instrucciones de output 
+    // Lea todos los números en el archivo rawdata.dat y escriba los números
+     // a la pantalla y al archivo clean.dat con un formato ordenado.
 
-    #include <cstdlib>  // for the exit function
-    #include <fstream>  // for I/O member functions
-    #include <iomanip>  // for the setw function
-    #include <iostream> // for cout
+    #include <cstdlib>  // para la función de salida
+    #include <fstream>  // para funciones miembro de E/S
+    #include <iomanip>  // para la función setw
+    #include <iostream> // para cout
     using namespace std;
     void make_neat(
         ifstream &messy_file,
@@ -229,35 +227,35 @@ The ``while`` loop to scan through a file is located in the ``make_neat(...)`` f
         ofstream fout;
 
         fin.open("rawdata.txt");
-        if (fin.fail()) { // oops the file did not exist for reading?
-            cout << "Input file opening failed." << endl;
+        if (fin.fail()) { // 
+            cout << "Error al abrir el archivo de entrada." << endl;
             exit(1);
         }
 
         fout.open("neat.txt");
-        if (fout.fail()) { // oops the output file open failed!
-            cout << "Output file opening failed.\n";
+        if (fout.fail()) { // ¡Oops, el archivo de salida abierto falló!
+            cout << "Error al abrir el archivo de salida.\n";
             exit(1);
         }
         make_neat(fin, fout, 5, 12);
 
         fin.close();
         fout.close();
-        cout << "End of program." << endl;
+        cout << "Termine el programa." << endl;
         return 0;
     }
-    // Uses iostreams, streams to the screen, and iomanip:
+    // Usa iostreams, flujos a la consola, y iomanip:
     void make_neat(
         ifstream &messy_file,
         ofstream &neat_file,
         int number_after_decimalpoint,
         int field_width) {
-        // set the format for the neater output file.
+        // establezca el formato para el archivo de salida más ordenado.
         neat_file.setf(ios::fixed);
         neat_file.setf(ios::showpoint);
         neat_file.setf(ios::showpos);
         neat_file.precision(number_after_decimalpoint);
-        // set the format for the output to the screen too.
+        // establecer el formato para la salida a la pantalla también.
         cout.setf(ios::fixed);
         cout.setf(ios::showpoint);
         cout.setf(ios::showpos);
@@ -269,9 +267,9 @@ The ``while`` loop to scan through a file is located in the ``make_neat(...)`` f
         }
     }
 
-    // Code by Jan Pearce
+    // Código escrito por Jan Pearce
     
-This is the ``rawdata.txt`` inputed into the ``make_neat(...)``.
+Este es el documento ``rawdata.txt`` introducido en el archivo ``make_neat(...)``.
 
 ::
 
@@ -280,7 +278,7 @@ This is the ``rawdata.txt`` inputed into the ``make_neat(...)``.
     -20 2 1 2
     10 -20 30 -40
 
-And this is the expected output
+Y este es el resultado esperado.
 
 ::
 
@@ -304,69 +302,69 @@ And this is the expected output
 .. raw :: html
 
     <div>
-        <iframe height="400px" width="100%" src="https://repl.it/@CodyWMitchell/File-Handling-2?lite=true" scrolling="no" frameborder="no" allowtransparency="true" allowfullscreen="true" sandbox="allow-forms allow-pointer-lock allow-popups allow-same-origin allow-scripts allow-modals"></iframe>
+        <iframe height="400px" width="100%" src="https://repl.it/@sheepof/manejo?lite=true" scrolling="no" frameborder="no" allowtransparency="true" allowfullscreen="true" sandbox="allow-forms allow-pointer-lock allow-popups allow-same-origin allow-scripts allow-modals"></iframe>
     </div>
 
-The input file ``rawdata.txt`` must be in the same directory (folder) as the program in order for it to open successfully. The program will create a file called "neat.dat" to output the results.
+
+El archivo de entrada ``rawdata.txt`` debe estar en el mismo directorio (carpeta) que el programa para que se abra correctamente. El programa creará un archivo llamado "neat.dat" para mostrar los resultados.
 
 .. mchoice:: eofFirst
     :multiple_answers:
-    :answer_a: To keep a program from writing into other files.
-    :answer_b: To keep a program from stopping.
-    :answer_c: To make sure you do not overflow into temporary buffer.
-    :answer_d: To stop an input files stream.
+    :answer_a: Para evitar que un programa escriba en otros archivos.
+    :answer_b: Para evitar que un programa se detenga.
+    :answer_c: Para asegurarse de que no se desborde en el búfer temporal.
+    :answer_d: Para detener un flujo de archivos de entrada.
     :correct: a,c,d
-    :feedback_a: Yes, EOFs are intended to prevent the program from overwriting a file.
-    :feedback_b: Not quite, the point of EOFs is to do the opposite.
-    :feedback_c: Yes, EOFs prevent overflow into temporary buffer.
-    :feedback_d: Yes, EOFs stop input file streams. 
+    :feedback_a: Si, Los EOF están destinados a evitar que el programa sobrescriba un archivo.
+    :feedback_b: No del todo, el objetivo de los EOF es hacer lo contrario.
+    :feedback_c: Sí, los EOF evitan el desbordamiento en el búfer temporal.
+    :feedback_d: Sí, los EOF detienen los flujos de archivos de entrada.
 
-    What are good use cases for EOFs in C++ programming?
+    ¿Cuáles son buenos casos de uso para los EOF en la programación de C++?
     
-Passing Streams as Parameters
+Pasar flujos como Parámetros
 ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
 
-In the above program, you see that the input and output streams are passed to the file
-via ``pass by reference``. This fact may at first seem like a surprising choice
-until you realize that a stream must be changed in order to read from it or write to it.
-In other words, as streams "flow", they are changed.
-For this reason, all streams will always be passed by reference.
+En el programa anterior, ve que los flujos de entrada y salida se pasan al archivo
+vía ``pasar por referencia``. Este hecho puede parecer al principio una elección sorprendente.
+hasta que te das cuenta de que una transmisión debe cambiarse para poder leer o escribir en ella.
+En otras palabras, a medida que las corrientes "fluyen", se modifican.
+Por esta razón, todos los flujos siempre se pasarán por referencia.
 
-File Names and C-Strings
+Nombres de Archivos y Cadenas C
 ~~~~~~~~~~~~~~~~~~~~~~~~
 
-In modern versions of C++, you can use the <string> library for filenames,
-but earlier versions of C++ required the use of C-strings.
-The program above will try to open the file called "rawdata.txt" and
-output its results to a file called "neat.dat" every time it runs,
-which is not very flexible. Ideally, the user should be able to enter
-filenames that the program will use instead of the same names.
-We have previously talked about the ``char`` data type that allows users to store
-and manipulate a single character at a time. A sequence of characters such as "myFileName.dat"
-can be stored in an array of chars called a ``c-string``, which can be declared as follows:
-
+En las versiones modernas de C++, puede usar la biblioteca <string> para los nombres de archivo,
+pero las versiones anteriores de C++ requerían el uso de C-strings.
+El programa anterior intentará abrir el archivo llamado "rawdata.txt" y
+enviar sus resultados a un archivo llamado "neat.dat" cada vez que se ejecuta,
+que no es muy flexible. Idealmente, el usuario debería poder ingresar
+nombres de archivo que usará el programa en lugar de los mismos nombres.
+Anteriormente hemos hablado sobre el tipo de datos ``char`` que permite a los usuarios almacenar
+y manipular un solo carácter a la vez. Una secuencia de caracteres como "myFileName.dat"
+se puede almacenar en un array de caracteres llamada ``c-string``, que se puede declarar de la siguiente manera:
 ::
 
     // Syntax: char C-string_name[LEN];
     // Example:
     char filename[16];
 
-This declaration creates a variable called ``filename`` that can hold a string of
-length up to ``16``-1 characters.
-The square brackets after the variable name indicate to the compiler the maximum
-number of character storage that is needed for the variable.
-A ``\0`` or ``NULL`` character terminates the C-string, without the system knowing how much of
-the array is actually used.
+Esta declaración crea una variable llamada ``filename`` que puede contener una cadena de
+longitud de hasta ``16``-1 caracteres.
+Los corchetes después del nombre de la variable indican al compilador el máximo
+número de almacenamiento de caracteres que se necesita para la variable.
+Un carácter ``\0`` o ``NULL`` termina la cadena C, sin que el sistema sepa cuánto de
+el array se utiliza realmente.
 
 
-    Warnings:
-        1. The number of characters for a c-string must be one greater than the number of actual characters!
-        2. Also, LEN must be an integer number or a declared const int, it cannot be a variable.
+    Advertencias:
+        1. ¡El número de caracteres para una cadena C debe ser uno mayor que el número de caracteres reales!
+        2. Además, LEN debe ser un número entero o una const int declarada, no puede ser una variable.
 
-**C-strings** are an older type of string that was inherited from the C language, and people frequently refer to both types as "strings", which can be confusing.
+**C-strings** son un tipo de cadena más antigua que se heredó del lenguaje C, y las personas con frecuencia se refieren a ambos tipos como "cadenas", lo que puede resultar confuso.
 
-Typically, `string` from the ``<string>`` library should be used in all other cases when not
-working with file names or when a modern version of C++ can be used.
+Por lo general, `string` de la biblioteca ``<string>`` debe usarse en todos los demás casos cuando no
+trabajar con nombres de archivos o cuando se puede usar una versión moderna de C++.
 
 Poniendolo todo junto
 ~~~~~~~~~~~~~~~~~~~~~~~
@@ -428,9 +426,8 @@ El siguiente programa combina todos los elementos anteriores y le pide al usuari
 .. raw :: html
 
     <div>
-        <iframe height="400px" width="100%" src="https://repl.it/@CodyWMitchell/File-Handling-3?lite=true" scrolling="no" frameborder="no" allowtransparency="true" allowfullscreen="true" sandbox="allow-forms allow-pointer-lock allow-popups allow-same-origin allow-scripts allow-modals"></iframe>
+        <iframe height="400px" width="100%" src="https://repl.it/@sheepof/manejotres?lite=true" scrolling="no" frameborder="no" allowtransparency="true" allowfullscreen="true" sandbox="allow-forms allow-pointer-lock allow-popups allow-same-origin allow-scripts allow-modals"></iframe>
     </div>
-
 
 Resumen 
 ~~~~~~~
@@ -445,7 +442,6 @@ Resumen
 
 Compruébalo tú mismo
 ~~~~~~~~~~~~~~
-
 
 .. mchoice:: stream_library_2
    :multiple_answers:
