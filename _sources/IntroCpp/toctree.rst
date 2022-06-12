@@ -1,8 +1,8 @@
-Introduction to C++ for Python Programmers
+Introducción a C++ para Programadores de Python 
 ::::::::::::::::::::::::::::::::::::::::::
 
 .. toctree::
-    :caption: Introduction to C++ for Python Programmers
+    :caption: Introducción a C++ para Programadores de Python 
     :maxdepth: 2
 
     welcome.rst
