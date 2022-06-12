@@ -1,4 +1,4 @@
-Collection Data Types
+Tipos de Datos de Colección
 :::::::::::::::::::::
 
 .. toctree::
