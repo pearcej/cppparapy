@@ -26,7 +26,7 @@ y se usa una notación < > para indicar el tipo de datos de los elementos. Para 
 
 
     ===================== ============================= ====================================================
-     **Operación del vector**                       **Uso**                                      **Explicación**
+     **Operación del vector**     **Uso**           **Explicación**
     ===================== ============================= ====================================================
                   ``[ ]``               ``myvector[i]``                   access value of element at index i
                     ``=``         ``myvector[i]=value``                   assign value to element at index i
@@ -40,21 +40,24 @@ y se usa una notación < > para indicar el tipo de datos de los elementos. Para 
     ===================== ============================= ====================================================
 
 
-A very common programming task is to grow a vector using the ``push_back()`` method to append to the vector
-as we see in the next example.
-Because vectors can change size, vectors typically allocate some extra storage to accommodate for possible growth.
-Thus the vector typically has an actual *capacity* greater than the storage *size* strictly needed to contain its elements.
 
 
-Iterating through Vectors
+Una tarea de programación muy común es hacer crecer un vector usando el método ``push_back()`` para agregarlo 
+al vector como vemos en el siguiente ejemplo. Debido a que los vectores pueden cambiar de tamaño, los vectores 
+suelen asignar algo de almacenamiento adicional para adaptarse a un posible crecimiento. Por lo tanto, el vector 
+normalmente tiene una capacidad real mayor que el *tamaño* de almacenamiento estrictamente necesario para contener 
+sus elementos.
+
+Iterando a través de Vectores
 ~~~~~~~~~~~~~~~~~~~~~~~~~
-
-When iterating vectors, you must first find the length of your container. You can simply call the ``.length()`` function.
-For arrays, the number of elements can be found by getting the size in memory of the array
-by using the ``sizeof()`` function, and then dividing it by the size of the first element of
-the array using the same ``sizeof()`` function. Because all elements in C++ arrays are
-the same type, they take the same amount of space and that can be used to find the number
-of elements the Array contains!
+Al iterar vectores, primero debe encontrar la longitud de su contenedor. 
+Simplemente puede llamar a la función ``.length()``. Para los arrays, 
+el número de elementos se puede encontrar obteniendo el tamaño en 
+la memoria del array usando la función ``sizeof()``, y luego dividiéndolo 
+por el tamaño del primer elemento del arreglo usando la misma función 
+``sizeof()``. Debido a que todos los elementos en las matrices de C++ 
+son del mismo tipo, ocupan la misma cantidad de espacio y eso se puede 
+usar para encontrar la cantidad de elementos que contiene el array!
 
 .. activecode:: vectorIteration1
    :language: cpp
@@ -65,17 +68,17 @@ of elements the Array contains!
 
    int main() {
        int nums[] = {1,3,6,2,5};
-       //Divide the size of the array (in bytes) by the size of a single element (in bytes)
-       // to get the total number of elements in the array.
-       int numsSize = sizeof(nums)/sizeof(nums[0]); // Get size of the nums array
+       //Dividir el tamaño del array (en bytes) por el tamaño de un solo elemento (en bytes)
+       // para obtener el número total de elementos del array.
+       int numsSize = sizeof(nums)/sizeof(nums[0]); // Obtener el tamaño del array nums
 
        for (int index=0; index<numsSize; index++) {
            cout << nums[index] << endl;
        }
 
 
-      // Simpler Implementation that may only work in
-      // Newer versions of C++
+      // Implementación más simple que solo puede funcionar en
+      // Versiones más recientes de C++
 
       // for (int item:nums) {
       //     cout << item << endl;
@@ -85,41 +88,42 @@ of elements the Array contains!
    }
 
 
-An optional secondary version of the ``for`` loop has been commented out of the above code.
-You can try running this in your version of C++ to see if it works, but in some older versions of C++,
-such as C++98, it does not.
 
-The above loop assigns the variable ``index`` to be each successive value from 0 to numsSize.
- Then, the value at that index in the array is printed to the console.
+Se ha comentado una versión secundaria opcional del bucle ``for`` del código anterior.
+Puede intentar ejecutar esto en su versión de C++ para ver si funciona, pero en algunas 
+versiones anteriores de C++, como C++98, no funciona.
+
+El ciclo anterior asigna la variable ``index`` para que sea cada valor sucesivo de 0 a numsSize. 
+Luego, el valor en ese índice del array se imprime en la consola.
     
 
-Matching
+Emparejar definiciones
 ^^^^^^^^
 .. dragndrop:: matching_vectors
-   :feedback: Feedback shows incorrect matches.
-   :match_1: [ ]|||Accesses value of an element.
-   :match_2: =||| Assigns value to an element.
-   :match_3: push_back|||Appends item to the end of the vector.
-   :match_4: pop_back||| Deletes last item of the vector.
-   :match_5: insert|||Injects an item into the vector.
-   :match_6: erase|||Deletes an element from the choosen index.
-   :match_7: size|||Returns the actual capacity used by elements.
-   :match_8: capacity|||Returns the ammount of allocated storage space.
-   :match_9: reserve||| Request a change in space to amount
+   :feedback: Los comentarios muestran coincidencias incorrectas.
+   :match_1: [ ]||| Accede al valor de un elemento.
+   :match_2: =||| Asigna valor a un elemento.
+   :match_3: push_back||| Agrega el elemento al final del vector.
+   :match_4: pop_back||| Elimina el último elemento del vector.
+   :match_5: insert||| Inyecta un elemento en el vector..
+   :match_6: erase||| Elimina un elemento del índice elegido.
+   :match_7: size||| Retorna la capacidad real utilizada por los elementos.
+   :match_8: capacity||| Retorna la cantidad de espacio de almacenamiento asignado.
+   :match_9: reserve||| Solicitar cambio de espacio a importe
 
-    Match the Vector operations with their corresponding explination.
+    Relaciona las operaciones vectoriales con su correspondiente explicación.
 
 .. tabbed:: intro_vector
 
   .. tab:: C++
 
     .. activecode:: introvector_cpp
-        :caption: Using a vector in C++
+        :caption: Usando un vector en C++
         :language: cpp
 
-        // function that uses a vector to square
-        // every number from 0 to 49
-        // uses the reserve operation to save space in memory
+        // función que usa un vector para elevar al cuadrado
+        // todos los numeros del 0 al 49
+        // utiliza la operación de reserva para ahorrar espacio en la memoria
         #include <iostream>
         #include <vector>
         using namespace std;
@@ -139,10 +143,10 @@ Matching
   .. tab:: Python
 
     .. activecode:: introvector_py
-        :caption: Using a Python list
+        :caption: Usando una lista de Python
 
-        """Uses a list to square every
-        number from 0 to 49 """
+        """Usa una lista para cuadrar cada
+        número del 0 al 49"""
         def main():
             intlist=[]
             for i in range(50):
@@ -152,23 +156,24 @@ Matching
         main()
 
 
-In the above example, the use of ``reserve`` was optional. However, it is a good
-idea to use it before growing a vector in this way because it will save time.
-Because vectors are stored in underlying arrays which require contiguous memory,
-every time the vector's size gets too large for the capacity, the entire vector must
-be moved to a larger location in memory, and all that copying takes time.
-In a typical implementation, the capacity is doubled each time. as in the
-example that follows.
-
+En el ejemplo anterior, el uso de ``reservar`` era opcional. 
+Sin embargo, es una buena idea usarlo antes de hacer crecer 
+un vector de esta manera porque ahorrará tiempo. Debido a que 
+los vectores se almacenan en arreglos subyacentes que requieren 
+memoria contigua, cada vez que el tamaño del vector es demasiado 
+grande para la capacidad, el vector completo debe moverse a una 
+ubicación más grande en la memoria, y todo ese copiado lleva tiempo. 
+En una implementación típica, la capacidad se duplica cada vez. 
+como en el ejemplo que sigue.
 
 .. activecode:: vector_no_reserve_cpp
-    :caption: With use of ``reserve``
+    :caption: con el uso de  ``reserve``
     :language: cpp
 
-    // function that uses a vector to square
-    // every number from 0 to 49
-    // and does not use reserve.
-    // shows amount of space used
+    // función que usa un vector para elevar al cuadrado
+    // todos los numeros del 0 al 49
+    // y no utiliza reserva.
+    // muestra la cantidad de espacio utilizado
     #include <iostream>
     #include <vector>
     using namespace std;
@@ -176,7 +181,7 @@ example that follows.
     int main(){
 
         vector<int> intvector;
-        // without intvector.reserve(50);
+        // sin intvector.reserve(50);
 
         for (int i=0; i<50; i++){
             intvector.push_back(i*i);
@@ -187,20 +192,22 @@ example that follows.
     }
 
 
-Remembering that C++ is designed for speed, not protection,
-we will likely not be surprised by the following:
+
+
+Recordando que C++ está diseñado para la velocidad, 
+no para la protección, es probable que no nos sorprenda lo siguiente:
 
 .. tabbed:: vector_errors
 
   .. tab:: C++
 
     .. activecode:: vector_errors_cpp
-        :caption: Vectors out of bounds
+        :caption: Vectores fuera de límites
         :language: cpp
 
-        // Note: counting always starts at 0
-        // This demonstrates what happens when
-        // accessing datat outside of your vector
+        // Nota: el conteo siempre comienza en 0
+        // Esto demuestra lo que sucede cuando
+        // acceder a datos fuera de su vector
 
         #include <iostream>
         #include <vector>
@@ -226,10 +233,10 @@ we will likely not be surprised by the following:
   .. tab:: Python
 
     .. activecode:: vector_errors_py
-        :caption: Python list out of bounds
+        :caption: Lista de Python fuera de los límites
 
-        """Demonstrates python's protections
-        against iterating outside of a list"""
+        """Demuestra las protecciones de Python
+       en contra de iterar fuera de una lista"""
         def main():
             intlist=[]
             for i in range(10):
@@ -243,30 +250,30 @@ we will likely not be surprised by the following:
 
 
 .. mchoice:: mc_array_vector
-   :answer_a: Vectors can change size.
-   :answer_b: Vectors offer all of the features and protections of Python lists
-   :answer_c: Vectors don't use contiguous memory, so elements can be inserted.
-   :answer_d: more than one of the above
-   :answer_e: none of the above
+   :answer_a: Los vectores pueden cambiar de tamaño.
+   :answer_b: Los vectores ofrecen todas las características y protecciones de las listas de Python
+   :answer_c: Los vectores no usan memoria contigua, por lo que se pueden insertar elementos.
+   :answer_d: Más de uno de los anteriores
+   :answer_e: Ninguna de las anteriores
    :correct: a
-   :feedback_a: Right! Good job!
-   :feedback_b: Not all of the protections of lists are offered by vectors; one can still iterate off of either end.
-   :feedback_c: No. Although elements can be inserted in vectors, they do require contiguous memory.
-   :feedback_d: No. Only one of the above is correct.
-   :feedback_e: One of the above is indeed correct.
+   :feedback_a: Correcto! Buen trabajo!
+   :feedback_b: No todas las protecciones de las listas las ofrecen los vectores; uno todavía puede iterar fuera de cualquier extremo.
+   :feedback_c: No. Aunque los elementos se pueden insertar en vectores, requieren memoria contigua.
+   :feedback_d: No. Solo uno de los anteriores es correcto.
+   :feedback_e: Uno de los anteriores es de hecho correcto.
 
-   Which of the following is the biggest difference between a C++ array and a C++ vector?
+   ¿Cuál de las siguientes es la mayor diferencia entre una matriz de C++ y un vector de C++?
 
 
 .. mchoice:: mc_vector1
-   :answer_a: Nothing. It is completely optional.
-   :answer_b: Using it will save time if you know the maximum size needed.
-   :answer_c: It is required so memory can be allocated.
-   :answer_d: none of the above
+   :answer_a: Nada. Es completamente opcional.
+   :answer_b: Usarlo ahorrará tiempo si conoce el tamaño máximo necesario.
+   :answer_c: Es necesario para que se pueda asignar memoria.
+   :answer_d: Ninguna de las anteriores
    :correct: b
-   :feedback_a: It is optional but it does serve a purpose. Try again.
-   :feedback_b: Right!
-   :feedback_c: It is not required.
-   :feedback_d: One of the above is indeed correct.
+   :feedback_a: Es opcional pero tiene un propósito. Intentar otra vez.
+   :feedback_b: Correcto!
+   :feedback_c: No es requerido.
+   :feedback_d: Uno de los anteriores es de hecho correcto.
 
-   What good is the ``reserve`` method in a vector?
+   ¿De qué sirve el método ``reserva`` en un vector?
