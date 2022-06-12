@@ -28,7 +28,7 @@ Considere los siguientes ejemplos.
         const int SQUARE_SIZE = 35;
 
         ct::TurtleScreen scr;
-        scr.tracer(0);//disable animation
+        scr.tracer(0);//deshabilitar animación
         ct::Turtle turtle(scr);
         turtle.speed(ct::TS_FASTEST);
         turtle.penup();
@@ -123,7 +123,7 @@ Debe crear una imagen similar con los siguientes criterios:
 
     int main() {
         ct::TurtleScreen scr;
-        scr.tracer(0);//disable animation
+        scr.tracer(0);//deshabilitar animación
         ct::Turtle turtle(scr);
         
         //Escriba su código aquí
