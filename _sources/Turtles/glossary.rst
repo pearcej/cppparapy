@@ -1,68 +1,68 @@
-Glossary
+Glosario
 =======================================
 
 .. glossary::
 
     back
-        Moves the turtle backwards a specified number of units.
+        Mueve la tortuga hacia atrás un número específico de unidades.
     
     beginfill
-        Begins to fill the shape indicated by the path the turtle takes after calling it. 
-
+        Comienza a llenar la forma indicada por el camino que toma la tortuga después de llamarla.
+        
     delay
-        Adds a delay at the end of the frame.
+        Añade un retraso al final del cuadro.
 
     endfill
-        Finishes filling the shape the turtle has outlined since calling :code:`beginfill`.
+        Termina de llenar la forma que la tortuga ha delineado desde que llamó :code:`beginfill`.
 
     fillcolor
-        Tells the turtle what collor to fill the object it is drawing.
+        Le dice a la tortuga de qué color rellenar el objeto que está dibujando.
 
     forward
-        Tells the turtle to go forward a certin number of units.
+        Le dice a la tortuga que avance un cierto número de unidades.
 
     goto
-        Moves the turtle to a specified coordinate on the canvas.
+        Mueve la tortuga a una coordenada especificada en el lienzo.
         
     left
-        Turns the turtle to the left a specified number of units.
+        Gira la tortuga hacia la izquierda un número específico de unidades.
 
     pencolor
-        Tells the turtle what color it will draw the outline as.
+        Le dice a la tortuga de qué color dibujará el contorno.
 
     penup
-        Tells the turtle to pick up its paintbrush.
+        Le dice a la tortuga que recoja su pincel.
     
     pendown
-        Tells the turtle to put its paintbrush down. 
+        Le dice a la tortuga que deje su pincel. 
 
     right
-        Turns the turtle to the right a specified number of units.
+        Gira la tortuga hacia la derecha un número específico de unidades.
 
     speed
-        Tells the turtle how fast to draw. 
+        Le dice a la tortuga qué tan rápido dibujar.
     
     undo queue
-        A queue of actions the turtle has previously taken.
+        Una cola de acciones que la tortuga ha realizado previamente.
 
     width
-        Tells the turtle how wide its paintbrush should be.
+        Le dice a la tortuga qué tan ancho debe ser su pincel.
 
     write
-        Tells the turtle to write text at its current position.
+        Le dice a la tortuga que escriba texto en su posición actual.
 
-Matching
+Emparejar Definiciones 
 ========
 
 .. dragndrop:: cturtle_dnd_glossary
-   :match_1: what color to fill drawing with.|||turtle.fillcolor
-   :match_2: start filling the shape.|||turtle.beginfill
-   :match_3: stops filling the shape.|||turtle.endfill
-   :match_4: change the paintbrush color.|||turtle.pencolor
-   :match_5: change the paintbrush size.|||turtle.width
-   :match_6: change the speed|||turtle.speed
-   :match_7: move backward.|||turtle.back
-   :match_8: move forward.|||turtle.forward
-   :match_9: move to a specific coordinate.|||turtle.goto
-   :match_10: write some text to the canvas.|||turtle.write
+   :match_1: con que color rellenar el dibujo.|||turtle.fillcolor
+   :match_2: empezar a llenar la forma.|||turtle.beginfill
+   :match_3: deja de llenar la forma.|||turtle.endfill
+   :match_4: cambiar el color del pincel.|||turtle.pencolor
+   :match_5: cambiar el tamaño del pincel.|||turtle.width
+   :match_6: cambiar la velocidad|||turtle.speed
+   :match_7: mover para atras.|||turtle.back
+   :match_8: mover para afelante.|||turtle.forward
+   :match_9: mover a una coordenada específica.|||turtle.goto
+   :match_10: escribe algo de texto en el canvas.|||turtle.write
 
