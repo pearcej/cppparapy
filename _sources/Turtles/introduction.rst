@@ -10,7 +10,7 @@ Python se salta este paso a favor de la interpretación inmediata del propio có
 Esta diferencia es lo que permite que C++ sea tan rápido como lo es, lo que también lo hace 
 particularmente bueno para aplicaciones con uso intensivo de gráficos. Las aplicaciones gráficas 
 aprovechan en gran medida la gestión de la memoria para mostrar cada píxel que ve en su pantalla. 
-Python no permite la creación de arreglos como en C++, que son solo "trozos" de memoria de un tamaño fijo. 
+Python no permite la creación de arreglos como en C++, que son solo "pedazos" de memoria de un tamaño fijo. 
 Además, ejecutarse directamente en el hardware permite que C++ se comunique mejor con otros componentes de 
 su computadora, como su unidad de procesamiento de gráficos o "GPU". Esta es una de las muchas razones por 
 las que C ++ se considera un estándar de la industria para aplicaciones gráficas de alto rendimiento, 
