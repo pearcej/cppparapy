@@ -11,7 +11,7 @@ Glosario
         `cin` significa "entrada de consola". Es la instrucción de entrada estándar en C++.
 
     comentario 
-        A comment is a programmer-readable explanation  in the source code of a computer program (``//`` single line comment, ``/**/`` Multiline comment).
+        Un comentario es una explicación legible escrita el programador en el código de un programa (``//`` comentario de una sola línea, ``/**/`` comentario de varias líneas).
 
     compilador 
         Un compilador generalmente transforma el código escrito en un lenguaje de programación de alto nivel como C++ en un lenguaje de programación de bajo nivel como código de máquina para crear un programa ejecutable.
