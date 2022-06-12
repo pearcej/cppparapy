@@ -62,7 +62,7 @@ Compruébalo tú mismo
    :answer_d: Estrella
    :correct: d
    :feedback_a: Incorrecto! Considere cuántas veces itera el bucle for...
-   :feedback_b: Incorrecto! The turtle's pen is always down.
+   :feedback_b: Incorrecto! El lapicero de la tortuga esta siempre abajo.
    :feedback_c: Incorrecto! Considere el ángulo la tortuga gira con cada iteración.
    :feedback_d: Correcto!
 
