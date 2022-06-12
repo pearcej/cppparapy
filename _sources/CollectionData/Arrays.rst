@@ -15,8 +15,8 @@ Las matrices, los vectores, las cadenas, los conjuntos y las tablas hash están 
 Arrays 
 ~~~~~~
 
-**¿Qué es un array? **
-Un array (arreglo) es una estructura de datos que consta de una colección ordenada de elementos de datos, de tipo idéntico, 
+**¿Qué es un array?**
+Un array (también conocido como arreglo) es una estructura de datos que consta de una colección ordenada de elementos de datos, de tipo idéntico, 
 en la que cada elemento puede identificarse mediante un índice del array. En términos más técnicos, una estructura de datos de array 
 es un arreglo ordenado de valores ubicados en direcciones igualmente espaciadas en la memoria de la computadora contigua.
 
@@ -38,7 +38,7 @@ de C++ debe tener un tipo de datos idéntico. Al igual que las listas de Python,
 El uso de arrays nos permite utilizar un conjunto ordenado de ubicaciones de memoria que luego podemos manipular como una sola entidad 
 y que, al mismo tiempo, nos brinda acceso directo a cada componente individual.
 
-**Por qué usar un Array?**
+**¿Por qué usar un Array?**
 
 C++ es un lenguaje que se usa a menudo para el procesamiento en tiempo real 
 o de bajo nivel donde la velocidad es esencial y/o solo hay una cantidad 
