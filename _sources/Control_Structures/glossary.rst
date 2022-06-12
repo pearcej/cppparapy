@@ -4,8 +4,7 @@
 
 Glosario 
 --------
-
-.. glosario::
+.. glossary::
 
     ``break``
         Termina el bloque de código actual y reanuda el programa fuera de él.
@@ -23,6 +22,7 @@ Glosario
         Una declaración que prueba una variable contra las posibles condiciones para ella.
 
 
+
 Emparejar definiciones 
 --------
 .. dragndrop:: matching_ControlStructures
@@ -33,4 +33,4 @@ Emparejar definiciones
    :match_4: bucle |||Serie de instrucciones repetidas infinitamente o hasta que se cumpla una condición.
    :match_5: switch|||Declaración que prueba una variable frente a posibles condiciones para ella.
 
-  Arrastre cada término del glosario a su definición correspondiente.
+Arrastre cada término del glosario a su definición correspondiente.
