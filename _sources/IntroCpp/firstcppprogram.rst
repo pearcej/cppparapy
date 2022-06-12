@@ -1,22 +1,22 @@
 Veamos un programa en C++
 ===========================
 
-Una larga tradición en informática es escribir un programa llamado "hola mundo". El programa “hola mundo” es simple y fácil. No es posible cometer errores lógicos, por lo que lograr que se ejecute depende solo de comprender la sintaxis. Veamos una versión fácil de "hola mundo"
+Una larga tradición en informática es escribir un programa llamado "Hola Mundo". El programa “Hola Mundo” es simple y fácil. No es posible cometer errores lógicos, por lo que lograr que se ejecute depende solo de comprender la sintaxis. Veamos una versión fácil de "Hola Mundo"
 en Python:
 
 .. activecode:: hellopysimp
   :language: python
 
-  print("hola mundo!")
+  print("Hola Mundo!")
 
-Ahora, miremos a una versión más “complicada” del programa "hola mundo" con una función 
+Ahora, miremos a una versión más “complicada” del programa "Hola Mundo" con una función principal o
 ``main`` en Python:
 
 .. activecode:: hellopymain
   :language: python
 
   def main():
-      print("hola Mundo!")
+      print("Hola Mundo!")
   main()
 
 Ahora, miremos al mismo programa escrito en C++:
@@ -28,7 +28,7 @@ Ahora, miremos al mismo programa escrito en C++:
 
     int main(){
 
-        std::cout << "hola mundo!\n";
+        std::cout << "Hola Mundo!\n";
         return 0;
     }
 
@@ -42,14 +42,14 @@ mejor la entrada y salida estándar:
     using namespace std;
 
     int main(){
-        cout << "hola mundo!\n";
+        cout << "Hola Mundo!\n";
         return 0;
     }
 
 Lo que vemos fundamentamente es que hay algunas similitudes con la versión complicada de Python, 
-como la función main y la cadena "Hola mundo". Sin embargo, en la versión en C++ hay muchas más 
-cosas que dificultan ver lo esencial del programa. ¡No te preocupes! Una habilidad importante para 
-un informático es aprender qué ignorar y qué mirar cuidadosamente. Pronto se acostumbrará con los 
+como la función ``main`` y la cadena "Hola mundo". Sin embargo, en la versión en C++ hay muchas más 
+cosas que dificultan ver lo esencial del programa. ¡No se preocupe! Una habilidad importante para 
+un científico computacional es aprender qué ignorar y qué mirar cuidadosamente. Pronto se acostumbrará con los 
 elementos en C++ a medida que los vea. Una cosa que le ayudará, es aprender un poco más sobre C++.
 
 Compilación
@@ -59,10 +59,10 @@ Una pregunta que puede tener sobre este pequeño programa es "¿Cómo lo ejecuta
 Ejecutar un programa en C++ no es tan simple como ejecutar un programa en Python. 
 La primera gran diferencia entre C++ y Python es que Python es un *lenguaje interpretado* mientras que C++ 
 es un lenguaje compilado. Podíamos ejecutar nuestros programas de Python usando el **intérprete** de Python y, 
-normalmente, estábamos muy contentos de hacerlo. En C++, ejecutar programas es un proceso de dos pasos.
+normalmente, eso era todo lo que tomaba para ejecutar el programa. En C++, ejecutar programas es un proceso de dos pasos.
 
 Primero, debemos escribir el programa hola mundo en un archivo y guardar ese archivo con un nombre como ``hello.cpp`` 
-Una vez que hemos guardado el archivo, lo compilamos desde la línea de comandos o desde un entorno de desarrollo integrado (IDE). 
+Una vez que hemos guardado el archivo, lo compilamos desde la línea de comandos o desde un entorno de desarrollo integrado `(IDE) <https://www.redhat.com/es/topics/middleware/what-is-ide>`_. 
 Solo después de compilar el programa podemos ejecutarlo.
 
 Ahora puede que se pregunte ¿de qué sirve este paso adicional? ¿Qué hace compilar por nosotros? Hay un par 
@@ -75,9 +75,9 @@ de beneficios importantes que obtenemos al compilar:
 El trabajo del compilador es convertir su código en C++ a un lenguaje que su máquina puede entender. 
 Llamamos al código que la computadora entiende **Lenguaje de Máquina**. La computadora interpreta el 
 lenguaje de máquina al igual que el intérprete de Python interpreta el código en Python. Sin embargo, 
-dado que el lenguaje de máquina está mucho más cerca del lenguaje nativo del computadora, funciona más rápido.
+dado que el lenguaje de máquina está mucho más cerca del lenguaje nativo de la computadora, funciona más rápido.
 
-Cuando el compilador hace la traducción, puede encontrar muchos tipos diferentes errores. 
+Cuando el compilador hace la traducción, puede encontrar muchos diferentes tipos de errores. 
 Por ejemplo, si se olvida declarar una variable el compilador los encontrará y se los mostrará antes de que 
 ejecute el programa. Veremos en breve algunos ejemplos de errores que el compilador captura. Lo más probable 
 es que también cometas estos errores muy pronto, pero primero hablemos de cada una de las declaraciones en un programa C++.
@@ -95,12 +95,12 @@ Uso de encabezados y bibliotecas
 
 Las instrucciones del preprocesador en C++ aparecen como declaraciones precedidas por el símbolo numeral ``#``.
 Estos le dicen al preprocesador qué archivo, encabezado o biblioteca debe poner a disposición
-el compilador Por ejemplo, ``#include <iostream>`` se asegurará de que
+del compilador. Por ejemplo, ``#include <iostream>`` se asegurará de que
 la biblioteca ``iostream`` está disponible en tiempo de compilación.
 Aquí, el término *encabezado* se usa para un tipo de archivo C++ que contiene definiciones
 de funciones y variables, pero no las implementaciones de funciones.
 
-Puede pensar en la instrucción ``#include ...`` en C++ como si funcionara un poco como
+Puede pensar en la expresión ``#include ...`` en C++ como si funcionara un poco como
 la declaración ``import ...`` en Python.
 La declaración ``import`` de Python accede directamente al código escrito en otro archivo
 mientras que la instrucción ``#include`` en C++ copia clases y funciones de
@@ -120,7 +120,7 @@ Hay dos maneras de usar ``#include`` en C++:
 
 Aquí los símbolos de mayor y menor ``<>`` son usados para incluir bibliotecas o 
 encabezados dados en la implementación como los encabezados en la biblioteca estandard (``iostream``, ``string``, etc.). 
-Las comillas ``"`` son usadas para los encabezados y los archivos que no son dados por la implementación.
+Las dobles comillas ``"`` son usadas para los encabezados y los archivos que no son dados por la implementación.
 
 La función main
 -----------------
@@ -134,16 +134,14 @@ El ``int`` en ``int main()`` indica que el *tipo de retorno* de la función ``ma
 un número entero. La última línea de la función ``main`` de C++ suele ser ``return 0``,
 para que pueda ver que el programa realmente retorna el número entero 0.
 Se retorna cero para indicar la finalización exitosa de la función ``main``. 
-En caso de que se pregunte por qué se devuelve un número entero, si comete un error de
-manejo en C++, en lugar de 0, puede alternativamente devolver un código de error con un número entero que represente
+En caso de que se pregunte por qué se retorna un número entero, si comete un error de
+manejo en C++, en lugar de 0, puede alternativamente retornar un código de error con un número entero que represente
 un error específico cuándo y dónde ocurre.
 
 Las funciones en C++ y otros bloques de código en C++ se agrupan usando los símbolos de llaves ``{}``.
 Las llaves son usadas como se usan las tabulaciones en Python. 
-Muchos también usan el tabulado en C++ para indicar bloques de código, pero las tabulaciones y otros
-los espacios en blanco (en su mayoría) no tienen un significado intrínseco en C++.
-
-En su lugar, se debe usar el punto y coma (``;``) para concluir la mayoría de las declaraciones en C++.
+Muchos también usan el tabulado en C++ para indicar bloques de código, pero las tabulaciones y otros 
+espacios en blanco (en su mayoría) no tienen un significado intrínseco en C++. En su lugar, se debe usar el punto y coma (``;``) para concluir la mayoría de las declaraciones en C++.
 
 De hecho, el siguiente programa funcionará perfectamente a pesar de que la falta de espacios  
 hace que sea más difícil de leer para los humanos.
@@ -191,9 +189,7 @@ Ambos Python y C++ admiten comentarios que no son procesados por el intérprete 
 
 En Python, una sola línea de comentario comienza con el símbolo de  (``#``).
 En C++, el equivalente son dos barras diagonales (``//``).
-En ambos casos el resto de la línea es tratado como un comentario e ignorado por el intérprete o compilador. 
-
-Python admite comentarios usando triple comillas. 
+En ambos casos el resto de la línea es tratado como un comentario e ignorado por el intérprete o compilador. Python admite comentarios usando triple comillas. 
 
 Al igual que Python, C++ también admite comentarios de varias líneas
 empezando con
@@ -201,21 +197,11 @@ empezando con
 y terminando con 
 ``*/``.
 
-La cadena de documentación entre comillas triples en Python se usa a menudo para
-Tramitación de la documentación.
-No hay equivalente en el estándar C++ a la cadena de documentación entre comillas triples en Python.
-Sin embargo, los grupos de símbolos
-
-Las comillas 
-``/**``
-y
-``*/``
-se utilizan a menudo para indicar bloques de documentación
-al comienzo de una clase, programa o función,
-lo cual es legal porque el segundo asterisco ``*`` simplemente se trata como parte del
-comentario de varias líneas.
-Ciertas bibliotecas también procesarán automáticamente el texto entre estos grupos de símbolos,
-como una cadena de documentación.
+La cadena de documentación entre comillas triples en Python se usa a menudo para procesar automáticamente la documentación. 
+No hay equivalente en el estándar C++ a la cadena de documentación entre comillas triples en Python. Sin embargo, 
+los grupos de símbolos ``/**`` y ``*/`` a menudo se usan para indicar bloques de documentación al comienzo de una clase, programa o función, 
+lo cual es legal porque el segundo asterisco ``*`` es parte del comentario de varias líneas. 
+Ciertas bibliotecas también procesarán automáticamente el texto entre estos grupos de símbolos, como una cadena de documentación.
 
 ::
 
@@ -223,7 +209,7 @@ como una cadena de documentación.
   /* Este es un comentario de C++ de varias líneas que puede abarcar muchas líneas, comenzando y terminando con los símbolos dados */
 
 
-Standard Output
+Salida estándar
 ---------------
 
 A menudo tenemos la necesidad de interactuar con los usuarios, ya sea para obtener datos o para proporcionar algún tipo de resultado.
@@ -234,10 +220,10 @@ se conoce como ``flujo``.
 Un ``flujo`` es esencialmente un canal en el que los datos fluyen desde el origen hasta el destino (a menudo denominado "sumidero").
 Los flujos de salida envían datos, y el flujo de salida estándar ``cout`` envía datos de caracteres a la pantalla.
 Entonces, ``cout`` significa "salida de caracteres".
-Al igual que la instrucción ``print`` de Python, ``cout`` se usa para
+Al igual que la instrucción ``print`` de Python, ``cout`` se usa para que
 imprima en el dispositivo de salida estándar, que suele ser su pantalla.
 Cuando se usa ``cout``, también verá que se usa ``<<``.
-Cuando este extraño conjunto de símbolos se usan juntos, se denominan "operador de salida".
+Cuando este conjunto de símbolos se usan juntos, se denominan "operador de salida".
 El operador de salida se utiliza para dirigir la salida al archivo o dispositivo de salida designado.
 El operador de salida también se puede usar para concatenar la salida, como el "+"
 se puede usar para concatenar en Python.
@@ -245,13 +231,13 @@ se puede usar para concatenar en Python.
 .. activecode:: hellocppducky
     :language: cpp
 
-    /* Ever heard of rubber duck debugging?
+    /* Alguna vez ha escuchado de rubber duck debugging?
         See https://en.wikipedia.org/wiki/Rubber_duck_debugging */
     #include <iostream>
     using namespace std;
 
     int main(){
-      cout << "Alguna vez has escuchado de rubber duck debugging?" << endl;
+      cout << "Alguna vez ha escuchado de rubber duck debugging?" << endl;
       cout << "                __     " << endl;
       cout << "              <(o )___-" << endl;
       cout << "               ( .__> /" << endl;
@@ -259,10 +245,10 @@ se puede usar para concatenar en Python.
     }
 
 
-Standard Input
+Entrada Estándar
 --------------
 Además de poder generar la salida estándar, queremos poder recibir información del usuario.
-El comando ``cin`` es algo similar a ``cout`` excepto, por supuesto, que se usa para obtener entrada de caracteres.
+El comando ``cin`` es algo similar a ``cout`` excepto que se usa para obtener entrada de caracteres.
 La entrada transmite datos directos desde una fuente, como el teclado o un archivo.
 Como habrás adivinado, ``cin`` significa "entrada de caracteres" y hace que obtener entrada desde el dispositivo de entrada estándar (generalmente el teclado) sea relativamente fácil.
 El operador de entrada en C++ es ``>>``.
@@ -272,7 +258,7 @@ Este un ejemplo que usa ``cin``:
 .. raw :: html
 
     <div>
-    <iframe height="600px" width="100%" src="https://repl.it/@pearcej/cin-example?lite=true" scrolling="no" frameborder="no" allowtransparency="true" allowfullscreen="true" sandbox="allow-forms allow-pointer-lock allow-popups allow-same-origin allow-scripts allow-modals"></iframe>
+    <iframe height="600px" width="100%" src="https://repl.it/@sheepof/cin-ejemplo?lite=true" scrolling="no" frameborder="no" allowtransparency="true" allowfullscreen="true" sandbox="allow-forms allow-pointer-lock allow-popups allow-same-origin allow-scripts allow-modals"></iframe>
     </div>
 
 Tipo de Declaraciones
@@ -282,22 +268,19 @@ En este ejemplo, puedes notar la línea ``float num`` que declara una nueva vari
 Al igual que las funciones, todas las variables en C++ deben declararse antes de su uso y
 no pueden cambiar de tipo. Esto se conoce como **escritura estática**.
 La línea ``float num`` esencialmente le dice al compilador que reserve suficiente espacio para un número de coma flotante,
-y para nombrar esta ubicación de memoria ``num.`` 
-
-Luego, lo que el usuario escriba se almacenará en la variable ``num``.
+y para nombrar esta ubicación de memoria ``num.`` Luego, lo que el usuario escriba se almacenará en la variable ``num``.
 Usando la función ``cout``, podemos escribir instrucciones que pedirán al usuario que ingrese datos y luego
 incorporar esos datos en un procesamiento posterior.
-Por ejemplo, en el código anterior, la entrada de entero se duplica y luego se muestra.
+Por ejemplo, en el ejemplo anterior, la entrada de número entero se duplica y luego se muestra en la consola.
 
-Hablaremos más sobre las declaraciones de tipo en la sección sobre tipos de datos, y
-profundizaremos en la entrada y la salida más adelante cuando discutamos
-Flujos C++ y manejo de archivos.
+Hablaremos más sobre el tipo de declaraciones en la sección sobre tipos de datos, y
+profundizaremos cuando hablemos sobre la entrada y la salida más adelante cuando discutamos flujos en C++ y el manejo de archivos.
 
 
 Resumen
 =======
-Ahora que hemos ejecutado nuestro programa "hola mundo", regresemos y veamos
-atentamente para ver qué podemos aprender sobre el lenguaje C++.
+Ahora que hemos ejecutado nuestro programa "Hola Mundo", regresemos y veamos
+atentamente para ver qué podemos aprender sobre C++.
 
 .. activecode:: hellocommented
     :language: cpp
@@ -347,7 +330,7 @@ Compruébalo tú mismo
   :answer_b: Falso
   :correct: a
   :feedback_a: Correcto!
-  :feedback_b: Perdon, ambos idiomas admiten comentarios de varias líneas. Python usa comillas triples mientras que en C++ comienzan con /* y terminan con */.
+  :feedback_b: Incorrecto, ambos idiomas admiten comentarios de varias líneas. Python usa comillas triples mientras que en C++ comienzan con /* y terminan con */.
 
   Verdadero o Falso: Ambos Python y C++ admiten comentarios multilínea. En c++, los comentarios comienzan con ``/*`` y terminan con ``*/``.
 
