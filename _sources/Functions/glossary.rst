@@ -36,9 +36,9 @@ Emparejar Definiciones
    :feedback: Feedback shows incorrect matches.
    :match_1: argumento|||Datos pasados al parámetro.
    :match_2: const|||indica una variable y un valor son inmutables.
-   :match_3: friend|||Operador o función que puede acceder the private data members of a class.
-   :match_4: función ||| Section of code that performs a procedure and usually is named meaningfully. 
-   :match_5: sobrecarga|||Specifying more than one definition for the same function name or the same operator within the same scope.
+   :match_3: friend|||Operador o función que puede acceder los miembros de datos privados de una clase.
+   :match_4: función ||| Sección de código que realiza un procedimiento y por lo general tiene un nombre significativo.
+   :match_5: sobrecarga||| Especificar más de una definición para el mismo nombre de función o el mismo operador dentro del mismo ámbito.
    :match_6: parámetro|||Variable en una función o la definición de un método que acepta datos pasados por un argumento.
    :match_7: referencia|||Valor que indica una dirección en la memoria de la compuradora.
    :match_8: void|||indica que una función no retorna un valor.
