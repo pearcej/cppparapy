@@ -8,8 +8,8 @@ Hay dos tipos de errores que suelen ocurrir al escribir programas. El primero,
 conocido como **error de sintaxis**, simplemente significa que el programador 
 ha cometido un error en la estructura de una declaración o expresión. 
 Por ejemplo, es incorrecto escribir una declaración en una línea y olvidar el punto y coma.
-
 ::
+
     int main() {
         int i = 10
         return 0;
@@ -20,7 +20,6 @@ Por ejemplo, es incorrecto escribir una declaración en una línea y olvidar el 
         main.cpp:3:5: error: expected ',' or ';' before 'return'
              return 0;
          ^~~~~~
-
 En este caso, el compilador de C++ no puede completar el 
 procesamiento de esta instrucción porque no concuerda con las reglas del lenguaje. 
 Los errores sintácticos suelen ser más frecuentes cuando está aprendiendo un nuevo lenguage de programación.
@@ -220,7 +219,7 @@ Compuébalo tú mismo
     :click-incorrect:cout << "age:";:endclick:
     :click-incorrect:cin >> age;:endclick:
     :click-correct:if (age > 18) {:endclick:
-    :click-incorrect:cout << "You can vote in the U.S!";}:endclick:
+    :click-incorrect:cout << "Puede votar en EE.UU.!";}:endclick:
     :click-incorrect:else {:endclick:
-    :click-incorrect:cout << You cannot vote in the U.S yet.;:endclick:
+    :click-incorrect:cout << No puede votar aun en EE.UU.;:endclick:
     }
