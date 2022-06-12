@@ -40,10 +40,10 @@ Emparejar Definiciones
 .. dragndrop:: matching_ADT
    :feedback: Los comentarios muestran coincidencias incorrectas.
    :match_1: address-of|||(&) se utiliza para acceder a la dirección de memoria de una variable de C++.
-   :match_2: tipo de datos atómicos|||Data type that cannot be broken down into any simpler data elements.
+   :match_2: tipo de datos atómicos||| Tipo de datos que no se puede dividir en elementos de datos más simples.
    :match_3: dereferencia|||Lee datos en una ubicación de memoria de punteros. 
    :match_4: punteros||| Variables que almacenan y manipulan direcciones de memoria.
 
-   Arrastre cada término del glosario a su definición correspondiente. (Nota: ninguno de los tipos de datos está en esta coincidencia, pero están en el glosario)
+   Arrastre cada término del glosario a su definición correspondiente. (Nota: ninguno de los tipos de datos está en esta actividad, pero están en el glosario)
 
    
