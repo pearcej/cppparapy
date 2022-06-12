@@ -1,11 +1,6 @@
 Bucles For 
 =========
 
-Even though the ``while`` type of construct is very useful in a wide variety of
-situations, another iterative structure, the ``for`` statement, can be
-used to iterate across a range of values easily.
-A ``for`` statement allows us to write a loop that is executed a specific number of times.
-
 Aunque ``while`` es muy útil en muchas situaciones, 
 se puede usar otra estructura iterativa, la declaración ``for``, para iterar fácilmente a 
 través de un rango de valores. Una declaración ``for`` nos permite escribir un bucle que se 
