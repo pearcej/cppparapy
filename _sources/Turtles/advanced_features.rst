@@ -1,31 +1,30 @@
-Advanced Features
+Características Avanzadas
 =================
 
-Turtles are a large tool, and thus have a lot of options dictating how they function.
-Some features and functionality are more complicated than others, relating to the inner workings
-of turtles themselves. A few of these include the :code:`tracer` and :code:`undo` methods, and also screen modes.
+Las tortugas son una gran herramienta y, por lo tanto, tienen muchas opciones que dictan cómo funcionan.
+Algunas características y funcionalidades son más complicadas que otras, relacionadas con el funcionamiento interno.
+de las propias tortugas. Algunos de estos incluyen los métodos :code:`tracer` y :code:`undo`, y también modos de pantalla.
 
-Screen modes dictate the direction of angle measurements. This means that, depending on which mode a :code:`TurtleScreen`
-object is in, positive angles could represent clockwise rotations or counterclockwise rotations. The :code:`mode` method
-for :code:`TurtleScreen` allows you to set which mode a screen is in.
+Los modos de pantalla dictan la dirección de las mediciones de ángulos. Esto significa que, dependiendo del modo en el que se encuentre un :code:`TurtleScreen`
+el objeto está dentro, los ángulos positivos podrían representar rotaciones en el sentido de las agujas del reloj o en el sentido contrario a las agujas del reloj. El método :code:`mode`
+for :code:`TurtleScreen` te permite establecer en qué modo está una pantalla.
 
 =========== ================ ================
-    Mode    Default Rotation Positive Angles
+    Mode        Rotación         Ángulos 
 =========== ================ ================
-SM_STANDARD       East       Counterclockwise
-  SM_LOGO         North         Clockwise
+SM_STANDARD       Este       Counterclockwise
+  SM_LOGO         Norte         Clockwise
 =========== ================ ================
 
-Regarding angles, Turtles can use both *degrees* and *radians* for their rotations. You can choose between the two using the
-:code:`radians` and :code:`degrees` methods for the Turtle object. By default, all angles are measured in *degrees*. This option
-only effects methods regarding rotation, such as :code:`left` and :code:`right`.
-
+Con respecto a los ángulos, las tortugas pueden usar tanto *grados* como *radianes* para sus rotaciones. Puede elegir entre los dos usando el
+Métodos :code:`radianes` y :code:`grados` para el objeto Tortuga. De forma predeterminada, todos los ángulos se miden en *grados*. Esta opción
+solo afecta los métodos relacionados con la rotación, como :code:`left` y :code:`right`.
 .. code-block:: cpp
 
     turtle.degrees();
-    turtle.right(90);//90-degree turn to the right
+    turtle.right(90);//giro de 90 grados a la derecha
     turtle.radians();
-    turtle.left(1.5708f);//Equivalent rotation in radians to the left.
+    turtle.left(1.5708f);//Rotación equivalente en radianes hacia la izquierda.
 
 The :code:`tracer(N)` method is used to control how many times the Turtle is actually
 drawn on the screen. This method belongs to the :code:`TurtleScreen` object, and effects
@@ -35,29 +34,29 @@ only allowing the :code:`TurtleScreen` to display one frame out every :code:`N`.
 .. core-block:: cpp
 
     screen.tracer(12);
-    //Show one out of every 12 frames of animation.
+    //Muestra uno de cada 12 fotogramas de animación.
 
-This can be combined with the :code:`speed` method available to turtles to achieve **very** quickly
-drawn images. The maximum speed a Turtle can have, :code:`TS_FASTEST`, completely disables animation
-for Turtles between movements and rotations. This allows the :code:`tracer` setting to directly relate
-to the total number of actions the turtle makes. The actions the turtle takes happen regardless
-of whether or not they are actually shown on the screen.
+Esto se puede combinar con el método :code:`speed` disponible para las tortugas para lograr **muy** rápidamente
+imágenes dibujadas. La velocidad máxima que puede tener una Tortuga, :code:`TS_FASTEST`, deshabilita completamente la animación
+para tortugas entre movimientos y rotaciones. Esto permite que la configuración :code:`tracer` se relacione directamente
+al número total de acciones que realiza la tortuga. Las acciones que realiza la tortuga suceden independientemente
+de si se muestran o no en la pantalla.
 
 .. code-block:: cpp
 
-    screen.tracer(3); //Show one out of every 3 frames of animation.
-    turtle.speed(ct::TS_FASTEST);  //Disables Turtle animation
+    screen.tracer(3); //Muestra uno de cada 3 cuadros de animación.
+    turtle.speed(ct::TS_FASTEST);  //Disabilita la animación de  la tortuga
 
-    turtle.forward(50);//This is not shown on-screen...
-    turtle.right(90);//Neither is this...
-    turtle.forward(50);//But this action is, because it is third out of three.
+    turtle.forward(50);//Esto no se muestra en la pantalla...
+    turtle.right(90);//Esto tampoco...
+    turtle.forward(50);//Pero esta acción es, porque es tercero de tres.
 
-A frame of animation is added for almost every action a turtle takes, regardless of whether or not
-the turtle is moving or adding something to the screen. This includes methods like
-:code:`begin_fill` and :code:`end_fill`, which don't do anything visually but do
-tell the turtle to start or stop tracking its own movements.
+Se agrega un cuadro de animación para casi todas las acciones que realiza una tortuga, independientemente de si
+la tortuga se está moviendo o agregando algo a la pantalla. Esto incluye métodos como
+:code:`begin_fill` y :code:`end_fill`, que no hacen nada visualmente pero sí
+dígale a la tortuga que comience o deje de rastrear sus propios movimientos.
 
-Consider the following example and related questions.
+Considere el siguiente ejemplo y las preguntas relacionadas.
 
 .. code-block:: cpp
 
@@ -87,18 +86,18 @@ Consider the following example and related questions.
    :answer_c: 1
    :answer_d: 12
    :correct: c
-   :feedback_a: Incorrect! Consider how many actions the turtle takes in the for loop.
-   :feedback_b: Incorrect! Consider the tracer setting for the screen.
-   :feedback_c: Correct!
-   :feedback_d: Incorrect! Consider how many actions the turtle takes in the for loop.
+   :feedback_a: Incorrecto! Considere cuántas acciones realiza la tortuga en el bucle for.
+   :feedback_b: Incorrecto! Considere la configuración del trazador para la pantalla.
+   :feedback_c: Correcto!
+   :feedback_d: Incorrecto! Considere cuántas acciones realiza la tortuga en el bucle for.
 
-   How many frames of animation does the above code create?
+   ¿Cuántos cuadros de animación crea el código anterior?
 
-Similarly to tracer settings, every action a turtle takes is also added to the *undo queue*. This allows it to keep track
-of actions it is performing over a period of time. The queue is only allowed to grow to a certain size, starting at 100 actions total.
-This is modifiable through the :code:`setundobuffer` method that belongs to turtles. Every action is added, even if
-the action doesn't change anything visually. This feature is comparable to the "undo" tool available in most text editors.
-Turtles can "undo" their progress with the :code:`undo` method.
+De manera similar a la configuración del rastreador, cada acción que realiza una tortuga también se agrega a la *cola de deshacer*. Esto le permite hacer un seguimiento
+de las acciones que está realizando durante un período de tiempo. La cola solo puede crecer hasta cierto tamaño, a partir de 100 acciones en total.
+Esto es modificable a través del método :code:`setundobuffer` que pertenece a las tortugas. Cada acción se suma, incluso si
+la acción no cambia nada visualmente. Esta función es comparable a la herramienta "deshacer" disponible en la mayoría de los editores de texto.
+Las tortugas pueden "deshacer" su progreso con el método :code:`undo`.
 
 .. mchoice:: cturtle_advanced_mchoice_2
     :answer_a: 3
@@ -106,9 +105,9 @@ Turtles can "undo" their progress with the :code:`undo` method.
     :answer_c: 1
     :answer_d: 12
     :correct: b
-    :feedback_a: Incorrect! Consider how many actions the turtle takes in the for loop.
-    :feedback_b: Correct!
-    :feedback_c: Incorrect! Consider how many actions the turtle takes in the for loop.
-    :feedback_d: Incorrect! Consider how many actions the turtle takes in the for loop.
+    :feedback_a: Incorrecto! Considere cuántas acciones realiza la tortuga en el bucle for.
+    :feedback_b: Correcto!
+    :feedback_c: Incorrecto! Considere recibir acciones para realizar la tortuga en el bucle.
+    :feedback_d: Incorrecto! Considere cuántas acciones realiza la tortuga en el bucle for.
 
-    How many actions will be in the turtle's undo queue for the code above?
+    ¿Cuántas acciones habrá en la cola de deshacer de la tortuga para el código anterior?
