@@ -1,64 +1,64 @@
-Turtle & TurtleScreen
+Tortugas y TurtleScreen
 =====================
 
-Turtles must exist on a :code:`TurtleScreen` to be used. This is a significant difference from
-Python, as you are required to create your own screen *before* creating a :code:`Turtle` object.
+Las tortugas deben existir en un :code:`TurtleScreen` para ser utilizadas. Esta es una diferencia significativa de
+Python, ya que debe crear su propia pantalla *antes* de crear un objeto :code:`Tortuga`.
 
 .. code-block:: cpp
 
     ct::TurtleScreen screen;
     ct::Turtle turtle(screen);
-    //Notice how the Screen is given to our Turtle when we create it.
+    //Observe cómo se le da la pantalla a nuestra tortuga cuando la creamos.
 
-Closing a :code:`TurtleScreen` works exactly how it does in Python. For this chapter, only :code:`bye` is used.
-Calling it is not completely necessary, as it is also called automatically if it, or an equivalent method, hasn't been called.
-When working outside of the textbook, the :code:`exitonclick` method is also available.
+Cerrar un :code:`TurtleScreen` funciona exactamente como lo hace en Python. Para este capítulo, solo se usa :code:`bye`.
+Llamarlo no es completamente necesario, ya que también se llama automáticamente si no se ha llamado a él o a un método equivalente.
+Cuando se trabaja fuera del libro de texto, el método :code:`exitonclick` también está disponible.
 
 .. code-block:: cpp
 
     screen.bye();
 
-Turtles are based on the following premise: "There is a turtle on a canvas with a colored pen
-attached to their tail." In this case, the *canvas* is a :code:`TurtleScreen`. This Turtle will
-follow any command you give it, which consist of telling it to go certain directions, what color
-of pen to use, when to raise or lower its pen, and others. Below is an outline of commonly used
-methods when working with turtles.
+Las tortugas se basan en la siguiente premisa: "Hay una tortuga en un lienzo con un bolígrafo de color
+unido a su cola". En este caso, el *lienzo* es un :code:`TurtleScreen`. Esta Tortuga
+seguir cualquier orden que le des, que consiste en decirle que vaya en ciertas direcciones, de qué color
+de bolígrafo a utilizar, cuándo subir o bajar su bolígrafo, y otros. A continuación se muestra un esquema de los más utilizados
+métodos cuando se trabaja con tortugas.
 
 =================  ==========================================================================
-    Method Name                                  Description
+    Nombre                                  Descripción
 =================  ==========================================================================
-turtle.left        turns the turtle a certain number of units to the left.
-turtle.right       turns the turtle a certain number of units to the right.
-turtle.penup       raises the paint pen on the end of the turtle's tail.
-turtle.pendown     lowers the paint pen on the end of the turtle's tail.
-turtle.fillcolor   tells the turtle what color the inside of the shape will be. 
-turtle.beginfill   tells the turtle to begin filling a shape as it moves.
-turtle.endfill     tells the turtle to finish filling the shape it has created as it moved.
-turtle.pencolor    tells the turtle what color it will draw with. 
-turtle.width       tells the turtle how large of a paint pen to use.
-turtle.speed       tells the turtle how fast it should go, faster or slower than the hare.
-turtle.back        moves the turtle back a number of units.
-turtle.forward     moves the turtle forward a number of units.
-turtle.goto        tells the turtle to move to a specific coordinate.
-turtle.write       tells the turtle to write some kind of text. 
+turtle.left        gira la tortuga un cierto número de unidades hacia la izquierda.
+turtle.right       gira la tortuga un cierto número de unidades a la derecha.
+turtle.penup       levanta el lapicero de pintura en el extremo de la cola de la tortuga.
+turtle.pendown     baja el lapicero de pintura en el extremo de la cola de la tortuga.
+turtle.fillcolor   le dice a la tortuga de qué color será el interior de la forma. 
+turtle.beginfill   le dice a la tortuga que comience a llenar una forma a medida que se mueve.
+turtle.endfill     le dice a la tortuga que termine de llenar la forma que ha creado mientras se movía.
+turtle.pencolor    le dice a la tortuga con qué color dibujará. 
+turtle.width       le dice a la tortuga qué tan grande debe usar una lapicero de pintura.
+turtle.speed       le dice a la tortuga qué tan rápido debe ir, más rápido o más lento que la liebre.
+turtle.back        mueve la tortuga hacia atrás un número de unidades.
+turtle.forward     mueve la tortuga hacia adelante un número de unidades.
+turtle.goto        le dice a la tortuga que se mueva a una coordenada específica.
+turtle.write       le dice a la tortuga que escriba algún tipo de texto.
 =================  ==========================================================================
 
-Many of these methods are used alongside one-another to create different images. All of the :code:`speed` settings
-you may be familiar with from Python are also available in CTurtle. All speeds are measured on a range of 1 to 10,
-the latter being the fastest and the former being the slowest. The exception is the fastest speed, :code:`TS_FASTEST`,
-which is set to 0 just as it is for Python's equivalent :code:`"fastest"`. The :code:`TS` prefix represents "Turtle Speed".
+Muchos de estos métodos se utilizan junto con otros para crear diferentes imágenes. Todas las configuraciones de :code:`speed`
+con los que puede estar familiarizado Python también están disponibles en CTurtle. Todas las velocidades se miden en un rango de 1 a 10,
+siendo este último el más rápido y el primero el más lento. La excepción es la velocidad más rápida, :code:`TS_FASTEST`,
+que se establece en 0 al igual que para el equivalente de Python :code:`"fastest"`. El prefijo :code:`TS` representa "Velocidad de tortuga".
 
 ===================== ============== ==========
- Python Turtle Name   C-Turtle Name    Speed
+Nombre Turtle Python  Nombre C-Turtle  Velocidad
 ===================== ============== ==========
-       "fastest"       TS_FASTEST       0
-       "fast"          TS_FAST          10
-       "normal"        TS_NORMAL        6
-       "slow"          TS_SLOW          3
-       "slowest"       TS_SLOWEST       1
+     "el más rápido"   TS_FASTEST       0
+     "rápido"            TS_FAST       10
+     "normal"          TS_NORMAL        6
+     "despacio"        TS_SLOW          3
+     "el más despacio" TS_SLOWEST       1
 ===================== ============== ==========
 
-Consider the following annotated example.
+Considere el siguiente ejemplo anotado.
 
 .. activecode:: cturtle_4
     :language: cpp
@@ -67,52 +67,52 @@ Consider the following annotated example.
     namespace ct = cturtle;
 
     int main() {
-        //Create a turtle screen, and add our turtle to it.
+        //Cree una pantalla de tortuga y agregue nuestra tortuga a ella.
         ct::TurtleScreen screen;
         ct::Turtle turtle(screen);
         
-        //Set the turtle speed to the slowest available option.
+        //Establecer la velocidad de la tortuga en la opción más lenta disponible.
         turtle.speed(ct::TS_SLOWEST);
-        //Any number from 0 to 10 would work as well.
+        //Cualquier número del 0 al 10 también funcionaría.
         //turtle.speed(7);
         
-        //Sets the turtle's fill color to purple.
+        //Establece el color de relleno de la tortuga en morado.
         turtle.fillcolor({"purple"});
         
-        //Tells the turtle to begin filling a shape as it moves.
+        //Le dice a la tortuga que comience a llenar una forma a medida que se mueve.
         turtle.begin_fill();
         
-        //Tells the turtle to make a square.
-        //Iterates once for every corner of the square.
+        //Le dice a la tortuga que haga un cuadrado.
+        //Itera una vez por cada esquina del cuadrado.
         for (int i = 0; i < 4; i++) {
         
-            //Tells the turtle to move forward 50 units.
+            //Le dice a la tortuga que avance 50 unidades.
             turtle.forward(50);
             
-            //Tells the turtle to turn 90 degrees to the right.
+            //Le dice a la tortuga que gire 90 grados a la derecha.
             turtle.right(90);
         }
         
-        //Tells the turtle to finish filling the shape it has outlined.
+        //Le dice a la tortuga que termine de rellenar la forma que ha delineado.
         turtle.end_fill();
-        
-        //Closes the turtle screen.
+    
+        //Cierra la pantalla de la tortuga.
         screen.bye();
         return 0;
     }
 
-The expected output would be a purple square in the center of the turtle's canvas.
-If you have experience with Turtles in Python, a lot of what you see in the example should look
-familiar. If not, don't worry! It will all be covered in this chapter.
+El resultado esperado sería un cuadrado morado en el centro del lienzo de la tortuga.
+Si tiene experiencia con Turtles en Python, mucho de lo que ve en el ejemplo debería verse
+familiar. Si no, ¡no te preocupes! Todo será cubierto en este capítulo.
 
-The order of operations given to a turtle is important, as some actions must be completed
-one after another. A good example of this is the :code:`begin_fill` and :code:`end_fill`
-pattern, which must be called in that specified order to actually fill a shape.
+El orden de las operaciones dadas a una tortuga es importante, ya que algunas acciones deben completarse
+Uno después del otro. Un buen ejemplo de esto es :code:`begin_fill` y :code:`end_fill`
+patrón, que debe llamarse en ese orden específico para llenar realmente una forma.
 
 .. parsonsprob:: cturtle_question_3
 
-    Construct a program that fills a green triangle using begin_fill and end_fill
-    using the example code above as a guide.
+    Construya un programa que llene un triángulo verde usando begin_fill y end_fill 
+    usando el código de ejemplo anterior como guía.
     -----
     #include <CTurtle.hpp>
     namespace ct = cturtle;
@@ -139,19 +139,19 @@ pattern, which must be called in that specified order to actually fill a shape.
     =====
     }
 
-There are 14 commonly used methods for Turtles. Many of them have names that indicate what they do. 
-See if you can match each method description with their names!
+Hay 14 métodos de uso común para las tortugas. Muchos de ellos tienen nombres que indican lo que hacen.
+¡Vea si puede hacer coincidir la descripción de cada método con sus nombres!
 
 .. dragndrop:: cturtle_dnd_1
-   :match_1: turn to the left.|||turtle.left
-   :match_2: turn to the right.|||turtle.right
-   :match_3: pick pen up.|||turtle.penup
-   :match_4: put pen down.|||turtle.pendown
-   :match_5: what color to fill drawing with.|||turtle.fillcolor
-   :match_6: start filling the shape.|||turtle.beginfill
-   :match_7: stops filling the shape.|||turtle.endfill
-   :match_8: change the pen color.|||turtle.pencolor
-   :match_9: change the pen size.|||turtle.width
-   :match_10: change the speed|||turtle.speed
+   :match_1: doblar a la izquierda.|||turtle.left
+   :match_2: gira a la derecha.|||turtle.right
+   :match_3: levantar el lapicero.|||turtle.penup
+   :match_4: poner el lapicero abajo.|||turtle.pendown
+   :match_5: con que color rellenar el dibujo.|||turtle.fillcolor
+   :match_6: empezar a llenar la forma.|||turtle.beginfill
+   :match_7: deja de llenar la forma.|||turtle.endfill
+   :match_8: cambiar el color de la pluma.|||turtle.pencolor
+   :match_9: cambiar el tamaño de la pluma.|||turtle.width
+   :match_10: cambiar la velocidad. |||turtle.speed
 
-   Match the turtle method descriptions to the methods they belong to.
+   Haga coincidir las descripciones de los métodos de tortuga con los métodos a los que pertenecen.
