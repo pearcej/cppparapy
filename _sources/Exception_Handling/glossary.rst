@@ -5,7 +5,7 @@
 Glosario
 --------
 
-.. glossario::
+.. glossary::
     excepción
         es una respuesta a una circunstancia inusual mientras un programa se ejecuta.
 
