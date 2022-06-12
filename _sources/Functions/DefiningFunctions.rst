@@ -7,11 +7,10 @@
 Definiendo Funciones en C++ 
 ----------------------
 
-In general, we can hide the details of any computation by defining
-a function. A function definition requires a name, a group of
-parameters, a return type, and a body. It may either return a variable, value, or nothing (specified by the keyword void). For
-example, the simple function defined below returns an integer which is the double of the
-value you pass into it.
+En general, podemos ocultar los detalles de cualquier computación definiendo una función. 
+Una definición de función requiere un nombre, un grupo de parámetros, un tipo de valor de retorno 
+y un cuerpo. Puede retornar una variable, un valor o nada (especificado por la palabra clave void). 
+Por ejemplo, la función simple definida a continuación retorna un número entero que es el doble del valor que le pasa.
 
 .. _lst_timesTwo:
 
@@ -30,24 +29,26 @@ value you pass into it.
     }
 
     int main() {
-        /* return type int which indicates that
-           an integer is being returned */
+        /* tipo de retorno int que indica 
+        que se retorna un número entero */
         cout<<timesTwo(5)<<endl;
 
         return 0;
     }
 
-The syntax for this function definition includes the name, ``timesTwo``,
-and a parenthesized list of formal parameters and their types. For this function an ``int`` named ``num``
-is the only formal parameter, which suggests that ``timesTwo`` needs only
-one piece of data to do its work. The details, hidden “inside the box,”
-simply compute the result of ``num*2`` and return it. We can invoke or
-call the ``timesTwo`` function by asking the C++ to
-evaluate it, passing an actual parameter value, in this case, ``3``.
-Note that the call to ``timesTwo`` returns an integer that can in turn be
-passed to another invocation.
 
-Miremos a una función similar.
+
+La sintaxis de la definición de esta función incluye el nombre, ``timesTwo``, 
+y una lista entre paréntesis de parámetros formales y sus tipos. 
+Para esta función, un ``int`` llamado ``num`` es el único parámetro formal, 
+lo que sugiere que ``timesTwo`` necesita solo un dato para hacer su trabajo. 
+Los detalles, ocultos "dentro de la caja", simplemente calculan el 
+resultado de ``num*2`` y lo devuelven. Podemos invocar o llamar a la función 
+``timesTwo`` pidiéndole a C++ que la evalúe, pasando un valor de parámetro real, 
+en este caso, ``3``. Tenga en cuenta que la llamada a ``timesTwo`` devuelve un 
+número entero que a su vez se puede pasar a otra invocación.
+
+Miremos una función similar.
 
 
 .. _lst_timesTwoVoid:
@@ -59,43 +60,42 @@ Miremos a una función similar.
     #include <iostream>
     using namespace std;
 
-    // function that multiplies a number by 2
-    // except it does not anything it only outputs to the console
+    // función que multiplica un número por 2
+    // excepto que no hace nada, solo envía a la consola
+
     void timesTwoVoid(int num) {
-      /* return type void which indicates
-         that an nothing is being returned */
+      /* tipo de retorno void 
+      indica que no se devuelve nada */
       cout<< num*2<<endl;
     }
 
     int main() {
-        /* return type int which indicates that
-           an integer is being returned */
+        /* tipo de retorno int que indica que
+            se retorna un número entero */
         timesTwoVoid(5);
 
         return 0;
     }
 
-The ``timesTwoVoid`` function behaves very similarly to ``timesTwo``. However, there is one key
-difference between them. Instead of the ``int`` in ``timesTwo``, ``timesTwoVoid`` has a
-``void`` in front of its function definition. Unlike ``timesTwo``, ``timesTwoVoid`` is a non-fruitful
-function meaning it does not return a value even though it can still print something out.
+La función ``timesTwoVoid`` se comporta de manera muy similar a ``timesTwo``. Sin embargo, hay una diferencia clave entre ellos. 
+En lugar del ``int`` en ``timesTwo``, ``timesTwoVoid`` tiene un 
+``void`` delante de la definición de su función. A diferencia de ``timesTwo``, ``timesTwoVoid`` es una función no fructífera, 
+lo que significa que no devuelve un valor aunque todavía puede imprimir algo.
 
-We could go a step further and implement our own square root function by using a well-known
-technique called “Newton’s Method.” Newton’s Method for approximating
-square roots performs an iterative computation that converges on the
-correct value. The equation
+Podríamos ir un paso más allá e implementar nuestra propia función de raíz cuadrada 
+usando una técnica bien conocida llamada "Método de Newton". 
+El método de Newton para aproximar raíces cuadradas realiza un cálculo 
+iterativo que converge en el valor correcto. La ecuación
 :math:`newguess = \frac {1}{2} * (oldguess + \frac {n}{oldguess})`
-takes a value :math:`n` and repeatedly guesses the square root by
-making each :math:`newguess` the :math:`oldguess` in the subsequent
-iteration. The initial guess used here is :math:`\frac {n}{2}`.
-:ref:`Listing 1 <lst_root>` shows a function definition that accepts a value
-:math:`n` and returns the square root of :math:`n` after making 20
-guesses. Again, the details of Newton’s Method are hidden inside the
-function definition and the user does not have to know anything about
-the implementation to use the function for its intended purpose.
-:ref:`Listing 1 <lst_root>` also shows the use of the // characters as a comment
-marker. Any characters that follow the // on a line are ignored.
-
+toma un valor :math:`n` y adivina repetidamente la raíz cuadrada haciendo cada uno
+:math:`newguess` the :math:`oldguess` en la iteración subsiguiente.
+La conjetura inicial utilizada aquí es :math:`\frac {n}{2}`.
+:ref:`Listing 1 <lst_root>` muestra una definición de función que acepta un valor
+:math:`n` y retorna la raíz cuadrada de :math:`n` después de hacer 20 conjeturas. 
+Nuevamente, los detalles del Método de Newton están ocultos dentro de la definición de la función y el usuario no tiene 
+que saber nada sobre la implementación para usar la función para el propósito previsto.
+:ref:`Listing 1 <lst_root>` también muestra el uso de los caracteres // como marcador de comentario. 
+Los caracteres que siguen a // en una línea se ignoran.
 
 
 
@@ -107,12 +107,12 @@ marker. Any characters that follow the // on a line are ignored.
   :language: cpp
   :caption: Newton's Method for finding Square Root
 
-  // returns the square root of a number as a double
+  //devuelve la raíz cuadrada de un número como un doble
   #include <iostream>
   using namespace std;
 
-  double squareroot(double n) { /*return type double which indicates
-                                  that a decimal is being returned*/
+  double squareroot(double n) { /*tipo de retorno doble que indica
+                                   que se devuelve un decimal*/
   	double root = n / 2;
 
   	for (int i = 0; i < 20; i++) {
@@ -132,13 +132,13 @@ marker. Any characters that follow the // on a line are ignored.
 .. activecode:: dogwalk
     :language: cpp
 
-    // function that retuns outputs number of steps wallked 
+    // función que devuelve el número de pasos caminados
     #include <iostream>
     using namespace std;
 
     void dogWalk(int steps){
         for (int step = 0; step < steps; step++){
-            cout << "dog walked "<< step << " steps!"<< endl;
+            cout << "el perro camino "<< step << " pasos!"<< endl;
         }
     }
 
@@ -154,98 +154,95 @@ marker. Any characters that follow the // on a line are ignored.
     :answer_c: dog
     :answer_d: dogWalk
     :correct: a
-    :feedback_a: Correct, nothing is returned!
-    :feedback_b: Not quite, check the value preceding the name of the function!
-    :feedback_c: Not quite, dog is not even a data type!
-    :feedback_d: Not quite, that is the name of the function itself!
+    :feedback_a: Correcto, no retorna nada!
+    :feedback_b: No del todo, ¡verifique el valor que precede al nombre de la función!
+    :feedback_c: No del todo, dog ni siquiera es un tipo de datos!
+    :feedback_d: No del todo, ¡ese es el nombre de la función en sí!
 
-    What is the correct return type of the function above **int main()**?
+    ¿Cuál es el tipo de retorno correcto de la función anterior **int main()**?
 
-Parameter Passing: by Value versus by Reference
+Paso de Parámetros: por Valor vs por Referencia
 -----------------------------------------------
 
+En todas las funciones que hemos escrito hasta ahora, hemos utilizado un mecanismo 
+de llamada de función llamado  **paso por valor **. Llamar a una función por valor implica 
+copiar el contenido de los argumentos en las ubicaciones de memoria de los parámetros 
+formales correspondientes. Si la función cambia los valores de los parámetros, 
+el contenido original en la memoria a la que hacen referencia los argumentos de la 
+función que llama no cambia.
 
-In all of the functions we have written thus far, we have used a function calling
-mechanism called **pass by value**.
-Calling a function by value involves copying the contents of the arguments
-into the memory locations of the corresponding formal parameters.
-If the function changes
-the values of the parameters, the original contents in the memory referenced
-by the arguments of the calling function do not change.
-
-Consider the following two function definitions:
+Considere las siguientes dos definiciones de función:
 
 ::
 
-    void functionExample( int inputVar ) { /*return type void which indicates that
-                                             nothing is being returned*/
+    void functionExample( int inputVar ) { /*tipo de dato que retorna void, 
+                                             indica que no se devuelve nada*/
         int nextVar = inputVar * 2;
         inputVar = 4;
 
         cout << "nextVar = " << nextVar << " inputVar = " << inputVar;
     }
 
-    void callingFunction() { /*return type void which indicates
-                                 that nothing is being returned*/
+    void callingFunction() { /*tipo de retorno void que indica
+                                 que nada se retorna*/
         int myVar = 10;
 
         functionExample( myVar );
         cout << "myVar = " << myVar;
     }
 
-When the function ``callingFunction()`` executes, it calls ``functionExample(...)``
-with the variable *myVar* having the value 10. Within ``functionExample(...)``,
-the value of 10 is copied from *myVar* to the formal parameter *inputVar*,
-so the value of *nextVar* is 10x2, or 20. The next statement changes the contents of *inputVar* to 4,
-so the ``cout`` statement within this function produces the output:
-
+Cuando la función ``callingFunction()`` se ejecuta, llama ``functionExample(...)``
+con la variable *myVar* que tiene el valor de 10. Dentro de ``functionExample(...)``,
+el valor de 10 es copiado de *myVar* al parámetro formal *inputVar*,
+asi que el valor de *nextVar* es 10x2, o 20. La siguiente declaración cambia el contenido de *inputVar* a 4,
+y ``cout`` dentro de esta función produce lo siguiente: 
 ::
 
     nextVar = 20 inputVar = 4
 
-Notice what happens when ``functionExample(...)`` ends and execution returns to ``callingFunction()``.
-The contents of *myVar* is **still the same**, as the location for *myVar* differs from where *inputVar*
-is stored. Thus, *myVar* still has the value 10, and the ``cout`` statement after the function call will
-produce the output:
+
+
+Observe lo que sucede cuando finaliza ``functionExample(...)`` y la ejecución vuelve a ``callingFunction()``. 
+El contenido de *myVar* es **todavía el mismo**, ya que la ubicación de myVar difiere de donde se almacena *inputVar*. 
+Por lo tanto, *myVar* todavía tiene el valor 10, y la expresión ``cout`` después de la llamada a la función producirá el resultado:
 
 ::
 
     myVar = 10
 
-In other words, any changes to the variables are local to the function, which is exactly what we want.
-
+En otras palabras, cualquier cambio en las variables es local para la función, 
+que es exactamente lo que queremos.
 --------------
+Pero hay un problema
 
-However, there is a problem.
+Hemos visto ejemplos de funciones de C++ que no devuelven ningún valor o devuelven 
+un solo valor. ¿Qué pasa si queremos que la función devuelva **más** de un valor? 
+Necesitamos otro mecanismo de llamada llamado **paso por referencia**. 
+Cuando se utiliza este mecanismo, se envía la ubicación actual en la memoria a la 
+que hacen referencia los argumentos en lugar de los valores en esa ubicación. 
+Para que el compilador sepa que tiene la intención de utilizar el paso por referencia, 
+adjunte un "&" al final del nombre del tipo en la lista de parámetros formales en la 
+declaración y el encabezado de la función. Cuando haga esto, cualquier cambio en los 
+valores de los parámetros también cambiará el valor de los argumentos.
 
-We have seen examples of C++ functions that return no value or a single value.
-How about when we want the function to return **more** than one value?
-We need another function calling mechanism called **pass by reference**.
-When using this mechanism, the actual location in memory referenced by the arguments are
-sent rather than the values in that location.
-To let the compiler know that you intend to use pass by reference,
-you attach an "&" to the end of the type name in the formal parameter list in the function
-declaration and header. When you do this, any changes to the values of the parameters will
-change the value of the arguments as well.
-
-An example of a function where this is useful is a function that takes two values
-as input and swaps their order. Consider the following program fragment of a function
-called ``swap_values(...)`` that swaps its two inputs and the ``main()`` function
-that calls ``swap_values(...)``.
+Un ejemplo de una función en la que esto es útil es una función que toma dos valores 
+como entrada e intercambia su orden. Considere el siguiente fragmento de programa 
+de una función llamada ``swap_values(...)`` que intercambia sus dos entradas y la función 
+``main()`` que llama ``swap_values(...)``.
 
 .. _lst_swap_inputs:
 
     .. activecode:: activepassrefcpp
-        :caption: Pass by Reference
+        :caption: Pasar por Referencia
         :language: cpp
 
         #include <iostream>
         using namespace std;
 
-        // swap_values() function definition
-        // Interchanges the values located by variable1 and variable2.
+        // definición de la función swap_values() 
+        // Intercambia los valores ubicados por variable1 y variable2.
 
-        // Notice that this function does not return anything!
+        // ¡Observe que esta función no devuelve nada!
         void swap_values(int &variable1, int &variable2) {
             int temp; 		// temporary storage for swap
 
@@ -259,24 +256,25 @@ that calls ``swap_values(...)``.
             first_num = 7;
             second_num = 8;
 
-            cout << "Two numbers before swap function: 1) " << first_num << " 2) " << second_num << endl;
+            cout << "Dos números antes de la función de intercambio: 1) " << first_num << " 2) " << second_num << endl;
             swap_values(first_num, second_num);
-            cout << "The numbers after swap function: 1) " << first_num << " 2) " << second_num;
+            cout << "Los números después de la función de intercambio: 1) " << first_num << " 2) " << second_num;
 
             return 0;
         }
 
 
-For this program :ref:`Swap Inputs <lst_swap_inputs>` to reverse the order of the integers the users types in, the function ``swap_values(...)`` must be able to change the values of the arguments. Try removing one or both of the "&" 's in this code to see what happens.
+Para este programa :ref:`Swap Inputs <lst_swap_inputs>` para invertir el orden de los enteros que escriben los tipos de 
+usuarios, la función ``swap_values(...)`` debe poder cambiar los valores de los argumentos. Intente eliminar uno o ambos "&" en este código para ver qué sucede.
 
-Analyze the program and answer the question that involves parameter passing below:
+Analice el programa y responda la pregunta que implica el paso de parámetros a continuación:
 
 ..  activecode:: questionexample1
     :coach:
     :language: cpp
 
-    // demonstrates the difference between pass-by-value
-    // and pass-by-reference functions. 
+    // demuestra la diferencia entre las funciones que pasan por valor 
+    // y las que pasan por referencia
     #include <iostream>
     using namespace std;
 
@@ -299,10 +297,10 @@ Analyze the program and answer the question that involves parameter passing belo
         int num2 = 3;
         
         func1(num1, num2);
-        cout << "results of func1:" << endl;
+        cout << "resultado de la func1:" << endl;
         cout << "num1: " << num1 << ", num2: " << num2 << endl;
         func2(num1, num2);
-        cout << "results of func2:" << endl;
+        cout << "resultado de la func2:" << endl;
         cout << "num1: " << num1 << ", num2: " << num2 << endl;
         
         return 0;
@@ -310,55 +308,54 @@ Analyze the program and answer the question that involves parameter passing belo
 
 .. mchoice:: question1_1
     :multiple_answers:
-    :answer_a: func2 is a pass-by-reference function, meaning that the values passed into the function are the direct memory references of the original variables.
-    :answer_b: func1 is a pass-by-reference function, meaning that the values passed into the function are the direct memory references of the original variables.
-    :answer_c: func1 is a pass-by-value value function, meaning that the values passed into the function are copies of the original variables.
-    :answer_d: func2 is a pass-by-value value function, meaning that the values passed into the function are copies of the original variables.
+    :answer_a: func2 es una función de paso por referencia, lo que significa que los valores pasados a la función son las referencias de memoria directas de las variables originales.
+    :answer_b: func1 es una función de paso por referencia, lo que significa que los valores pasados a la función son las referencias de memoria directas de las variables originales.
+    :answer_c: func1 es una función de valor de paso por valor, lo que significa que los valores pasados a la función son copias de las variables originales.
+    :answer_d: func2 es una función de valor de paso por valor, lo que significa que los valores pasados a la función son copias de las variables originales.
     :correct: a, c
-    :feedback_a: Correct!
-    :feedback_b: No, func1 is simply using copies of the original variables as input because it is not using "&."
-    :feedback_c: Correct!
-    :feedback_d: No, func2 is using the direct memory references of the original variables because its input parameters are using "&."
+    :feedback_a: Correcto!
+    :feedback_b: No, func1 simplemente usa copias de las variables originales como entrada porque no usa "&".
+    :feedback_c: Correcto!
+    :feedback_d: No, func2 está usando las referencias de memoria directas de las variables originales porque sus parámetros de entrada están usando "&".
 
-    What is the difference between **func1** and **func2**? Check all that apply.
+    ¿Cuál es la diferencia entre **func1** y **func2**? Marque todo lo que corresponda.
 
 .. mchoice:: question1_2
-   :answer_a: The "&" forces variables to change in the global scope, resulting in the two variables not exclusively changing inside of the function.
-   :answer_b: The "&" passes the location where the two variables are stored, resulting in the two variables switching memory references.
-   :answer_c: The "&" in this function is incorrectly used, resulting in an overlapping memory reference.  
-   :answer_d: None of the above
+   :answer_a: El "&" obliga a las variables a cambiar en el ámbito global, lo que hace que las dos variables no cambien exclusivamente dentro de la función.
+   :answer_b: El "&" pasa la ubicación donde se almacenan las dos variables, lo que hace que las dos variables cambien las referencias de memoria.
+   :answer_c: El "&" en esta función se usa incorrectamente, lo que da como resultado una referencia de memoria superpuesta.
+   :answer_d: Ninguna de las anteriores
    :correct: b
-   :feedback_a: No, "&" has nothing to do with altering integers in the global scope.
-   :feedback_b: Correct!
-   :feedback_c: No, the use of "&" here is correct. Read over the active code 4 example earlier in the section.
-   :feedback_d: No, one of the above is definitely true.
+   :feedback_a: No, "&" no tiene nada que ver con alterar enteros en el ámbito global.
+   :feedback_b: Correcto!
+   :feedback_c: No, el uso de "&" aquí es correcto. Lea el ejemplo del código activo 4 anteriormente en la sección.
+   :feedback_d: No, Una de las anteriores es definitivamente cierta.
 
-   Why does adding the "&" to parameters in the **func** function cause the output to be a different result?
+   ¿Por qué agregar el "&" a los parámetros en la función **func** hace que la salida sea un resultado diferente?
 
 -----------------------------------------------------------------
 
-Arrays as Parameters in Functions
+Arrays como Parámetros en Funciones
 ---------------------------------
 
-An array is a collection data type that is the ancestor of the Python list.
-We will discuss arrays in more detail in the next chapter.
-Functions can be used with **array parameters** to maintain a structured design.
-However, a formal parameter for an array is neither a call-by-value nor a call-by-reference,
-but a new type of parameter pass called an array parameter.
-In a function definition, an array parameter looks like a pass-by-value parameter
-because there is no ampersand symbol (&), but the variable name is instead followed
-by a set of square brackets ([ and ]).
+Un array es un tipo de colección de datos que es el ancestro de la lista de Python. 
+Discutiremos los arrays con más detalle en el próximo capítulo. 
+Las funciones se pueden usar con **parámetros de arrays** para mantener un diseño estructurado. 
+Sin embargo, un parámetro formal para un array no es una llamada por valor ni una 
+llamada por referencia, sino un nuevo tipo de paso de parámetro denominado parámetro de array. 
+En una definición de función, un parámetro de array parece un parámetro de paso por valor 
+porque no hay un símbolo de y comercial (&), sino que el nombre de la variable va 
+seguido de un conjunto de corchetes ([ y ]).
 
-The following example function returns the average hours worked over the array of
-integers (note that we need to also pass in the number of elements in that array
-because the array parameter *list[]* does not include that information):
+La siguiente función retorna el promedio de horas trabajadas en el array de enteros (tenga en cuenta que también debemos pasar el número de 
+elementos en ese array porque el parámetro del array *list[]* no incluye esa información):
 
 ::
 
     double average( int list[], int length ) {	
-         // It is correct syntax to omit the array length on the array itself.
+         // Es una sintaxis correcta omitir la longitud del array en el propio array.
         double total = 0;                     
-         //return type double which indicates that a decimal is being returned
+         //tipo de retorno doble que indica que se está devolviendo un decimal
         int count;
         for( count = 0; count < length; count++ ) {
             total += double(list[count]);
@@ -366,10 +363,15 @@ because the array parameter *list[]* does not include that information):
         return (total / length);
     }
 
-Array parameters look like *pass by value*, but they are effectively similar to *pass by reference* parameters. When they execute, the functions with these parameters do not make private copies of the arrays. Instead, the reference is passed to reduce the impact on memory. Arrays can therefore always be permanently changed when passed as arguments to functions.
 
-After a call to the following function, each element in the third array argument is equal to the sum of the corresponding two elements in the first and second arguments:
+Los parámetros de array parecen *pasar por valor*, pero son efectivamente similares 
+a los parámetros que *pasan por referencia*. Cuando se ejecutan, las funciones con estos 
+parámetros no hacen copias privadas de los arrays. En su lugar, se pasa la referencia 
+para reducir el impacto en la memoria. Por lo tanto, los arrays siempre se pueden 
+cambiar permanentemente cuando se pasan como argumentos a funciones.
 
+Después de una llamada a la siguiente función, cada elemento en el tercer argumento de 
+matriz es igual a la suma de los dos elementos correspondientes en el primer y segundo argumento:
 ::
 
     void add_lists( int first[], int second[], int total[], int length ) { 
@@ -379,57 +381,57 @@ After a call to the following function, each element in the third array argument
             total[count] = first[count] + second[count];
     };}
 
-Upon further examination, we can see that the first two arrays do not change values. To prevent ourselves from accidentally modifying any of these arrays, we can add the modifier ``const`` in the function head:
 
+Examinando detalladamente, podemos ver que los dos primeros arrays no cambian de valor. Para evitar que modifiquemos accidentalmente cualquiera de estos arrays, podemos agregar el modificador ``const`` en el encabezado de la función:
 ::
 
     void add_lists( const int first[], const int second[], int total[], int length ) { 
-        //return type void which indicates that nothing is returned
+        //tipo de devolución void que indica que no se devuelve nada
         int count;
         for( count = 0; count < length; count++ ) {
             total[count] = first[count] + second[count];
     };}
 
-These changes would ensure that the compiler will then not accept any statements within the function's definition that potentially modify the elements of the arrays *first* or *second*.
+Estos cambios garantizarían que el compilador no acepte ninguna declaración dentro de la definición de la función que potencialmente modifique los elementos de los arrays *primero* o *segundo*.
 
-
-Function Overloading
+Sobrecarga de Funciones
 --------------------
 
-**Function overloading** is the ability to create multiple functions with identical names but different implementations.
-Not all languages support function overloading. Python does not, for example.
+**La sobrecarga de funciones** es la capacidad de crear múltiples funciones con nombres 
+idénticos pero con implementaciones diferentes. No todos los idiomas admiten la sobrecarga 
+de funciones. Python no lo hace, por ejemplo.
 
-In C++ programming, two or more functions can have same
-name when they can be distinguished by the parameters.
-Hence, C++  allows function overloading when either the data types of the parameters differ
-or the number of parameters differ.
+En programación C++, dos o más funciones pueden tener el mismo nombre cuando 
+se pueden distinguir por los parámetros. Por lo tanto, C++ permite la sobrecarga 
+de funciones cuando los tipos de datos de los parámetros difieren o el número de 
+parámetros difiere.
 
-Overloading is a nice feature of the C++ language.
-Python does not offer function overloading, so accomplishing the same task in
-Python requires a different technique.
+La sobrecarga es una buena característica del lenguaje C++. Python no ofrece 
+sobrecarga de funciones, por lo que realizar la misma tarea en Python requiere 
+una técnica diferente.
 
-See the following example where an optional parameter is used to accomplish the
-same task.
+Consulte el siguiente ejemplo donde se usa un parámetro opcional para lograr el
+misma tarea
 
 .. tabbed:: foverload
 
   .. tab:: C++
 
     .. activecode:: foverload_cpp
-        :caption: function overloading in C++
+        :caption: sobrecarga de funciones en C++
         :language: cpp
 
-        // demonstrates how function overloading works
-        // by changing the parameters on the inputs.
+        // demuestra cómo funciona la sobrecarga de funciones
+        // cambiando los parámetros en las entradas.
         #include <iostream>
         using namespace std;
 
         void myfunct(int n) {
-             cout << "1 parameter: " << n <<endl;
+             cout << "1 parámetro: " << n <<endl;
         }
 
         void myfunct(int n, int m) {
-             cout << "2 parameters: " << n;
+             cout << "2 parametros: " << n;
              cout << " and " << m <<endl;
         }
 
@@ -446,14 +448,14 @@ same task.
   .. tab:: Python
 
     .. activecode:: foverload_py
-        :caption: Function Overloading in Python
+        :caption: Sobrecarga de Funciones en Python
 
-        """Demonstrates the use of multiple parameters using a single function"""
+        """Demuestra el uso de múltiples parámetros usando una sola función"""
         def myfunct(n, m=None):
             if m is None:
-                print("1 parameter: " + str(n))
+                print("1 parámetro: " + str(n))
             else:
-                print("2 parameters: " + str(n), end="")
+                print("2 parámetros: " + str(n), end="")
                 print(" and ", str(m))
 
         def main():
@@ -465,45 +467,45 @@ same task.
 
 .. mchoice:: foverloading
     :multiple_answers:
-    :answer_a: Helps keep consintency in the way your functions are named across your program.
-    :answer_b: Functions that do similar tasks differ based on parameters rather than by name.
-    :answer_c: A function in essence can fulfill multiple tasks depending on the parameters.
-    :answer_d: Removes the limit on how many parameters can be written or passed.
+    :answer_a: Ayuda a mantener la coherencia en la forma en que se nombran las funciones en todo el programa.
+    :answer_b: Las funciones que realizan tareas similares difieren en función de los parámetros y no del nombre.
+    :answer_c: Una función en esencia puede cumplir múltiples tareas dependiendo de los parámetros.
+    :answer_d: Elimina el límite de cuántos parámetros se pueden escribir o pasar.
     :correct: a, b, c
-    :feedback_a: Take a look at the other answers as well...
-    :feedback_b: Take a look at the other answers as well...
-    :feedback_c: Take a look at the other answers as well...
-    :feedback_d: Wrong! Function overloading has nothing to do with removing the limit of parameters.
+    :feedback_a: Echa un vistazo a las otras respuestas también...
+    :feedback_b: Echa un vistazo a las otras respuestas también...
+    :feedback_c: Echa un vistazo a las otras respuestas también...
+    :feedback_d: Incorrecto! La sobrecarga de funciones no tiene nada que ver con eliminar el límite de parámetros.
 
-    What are benefits of function overloading?
+    ¿Cuáles son los beneficios de la sobrecarga de funciones?
 
-.. admonition:: Self Check
+.. admonition:: Autochequeo
 
-   Here's a self check that really covers everything so far.  You may have
-   heard of the infinite monkey theorem?  The theorem states that a monkey
-   hitting keys at random on a typewriter keyboard for an infinite amount of
-   time will almost surely type a given text, such as the complete works of
-   William Shakespeare.  Well, suppose we replace a monkey with a C++ function.
-   How long do you think it would take for a C++ function to generate just one
-   sentence of Shakespeare?  The sentence we'll shoot for is:  "methinks it is
-   like a weasel"
+   Aquí hay una autocomprobación que realmente cubre todo hasta ahora. ¿Es posible 
+   que hayas oído hablar del teorema del mono infinito? El teorema establece que un 
+   mono que golpea las teclas al azar en el teclado de una máquina de escribir durante 
+   un tiempo infinito seguramente escribirá un texto determinado, como las obras 
+   completas de William Shakespeare. Bueno, supongamos que reemplazamos un mono 
+   con una función de C++. ¿Cuánto tiempo cree que le tomaría a una función de 
+   C++ generar solo una oración de Shakespeare? La oración que buscaremos es: 
+   "Creo que es como una comadreja".
 
-   You're not going to want to run this one in the browser, so fire up your favorite
-   C++ IDE.  The way we'll simulate this is to write a function that generates a string
-   that is 28 characters long by choosing random letters from the 26 letters in the
-   alphabet plus the space.  We'll write another function that will score each
-   generated string by comparing the randomly generated string to the goal.
-   Hint: You will need to import the <random> library for this.
+   No querrá ejecutar este en el navegador, así que inicie su IDE de C++ favorito. 
+   La forma en que simularemos esto es escribir una función que genere una cadena 
+   de 28 caracteres de largo eligiendo letras aleatorias de las 26 letras del alfabeto 
+   más el espacio. Escribiremos otra función que puntuará cada cadena generada 
+   comparando la cadena generada aleatoriamente con el objetivo. 
+   Sugerencia: deberá importar la biblioteca <random> para esto.
 
-   A third function will repeatedly call generate and score, then if 100% of
-   the letters are correct we are done.  If the letters are not correct then
-   we will generate a whole new string. To make it easier to follow your program's
-   progress this third function should print out the best string generated so far
-   and its score every 1000 tries.
+   Una tercera función llamará repetidamente a generar y puntuar, luego, si 
+   el 100% de las letras son correctas, hemos terminado. Si las letras no son correctas, 
+   generaremos una cadena completamente nueva. Para facilitar el seguimiento del 
+   progreso de su programa, esta tercera función debe imprimir la mejor cadena 
+   generada hasta el momento y su puntaje cada 1000 intentos.
 
 .. admonition:: Desafío de autocomprobación
 
-    See if you can improve upon the program in the self check by keeping letters
-    that are correct and only modifying one character in the best string so far.
-    This is a type of algorithm in the class of 'hill climbing' algorithms, that
-    is we only keep the result if it is better than the previous one.
+    Vea si puede mejorar el programa en la autocomprobación manteniendo las letras 
+    correctas y modificando solo un carácter en la mejor cadena hasta el momento. 
+    Este es un tipo de algoritmo en la clase de algoritmos llamados "hill climbling", 
+    es decir, solo conservamos el resultado si es mejor que el anterior.
