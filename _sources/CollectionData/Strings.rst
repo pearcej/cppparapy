@@ -4,102 +4,104 @@
 
 Strings
 ^^^^^^^
-**Strings** are sequential collections of zero or more characters such as letters, numbers
-and other symbols. There are actually two types of strings in C++ . The *C++ string* or just *string* from the
-``<string>`` library is the more modern type, and it is very similar to the Python string class.
-The old style *C-string* which is essentially
-an array of ``char`` type. The char type itself is actually distinct from both types of strings.
+Las **cadenas** son colecciones secuenciales de cero o más caracteres, como letras, 
+números y otros símbolos. En realidad, hay dos tipos de cadenas en C++. 
+La *cadena de C++* o simplemente la *cadena* de la biblioteca ``<string>`` es el 
+tipo más moderno y es muy similar a la clase de cadena de Python. 
+La cadena C de estilo antiguo que es esencialmente un array de tipo char. 
+El tipo ``char`` en sí es distinto de ambos tipos de cadenas.
 
 ::
 
-    char cppchar = 'a';   // char values use single quotes
-    string cppstring = "Hello World!";  // C++ strings use double quotes
-    char cstring[] = {"Hello World!"};    // C-string or char array uses double quotes
+    char cppchar = 'a';   // los valores char usan simples comillas 
+    string cppstring = "Hola Mundo!";  // las cadenas de C++ usan comillas doble.
+    char cstring[] = {"Hola Mundo!"};    // C-string o un array char array usa comillas doble.
 
 
-In older versions of C++, you must use a ``char`` array to work with filenames. In modern
-C++ (from C++11 onward), however, you can use a C++ string for everything.
-Since C++ strings are so much nicer and similar to Python strings, I would not recommend using C-strings.
+
+En versiones anteriores de C++, debe usar un array ``char`` para trabajar con nombres de archivo. En el 
+C++ moderno (desde C++11 en adelante), puede usar una cadena de C++ para todo.
+Dado que las cadenas de C++ son mucho más agradables y similares a las cadenas de Python, no recomendaría usar cadenas de C.
 
 .. mchoice:: cstringquestion1_1
-    :answer_a: An array of characters that ends with a terminating null character. i.e. \0
-    :answer_b: A sequential data structure consisting of zero or more characters
-    :answer_c: A data structure consisting of an ordered collection of data elements of identical type in which each element can be identified by an array index.
-    :answer_d: sequence container storing data of a single type that is stored in a dynamically allocated array which can change in size.
+    :answer_a: Un array o arreglo de caracteres que termina con un carácter nulo de terminación. es decir, \0
+    :answer_b: Una estructura de datos secuenciales que consta de cero o más caracteres.
+    :answer_c: Una estructura de datos que consta de una colección ordenada de elementos de datos de tipo idéntico en la que cada elemento puede identificarse mediante un índice de el array.
+    :answer_d: contenedor de secuencias que almacena datos de un solo tipo que se almacenan en una matriz asignada dinámicamente que puede cambiar de tamaño.
     :correct: a
-    :feedback_a: Correct! a c-string is different from a string
-    :feedback_b: Close, but that is the definition of a string, not a c-string
-    :feedback_c: Sorry, thats not a string or a c-string
-    :feedback_d: No, that's a vector
+    :feedback_a: Correcto! una c-string es diferente de una cadena.
+    :feedback_b: Estas cerca, pero esa es la definición de una cadena, no de una c-string
+    :feedback_c: Incorrecto, eso no es una cadena o una c-string
+    :feedback_d: No, eso es un vector.
 
-    What is the correct definition of c-strings?
+    ¿Cuál es la definición correcta de c-strings?
 
-Because strings are sequences, all of the typical sequence operations work as you would expect.
-In addition, the string library offers a huge number of
-methods, some of the most useful of which are shown in :ref:`Table 4<tab_stringmethods>`.
+Dado que las cadenas son secuencias, todas las operaciones de secuencia típicas funcionan como se espera.
+En adición, la biblioteca de cadenas ofrece una gran cantidad de
+métodos, algunos de los más útiles se muestran en la :ref:`Tabla 4<tab_stringmethods>`.
 
 .. _tab_stringmethods:
 
-.. table:: **Table 4: String Methods Provided in C++**
+.. table:: **Tabla 4: Métodos de Cadena Proporcionados en C++**
 
     ===================  ==============================  =========================================================
-        **Method Name**                         **Use**                                            **Explanation**
+        **Nombre**                    **Uso**                                           **Explicación**
     ===================  ==============================  =========================================================
-                ``[ ]``                  ``astring[i]``                       access value of character at index i
-                  ``=``            ``astring[i]=value``                       change value of character at index i
-                  ``+``          ``string1 + astring2``                                        concatenate strings
-             ``append``      ``astring.append(string)``                  Appends a string to the end of the string
-          ``push_back``     ``astring.push_back(char)``               Appends a character to the end of the string
-           ``pop_back``          ``astring.pop_back()``      Deletes the last character from the end of the string
-             ``insert``   ``astring.insert(i, string)``                       Inserts a string at a specific index
-              ``erase``         ``astring.erase(i, j)``                Erases an element from one index to another
-               ``find``          ``astring.find(item)``          Returns the index of the first occurrence of item
-               ``size``              ``astring.size()``                             Returns the size of the string
+                ``[ ]``                  ``astring[i]``                valor de acceso del carácter en el índice i
+                  ``=``            ``astring[i]=value``               cambiar el valor del carácter en el índice i
+                  ``+``          ``string1 + astring2``                                         concatenar cadenas
+             ``append``      ``astring.append(string)``                   Agrega una cadena al final de una cadena
+          ``push_back``     ``astring.push_back(char)``                   Agrega un carácter al final de la cadena
+           ``pop_back``          ``astring.pop_back()``          Elimina el último carácter del final de la cadena
+             ``insert``   ``astring.insert(i, string)``                 Inserta una cadena en un índice específico
+              ``erase``         ``astring.erase(i, j)``                      Borra un elemento de un índice a otro
+               ``find``          ``astring.find(item)``    Devuelve el índice de la primera aparición del elemento
+               ``size``              ``astring.size()``                            Devuelve el tamaño de la cadena
     ===================  ==============================  =========================================================
 
 
 
-Matching
+Emparejar Definiciones
 ========
 .. dragndrop:: matching_strings
-   :feedback: Feedback shows incorrect matches.
-   :match_1: [ ]|||Accesses value of an element. 
-   :match_2: =||| Assigns value to an element. 
-   :match_3: push_back|||Adjoins a character to the end of the string.
-   :match_4: pop_back|||Removes the last character from the end of the string.
-   :match_5: insert|||Injects a string at a specific index. 
-   :match_6: erase|||Deletes an element from one index to another.
-   :match_7: size|||Returns the capacity of the string.
-   :match_8: +|||connects strings.
-   :match_9: append|||Adjoins a string to the end of the string.
-   :match_10: find||| Returns the index of the first occurrence of item.
+   :feedback: Los comentarios muestran coincidencias incorrectas.
+   :match_1: [ ]||| Accede al valor de un elemento.
+   :match_2: =||| Asigna valor a un elemento. 
+   :match_3: push_back||| Adjunta un carácter al final de la cadena.
+   :match_4: pop_back||| Elimina el último carácter del final de la cadena. 
+   :match_5: insert||| Inyecta una cadena en un índice específico.
+   :match_6: erase||| Elimina un elemento de un índice a otro.
+   :match_7: size||| Retorna la capacidad de la cadena.
+   :match_8: +||| conecta cadenas.
+   :match_9: append||| Adjunta una cadena al final de la cadena.
+   :match_10: find||| Devuelve el índice de la primera aparición de elemento.
 
-    Match the String operations with their corresponding explination. 
+    Relaciona las operaciones de String con su correspondiente explicación.
 
 .. tabbed:: intro_string
 
   .. tab:: C++
 
     .. activecode:: introstring_cpp
-        :caption: Strings in C++
+        :caption: Strings en C++
         :language: cpp
 
-        // This function concatenates the string hello World
-        // Then it says where World begins in the concatenated string
+        // Esta función concatena la cadena Hola Mundo
+        // Luego dice dónde comienza Mundo en la cadena concatenada.
         #include <iostream>
         #include <string>
         using namespace std;
 
         int main(){
 
-            string mystring1 = "Hello";
-            string mystring2 = "World!";
+            string mystring1 = "Hola";
+            string mystring2 = "Mundo!";
             string mystring3;
 
             mystring3 = mystring1 + " " + mystring2;
             cout << mystring3 << endl;
 
-            cout << mystring2 << " begins at ";
+            cout << mystring2 << " comienza en";
             cout << mystring3.find(mystring2) << endl;
 
             return 0;
@@ -108,31 +110,30 @@ Matching
   .. tab:: Python
 
     .. activecode:: introstring_py
-        :caption: Python strings
+        :caption: Cadenas o Strings en Python 
 
-        """This does the same thing as the C++ function """
+        """Esto hace lo mismo que la función de C++"""
         def main():
-            mystring1 = "Hello"
-            mystring2 = "World!"
+            mystring1 = "Hola"
+            mystring2 = "Mundo!"
 
             mystring3 = mystring1 + " " + mystring2
             print(mystring3)
 
             print(mystring2, end=" ")
-            print("begins at", end=" ")
+            print("comienza en", end=" ")
             print(str(mystring3.find(mystring2)))
 
         main()
 
 
-Check your understanding by completing the following question.
-
+Comprueba tu comprensión completando la siguiente pregunta.
 
 .. dragndrop:: string_types
-   :feedback: Feedback shows incorrect matches.
+   :feedback: Los comentarios muestran coincidencias incorrectas.
    :match_1: char|||'a'
    :match_2: char array|||{'a'}
    :match_3: string|||"a"
 
 
-   Drag each data type to its' corresponding C++ initialization syntax.
+   Arrastre cada tipo de datos a su correspondiente sintaxis de inicialización de C++.
