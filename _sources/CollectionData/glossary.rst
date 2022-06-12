@@ -3,51 +3,49 @@
     4.0 International License. To view a copy of this license, visit http://creativecommons.org/licenses/by-nc-sa/4.0/.
 
 
-Glossary
+Glossario
 --------
 
 .. glossary::
 
     array
-        a data structure consisting of an ordered collection of data elements of identical type in which each element can be identified by an array index.
+        una estructura de datos que consta de una colección ordenada de elementos de datos de tipo idéntico en la que cada elemento puede identificarse mediante un índice de un array.
 
-    collection
-        a grouping of a number of data items (possibly only zero or one) that have some shared significance or need to be operated upon together.
+    collección
+        una agrupación de una serie de elementos de datos (posiblemente solo cero o uno) que tienen algún significado compartido o necesitan ser operados juntos.
 
-    hash table
-        a collection consisting of key-value pairs with an associated hash function that maps the key to the associated value.
+    tabla hash
+        una colección que consta de pares llave-valor con una función hash asociada que asigna la clave al valor asociado.
 
-    const (immutable)
-        unable to be modified.
+    const (inmutable)
+        no se puede modificar.
 
     non-const (mutable)
-        the ability of an object to be modified.
+        la capacidad de un objeto para ser modificado.
 
     set
-        An unordered data structure consisting of unique, immutable data values.
-
+        Una estructura de datos desordenada que consta de valores de datos únicos e inmutables.
     string
-        A sequential data structure consisting of zero or more characters.
+        Una estructura de datos secuenciales que consta de cero o más caracteres.
 
     vector
-        sequence container storing data of a single type that is stored in a dynamically allocated array which can change in size.
+        contenedor de secuencias que almacena datos de un solo tipo que se almacenan en un vector asignada dinámicamente que puede cambiar de tamaño.
 
     word
-        unit of data used by a particular processor design.
+       unidad de datos utilizada por un diseño de procesador particular.
 
-
-Matching
+Emparejar definiciones
 --------
 .. dragndrop:: matching_ch5
-   :feedback: Feedback shows incorrect matches.
-   :match_1: array|||a data structure consisting of an ordered collection of data elements of identical type in which each element can be identified by an index.
-   :match_2: collection||| a grouping of a number of data items that have some shared significance or need to be operated upon together.
-   :match_3: vector|||sequence container storing data of a single type that is stored in a dynamically allocated array which can change in size.
-   :match_4: hash table|||a collection consisting of key-value pairs with an associated function that maps the key to the associated value.
-   :match_5: set|||An unordered data structure consisting of unique, immutable data values.
-   :match_6: string|||A sequential data structure consisting of zero or more characters.
-   :match_7: word|||unit of data used by a particular processor design.
-   :match_8: mutability|||able to be modified.
-   :match_9: immutable|||unable to be modified.
+   :feedback: Los comentarios muestran coincidencias incorrectas.
+   :match_1: array||| una estructura de datos que consiste en una colección ordenada de elementos de datos de tipo idéntico en la que cada elemento puede identificarse mediante un índice.
+   :match_2: collección||| una agrupación de una serie de elementos de datos que tienen algún significado compartido o necesitan ser operados juntos.
+   :match_3: vector||| contenedor de secuencias que almacena datos de un solo tipo que se almacenan en una matriz asignada dinámicamente que puede cambiar de tamaño.
+   :match_4: tabla hash||| una colección que consta de pares llave-valor con una función asociada que asigna la clave al valor asociado.
+   :match_5: set||| Una estructura de datos desordenada que consta de valores de datos únicos e inmutables.
+   :match_6: string||| Una estructura de datos secuenciales que consta de cero o más caracteres.
+   :match_7: word|||unidad de datos utilizada por un diseño de procesador particular.
+   :match_8: mutabilidad|||capaz de ser modificado.
+   :match_9: inmutable|||no se puede modificar.
 
-   Match the words to thier corresponding definition. 
+   Relaciona las palabras con su definición correspondiente.
