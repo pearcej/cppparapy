@@ -2,7 +2,7 @@ Introducción
 ============
 
 Este libro asume que usted ya está familiarizado con el
-Lenguaje de programación `Python <http://www.python.org>`_ porque
+lenguaje de programación `Python <http://www.python.org>`_ porque
 Python será el punto de partida para aprender C++. Comenzaremos 
 mirando un programa en C++ muy simple para ver cómo el lenguaje C++
 se ve, y discutiremos cómo hacemos que se ejecute un programa en C++.
@@ -12,7 +12,7 @@ en casi todos los lenguajes de programación:
 
     -  Uso de bibliotecas de código
     
-    -  Documentar el código con comentarios 
+    -  Documentar con comentarios 
     
     -  La función main
     
@@ -26,11 +26,9 @@ en casi todos los lenguajes de programación:
 
     -  Bucles 
 
-
-
 Una vez que enseñemos los conceptos básicos de C ++, pasaremos a ver las características útiles adicionales de C ++, que incluyen:
 
-    -  Funciones y parámetros 
+    -  Funciones y sus parámetros 
 
     -  Operaciones con archivos
 
@@ -38,4 +36,4 @@ Una vez que enseñemos los conceptos básicos de C ++, pasaremos a ver las carac
 
 
 Tenga en cuenta que este libro es un trabajo en progreso.
-Es probable que haya actualizaciones y nuevas versiones próximas.
+Es probable que haya actualizaciones y nuevas versiones.
