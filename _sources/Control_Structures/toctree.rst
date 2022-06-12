@@ -1,4 +1,4 @@
-Control Structures
+Estructuras de Control
 ::::::::::::::::::
 
 .. toctree::
