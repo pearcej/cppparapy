@@ -1,4 +1,4 @@
-Atomic C++ Data Types
+Tipos de Datos Atómicos de C++
 :::::::::::::::::::::
 
 .. toctree::
