@@ -2,9 +2,9 @@
    This work is licensed under the Creative Commons Attribution-NonCommercial-ShareAlike 4.0 International License. To view a copy of this license, visit http://creativecommons.org/licenses/by-nc-sa/4.0/.
 
 
-Strings
+Cadenas
 ^^^^^^^
-Las **cadenas** son colecciones secuenciales de cero o más caracteres, como letras, 
+Las **cadenas** o strings son colecciones secuenciales de cero o más caracteres, como letras, 
 números y otros símbolos. En realidad, hay dos tipos de cadenas en C++. 
 La *cadena de C++* o simplemente la *cadena* de la biblioteca ``<string>`` es el 
 tipo más moderno y es muy similar a la clase de cadena de Python. 
